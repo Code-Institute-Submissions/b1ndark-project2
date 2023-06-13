@@ -76,6 +76,10 @@ h2 {
     justify-content: center;
 }
 
+.next-btn {
+    display: none;
+}
+
 /* Instructions container */
 
 #instructions-container {
