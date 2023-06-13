@@ -12,3 +12,13 @@ a {
     text-decoration: none;
 }
 
+/* Page Title */
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200%;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 75px;
+    color: black;
+}
