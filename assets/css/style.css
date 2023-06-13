@@ -17,8 +17,8 @@ a {
 h1 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 100px;
+    margin-bottom: 120px;
     color: black;
     font-size: 4rem;
 }
@@ -42,7 +42,7 @@ h2 {
     align-items: center;
     box-shadow: inset 0px 0px 10px 2px;
     margin: auto;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .hide {
@@ -104,6 +104,7 @@ h2 {
     box-shadow: inset 0px 0px 10px 2px;
     margin: auto;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 footer li {
