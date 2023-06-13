@@ -88,5 +88,7 @@ h2 {
 
 .error-container p {
     text-align: center;
+    display: flex;
+    flex-direction: column;
     font-family: 'Open Sans', sans-serif;
 }
