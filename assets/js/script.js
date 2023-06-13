@@ -3,6 +3,7 @@
  */
 const startButton = document.getElementById("start-btn");
 const instructionsButton = document.getElementById("instructions-btn");
+const closeInstructionsButton = document.getElementById("close-instructions-btn");
 
 
 /**
@@ -24,6 +25,17 @@ function selectInstructions() {
     console.log("open instructions");
     startMenu.classList.add('hide');
     instructionsContainerElement.classList.remove('hide');
+}
+
+// By pressing Close button, it will close the Instructions container and take you back to Main Menu Container
+
+closeInstructionsButton.addEventListener('click', selectMainMenu);
+
+function selectMainMenu() {
+    console.log("close instructions");
+    instructionsContainerElement.classList.add('hide');
+    startMenu.classList.remove('hide');
+    console.log('back to Main Menu');
 }
 
 
