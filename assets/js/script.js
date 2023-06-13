@@ -14,7 +14,7 @@ const easyButton = document.getElementById('easy-btn');
 const startMenu = document.getElementById("menu-container");
 const difficultyContainerElement = document.getElementById("difficulty-container");
 const instructionsContainerElement = document.getElementById("instructions-container");
-
+const questionContainerElement = document.getElementById("question-container");
 
 /**
  * Instructions container
@@ -63,4 +63,6 @@ easyButton.addEventListener('click', selectEasy);
 
 function selectEasy() {
     console.log('you have selected easy mode');
+    difficultyContainerElement.classList.add('hide');
+    questionContainerElement.classList.remove('hide');
 }
