@@ -23,6 +23,11 @@ h1 {
     color: black;
 }
 
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
 /* Container styling */
 
 .container {
