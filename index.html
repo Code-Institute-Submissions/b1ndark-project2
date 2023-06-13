@@ -29,15 +29,16 @@
     <!-- Containers -->
     <div class="container">
         <!-- Main Menu Container -->
-        <div>
-            <h2>Welcome and Enjoy the Quiz!</h2>
+        <div id="menu-container">
+            <div>
+                <h2>Welcome and Enjoy the Quiz!</h2>
+            </div>
+            <div id="start-menu" class="btn-display">
+                <button id="start-btn" class="btn start-btn">Start</button>
+                <button id="instructions-btn" class="btn instructions">Instructions</button>
+                <button id="score-board-btn" class="btn score-board">Score board</button>
+            </div>
         </div>
-        <div id="start-menu" class="btn-display">
-            <button id="start-btn" class="btn start-btn">Start</button>
-            <button id="instructions-btn" class="btn instructions">Instructions</button>
-            <button id="score-board-btn" class="btn score-board">Score board</button>
-        </div>
-
         <!-- Difficulty Menu Container -->
         <div id="difficulty-container" class="hide">
             <div>
@@ -61,6 +62,7 @@
             <button id="next-btn" class="btn next-btn">Next</button>
         </div>
     </div>
+
     <!-- JavaScript -->
     <script src="assets/js/game.js"></script>
     <script src="assets/js/script.js"></script>
