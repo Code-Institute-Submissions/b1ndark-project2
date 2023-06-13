@@ -16,11 +16,11 @@ a {
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200%;
     text-align: center;
     margin-top: 150px;
-    margin-bottom: 75px;
+    margin-bottom: 150px;
     color: black;
+    font-size: 4rem;
 }
 
 h2 {
