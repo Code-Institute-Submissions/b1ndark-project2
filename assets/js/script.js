@@ -18,7 +18,7 @@ const questionContainerElement = document.getElementById("question-container");
 
 /**
  * Instructions container
- */ 
+ */
 
 // By pressing Instructions it will open the Instructions container
 instructionsButton.addEventListener('click', selectInstructions);
