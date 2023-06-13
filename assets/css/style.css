@@ -42,3 +42,27 @@ h1 {
 .hide {
     display: none;
 }
+
+/* Button styling */
+
+.btn {
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #1d1d1d;
+    text-align: center;
+    padding: 2px 20px;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #464646;
+}
+
+.btn-display {
+    display: grid;
+    grid-template-columns: max-content;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+}
