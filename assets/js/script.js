@@ -1,8 +1,8 @@
 /**
  * Buttons to access its containers
  */
-
 const startButton = document.getElementById("start-btn");
+const instructionsButton = document.getElementById("instructions-btn");
 
 
 /**
@@ -10,10 +10,25 @@ const startButton = document.getElementById("start-btn");
  */
 const startMenu = document.getElementById("menu-container");
 const difficultyContainerElement = document.getElementById("difficulty-container");
+const instructionsContainerElement = document.getElementById("instructions-container");
 
 
 /**
- * By pressing Start it will take you to Difficulty Menu
+ * Instructions container
+ */ 
+
+// By pressing Instructions it will open the Instructions container
+instructionsButton.addEventListener('click', selectInstructions);
+
+function selectInstructions() {
+    console.log("open instructions");
+    startMenu.classList.add('hide');
+    instructionsContainerElement.classList.remove('hide');
+}
+
+
+/**
+ * By pressing Start it will take you to the Difficulty Menu
  */
 startButton.addEventListener('click', selectDifficulty);
 
