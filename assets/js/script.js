@@ -5,6 +5,8 @@ const startButton = document.getElementById("start-btn");
 const instructionsButton = document.getElementById("instructions-btn");
 const closeInstructionsButton = document.getElementById("close-instructions-btn");
 
+// Difficulty menu selection
+const easyButton = document.getElementById('easy-btn');
 
 /**
  * Containers
@@ -49,4 +51,16 @@ function selectDifficulty() {
     startMenu.classList.add('hide');
     difficultyContainerElement.classList.remove('hide');
     console.log('closed main menu')
+}
+
+
+/**
+ * The game will start on the mode that you have selected
+ */
+
+// This fucntion will select Easy mode
+easyButton.addEventListener('click', selectEasy);
+
+function selectEasy() {
+    console.log('you have selected easy mode');
 }
