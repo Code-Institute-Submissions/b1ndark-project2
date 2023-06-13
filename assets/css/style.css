@@ -1,0 +1,8 @@
+/* Padding, margin and border removed */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
