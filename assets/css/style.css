@@ -22,3 +22,23 @@ h1 {
     margin-bottom: 75px;
     color: black;
 }
+
+/* Container styling */
+
+.container {
+    color: #fff;
+    background-color: rgba(44, 44, 44, 0.6);
+    max-width: 550px;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 10px 2px;
+    margin: auto;
+}
+
+.hide {
+    display: none;
+}
