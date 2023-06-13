@@ -83,3 +83,10 @@ h2 {
 #instructions-container ol {
     font-family: 'Open sans', sans-serif;
 }
+
+/* 404 error page */
+
+.error-container p {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
