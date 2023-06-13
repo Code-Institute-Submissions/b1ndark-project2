@@ -6,3 +6,9 @@
     border: none;
 }
 
+/* body */
+
+a {
+    text-decoration: none;
+}
+
