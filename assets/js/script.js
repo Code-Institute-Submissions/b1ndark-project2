@@ -65,11 +65,25 @@ function selectDifficulty() {
  * The game will start on the mode that you have selected
  */
 
-// This fucntion will select Easy mode
-easyButton.addEventListener('click', selectEasy);
+ 
+// Event Listener will open and start Easy mode quiz
+easyButton.addEventListener('click', selectEasyQuiz);
 
-function selectEasy() {
+// This fucntion will select Easy mode and start it
+function selectEasyQuiz() {
     console.log('you have selected easy mode');
     difficultyContainerElement.classList.add('hide');
     questionContainerElement.classList.remove('hide');
+    currentQuestionIndex = 0;
+    score = 0;
+    showEasyQuestion()
 }
+
+/**
+ * This function will show questions and its answers
+ */
+
+function showEasyQuestion() {
+    console.log("show question");
+}
+
