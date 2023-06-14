@@ -7,6 +7,7 @@ const instructionsButton = document.getElementById("instructions-btn");
 const closeInstructionsButton = document.getElementById("close-instructions-btn");
 
 const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -97,5 +98,19 @@ function showEasyQuestion() {
      */
     let currentEasyQuestion = easyQuestions[currentQuestionIndex];
     questionElement.innerHTML = currentEasyQuestion.question;
-}
+
+    /**
+     * This function is to show answers of the current question
+     * It will add a button for each answer of the current question, in this case 4 answers
+     * Data for the answers will be collected from game.js file
+     */
+    currentEasyQuestion.answers.forEach(answer => {
+        console.log("answers displayed");
+        const answerButton = document.createElement("button");
+        answerButton.innerHTML = answer.text;
+        answerButton.classList.add("btn");
+        answerButtons.appendChild(answerButton);
+        
+    });
+};
 
