@@ -1,9 +1,15 @@
 /**
  * Buttons to access its containers
+ * Variables
  */
 const startButton = document.getElementById("start-btn");
 const instructionsButton = document.getElementById("instructions-btn");
 const closeInstructionsButton = document.getElementById("close-instructions-btn");
+
+const questionElement = document.getElementById("question");
+
+let currentQuestionIndex = 0;
+let score = 0;
 
 // Difficulty menu selection
 const easyButton = document.getElementById('easy-btn');
@@ -85,5 +91,11 @@ function selectEasyQuiz() {
 
 function showEasyQuestion() {
     console.log("show question");
+    /**
+     * This function will show current question
+     * Data for the questions will be collected from game.js file
+     */
+    let currentEasyQuestion = easyQuestions[currentQuestionIndex];
+    questionElement.innerHTML = currentEasyQuestion.question;
 }
 
