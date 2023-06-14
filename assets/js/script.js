@@ -110,7 +110,9 @@ function showEasyQuestion() {
         answerButton.innerHTML = answer.text;
         answerButton.classList.add("btn");
         answerButtons.appendChild(answerButton);
-
+        if (answer.correct) {
+            answerButton.dataset.correct = answer.correct;
+        }
         // This Event Listener is to select an answer
         answerButton.addEventListener('click', selectEasyAnswer);
     });
@@ -120,8 +122,16 @@ function showEasyQuestion() {
 /**
  * This function will activate as soon as the User selects an answer
  */
-function selectEasyAnswer() {
-    console.log("answer selected")
+function selectEasyAnswer(event) {
+    console.log("answer selected");
+    const selectedAnswerButton = event.target;
+    const correctAnswer = selectedAnswerButton.dataset.correct === "true";
+    // The answer will be check whether is correct or wrong
+    if (correctAnswer) {
+        console.log("its correct");
+    } else {
+        console.log("its wrong");
+    }
 }
 
 
