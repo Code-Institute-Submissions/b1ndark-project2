@@ -1,5 +1,6 @@
 /**
  * Quiz Questions
+ * Questions will be accessed from script.js
  */
 
 // Easy Mode

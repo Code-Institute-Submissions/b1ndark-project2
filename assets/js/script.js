@@ -18,21 +18,25 @@ const questionContainerElement = document.getElementById("question-container");
 
 /**
  * Instructions container
+ * By selecting Instructions button, you will be taken to Instructions container
+ * Event Listener to select Instructions
  */
-
-// By pressing Instructions it will open the Instructions container
 instructionsButton.addEventListener('click', selectInstructions);
 
+// This function will open the Instructions container
 function selectInstructions() {
     console.log("open instructions");
     startMenu.classList.add('hide');
     instructionsContainerElement.classList.remove('hide');
 }
 
-// By pressing Close button, it will close the Instructions container and take you back to Main Menu Container
-
+/**
+ * By pressing Close button, it will close the Instructions container and take you back to Main Menu Container
+ * Event Listener to close instructions
+ */
 closeInstructionsButton.addEventListener('click', selectMainMenu);
 
+// This function will close the Instructions container
 function selectMainMenu() {
     console.log("close instructions");
     instructionsContainerElement.classList.add('hide');
@@ -43,9 +47,11 @@ function selectMainMenu() {
 
 /**
  * By pressing Start it will take you to the Difficulty Menu
+ * Event Listener to take back to Difficulty Menu
  */
 startButton.addEventListener('click', selectDifficulty);
 
+// Function to close Start Menu and open Difficulty Menu
 function selectDifficulty() {
     console.log('difficulty menu');
     startMenu.classList.add('hide');
@@ -55,6 +61,7 @@ function selectDifficulty() {
 
 
 /**
+ * There are three modes Easy, Medium and Hard
  * The game will start on the mode that you have selected
  */
 
