@@ -110,7 +110,18 @@ function showEasyQuestion() {
         answerButton.innerHTML = answer.text;
         answerButton.classList.add("btn");
         answerButtons.appendChild(answerButton);
-        
+
+        // This Event Listener is to select an answer
+        answerButton.addEventListener('click', selectEasyAnswer);
     });
 };
+
+
+/**
+ * This function will activate as soon as the User selects an answer
+ */
+function selectEasyAnswer() {
+    console.log("answer selected")
+}
+
 
