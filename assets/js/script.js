@@ -129,8 +129,10 @@ function selectEasyAnswer(event) {
     // The answer will be check whether is correct or wrong
     if (correctAnswer) {
         console.log("its correct");
+        selectedAnswerButton.classList.add("correct-answer");
     } else {
         console.log("its wrong");
+        selectedAnswerButton.classList.add("wrong-answer");
     }
 }
 
