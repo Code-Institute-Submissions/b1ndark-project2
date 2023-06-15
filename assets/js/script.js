@@ -149,6 +149,7 @@ function selectEasyAnswer(event) {
     if (correctAnswer) {
         console.log("its correct");
         selectedAnswerButton.classList.add("correct-answer");
+        score++;
     } else {
         console.log("its wrong");
         selectedAnswerButton.classList.add("wrong-answer");
