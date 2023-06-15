@@ -127,7 +127,10 @@ function selectEasyAnswer(event) {
     console.log("answer selected");
     const selectedAnswerButton = event.target;
     const correctAnswer = selectedAnswerButton.dataset.correct === "true";
-    // The answer will be check whether is correct or wrong
+    /**
+     * The answer will be checked whether is correct or wrong
+     * Also class has been added to decorate/style the correct and wrong answers
+     **/ 
     if (correctAnswer) {
         console.log("its correct");
         selectedAnswerButton.classList.add("correct-answer");
