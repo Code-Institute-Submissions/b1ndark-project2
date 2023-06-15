@@ -150,16 +150,31 @@ function selectEasyAnswer(event) {
     nextQuestionButton.style.display = "block";
 }
 
+/**
+ * This function adds next question so the user can carry on with the quiz
+ * Next question Data will be loaded from game.js file
+ */
+function handleNextQuestionButton() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < easyQuestions.length) {
+        showEasyQuestion();
+        console.log("next question shown");
+    } else {
+        showScore();
+    }
+}
+
 
 /**
  * This Event Listener is to active the next button
- * 
+ * By pressing it you will be taken to next question
  */
 nextQuestionButton.addEventListener('click', () => {
     if (currentQuestionIndex < easyQuestions.length) {
         console.log("next button pressed");
+        handleNextQuestionButton();
     } else {
-        
+        selectEasyQuiz();
     }
 });
 
