@@ -92,7 +92,7 @@ const easyQuestions = [
 
 // Medium Mode/ 10 questions in Medium mode
 
-const MediumQuestions = [
+const mediumQuestions = [
     {
         question: 'In Ancient Rome, what was a thermae?',
         answers: [

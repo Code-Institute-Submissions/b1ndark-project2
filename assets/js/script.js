@@ -88,137 +88,268 @@ function selectEasyQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     showEasyQuestion()
-}
 
 
-/**
+    /**
  * This function will reset answers from previous questions
  * 
  */
-function resetEasyState() {
-    while (answerButtons.firstChild) {
-        answerButtons.removeChild(answerButtons.firstChild);
-        console.log("previous answers cleared");
-    }
-}
-
-
-/**
- * This function will show questions and its answers
- */
-
-function showEasyQuestion() {
-    resetEasyState();
-    console.log("show question");
-    /**
-     * This function will show current question
-     * Data for the questions will be collected from game.js file
-     */
-    let currentEasyQuestion = easyQuestions[currentQuestionIndex];
-    questionElement.innerHTML = currentEasyQuestion.question;
-
-    /**
-     * This function is to show answers of the current question
-     * It will add a button for each answer of the current question, in this case 4 answers
-     * Data for the answers will be collected from game.js file
-     */
-    currentEasyQuestion.answers.forEach(answer => {
-        console.log("answers displayed");
-        const answerButton = document.createElement("button");
-        answerButton.innerHTML = answer.text;
-        answerButton.classList.add("btn");
-        answerButtons.appendChild(answerButton);
-        if (answer.correct) {
-            answerButton.dataset.correct = answer.correct;
+    function resetEasyState() {
+        while (answerButtons.firstChild) {
+            answerButtons.removeChild(answerButtons.firstChild);
+            console.log("previous answers cleared");
         }
-        // This Event Listener is to select an answer
-        answerButton.addEventListener('click', selectEasyAnswer);
-    });
-};
+    }
 
 
-/**
- * This function will activate as soon as the User selects an answer
- */
-function selectEasyAnswer(event) {
-    console.log("answer selected");
-    const selectedAnswerButton = event.target;
-    const correctAnswer = selectedAnswerButton.dataset.correct === "true";
     /**
-     * The answer will be checked whether is correct or wrong
-     * Also class has been added to decorate/style the correct and wrong answers
-     **/
-    if (correctAnswer) {
-        console.log("its correct");
-        selectedAnswerButton.classList.add("correct-answer");
-        score++;
-    } else {
-        console.log("its wrong");
-        selectedAnswerButton.classList.add("wrong-answer");
-    }
-    // Soon as the answer is selected whether is correct or wrong, all answers will be locked.
-    Array.from(answerButtons.children).forEach(button => {
-        if (button.dataset.correct === "true") {
-            button.classList.add("correct-answer");
+     * This function will show questions and its answers
+     */
+
+    function showEasyQuestion() {
+        resetEasyState();
+        console.log("show question");
+        /**
+         * This function will show current question
+         * Data for the questions will be collected from game.js file
+         */
+        let currentEasyQuestion = easyQuestions[currentQuestionIndex];
+        questionElement.innerHTML = currentEasyQuestion.question;
+
+        /**
+         * This function is to show answers of the current question
+         * It will add a button for each answer of the current question, in this case 4 answers
+         * Data for the answers will be collected from game.js file
+         */
+        currentEasyQuestion.answers.forEach(answer => {
+            console.log("answers displayed");
+            const answerButton = document.createElement("button");
+            answerButton.innerHTML = answer.text;
+            answerButton.classList.add("btn");
+            answerButtons.appendChild(answerButton);
+            if (answer.correct) {
+                answerButton.dataset.correct = answer.correct;
+            }
+            // This Event Listener is to select an answer
+            answerButton.addEventListener('click', selectEasyAnswer);
+        });
+    };
+
+
+    /**
+     * This function will activate as soon as the User selects an answer
+     */
+    function selectEasyAnswer(event) {
+        console.log("answer selected");
+        const selectedAnswerButton = event.target;
+        const correctAnswer = selectedAnswerButton.dataset.correct === "true";
+        /**
+         * The answer will be checked whether is correct or wrong
+         * Also class has been added to decorate/style the correct and wrong answers
+         **/
+        if (correctAnswer) {
+            console.log("its correct");
+            selectedAnswerButton.classList.add("correct-answer");
+            score++;
+        } else {
+            console.log("its wrong");
+            selectedAnswerButton.classList.add("wrong-answer");
         }
-        button.disabled = true;
-        console.log("answers locked");
+        // Soon as the answer is selected whether is correct or wrong, all answers will be locked.
+        Array.from(answerButtons.children).forEach(button => {
+            if (button.dataset.correct === "true") {
+                button.classList.add("correct-answer");
+            }
+            button.disabled = true;
+            console.log("answers locked");
+        });
+        // Once the answer is selected and locked, the Next button will be displayed
+        nextQuestionButton.style.display = "block";
+    }
+
+
+    /**
+     * This function will show the user score at the end of the quiz.
+     * A text message has been added to congratulate the user.
+     */
+    function showScore() {
+        resetEasyState();
+        questionElement.innerHTML = `Well done in completing the quiz!` +
+            `<br> You have scored ${score} out of ${easyQuestions.length} questions!`;
+        // This will hide the next question button
+        nextQuestionButton.style.display = 'none';
+        // This will display Main Menu button
+        backToIndexButton.style.display = 'block';
+    }
+
+
+    /**
+     * This function adds next question so the user can carry on with the quiz
+     * Next question Data will be loaded from game.js file
+     */
+    function handleNextQuestionButton() {
+        // This will hide the next question button
+        nextQuestionButton.style.display = 'none';
+        currentQuestionIndex++;
+        if (currentQuestionIndex < easyQuestions.length) {
+            showEasyQuestion();
+            console.log("next question shown");
+        } else {
+            showScore();
+        }
+    }
+
+
+    /**
+     * This Event Listener is to active the next button
+     * By pressing it you will be taken to next question
+     */
+    nextQuestionButton.addEventListener('click', () => {
+        if (currentQuestionIndex < easyQuestions.length) {
+            console.log("next button pressed");
+            handleNextQuestionButton();
+        } else {
+            selectEasyQuiz();
+        }
     });
-    // Once the answer is selected and locked, the Next button will be displayed
-    nextQuestionButton.style.display = "block";
 }
-
-
-/**
- * This function will show the user score at the end of the quiz.
- * A text message has been added to congratulate the user.
- */
-function showScore() {
-    resetEasyState();
-    questionElement.innerHTML = `Well done in completing the quiz!` +
-        `<br> You have scored ${score} out of ${easyQuestions.length} questions!`;
-    // This will hide the next question button
-    nextQuestionButton.style.display = 'none';
-    // This will display Main Menu button
-    backToIndexButton.style.display = 'block';
-}
-
-
-/**
- * This function adds next question so the user can carry on with the quiz
- * Next question Data will be loaded from game.js file
- */
-function handleNextQuestionButton() {
-    // This will hide the next question button
-    nextQuestionButton.style.display = 'none';
-    currentQuestionIndex++;
-    if (currentQuestionIndex < easyQuestions.length) {
-        showEasyQuestion();
-        console.log("next question shown");
-    } else {
-        showScore();
-    }
-}
-
-
-/**
- * This Event Listener is to active the next button
- * By pressing it you will be taken to next question
- */
-nextQuestionButton.addEventListener('click', () => {
-    if (currentQuestionIndex < easyQuestions.length) {
-        console.log("next button pressed");
-        handleNextQuestionButton();
-    } else {
-        selectEasyQuiz();
-    }
-});
 
 
 // Event Listener will open and start Medium mode quiz
 mediumButton.addEventListener('click', selectMediumQuiz);
 
-// This fucntion will select Easy mode and start it
+// This fucntion will select Medium mode and start it
 function selectMediumQuiz() {
     console.log('you have selected medium mode');
+    difficultyContainerElement.classList.add('hide');
+    questionContainerElement.classList.remove('hide');
+    currentQuestionIndex = 0;
+    score = 0;
+    showMediumQuestion()
+
+
+    /**
+ * This function will reset answers from previous questions
+ * 
+ */
+    function resetMediumState() {
+        while (answerButtons.firstChild) {
+            answerButtons.removeChild(answerButtons.firstChild);
+            console.log("previous answers cleared");
+        }
+    }
+
+
+    /**
+     * This function will show questions and its answers
+     */
+
+    function showMediumQuestion() {
+        resetMediumState();
+        console.log("show medium question");
+        /**
+         * This function will show current question
+         * Data for the questions will be collected from game.js file
+         */
+        let currentMediumQuestion = mediumQuestions[currentQuestionIndex];
+        questionElement.innerHTML = currentMediumQuestion.question;
+        /**
+         * This function is to show answers of the current question
+         * It will add a button for each answer of the current question, in this case 4 answers
+         * Data for the answers will be collected from game.js file
+         */
+        currentMediumQuestion.answers.forEach(answer => {
+            console.log("answers displayed");
+            const answerButton = document.createElement("button");
+            answerButton.innerHTML = answer.text;
+            answerButton.classList.add("btn");
+            answerButtons.appendChild(answerButton);
+            if (answer.correct) {
+                answerButton.dataset.correct = answer.correct;
+            }
+            // This Event Listener is to select an answer
+            answerButton.addEventListener('click', selectMediumAnswer);
+        });
+    };
+
+
+    /**
+     * This function will activate as soon as the User selects an answer
+     */
+    function selectMediumAnswer(event) {
+        console.log("answer selected");
+        const selectedAnswerButton = event.target;
+        const correctAnswer = selectedAnswerButton.dataset.correct === "true";
+        /**
+         * The answer will be checked whether is correct or wrong
+         * Also class has been added to decorate/style the correct and wrong answers
+         **/
+        if (correctAnswer) {
+            console.log("its correct");
+            selectedAnswerButton.classList.add("correct-answer");
+            score++;
+        } else {
+            console.log("its wrong");
+            selectedAnswerButton.classList.add("wrong-answer");
+        }
+        // Soon as the answer is selected whether is correct or wrong, all answers will be locked.
+        Array.from(answerButtons.children).forEach(button => {
+            if (button.dataset.correct === "true") {
+                button.classList.add("correct-answer");
+            }
+            button.disabled = true;
+            console.log("answers locked");
+        });
+        // Once the answer is selected and locked, the Next button will be displayed
+        nextQuestionButton.style.display = "block";
+    }
+
+
+    /**
+     * This function will show the user score at the end of the quiz.
+     * A text message has been added to congratulate the user.
+     */
+    function showMediumScore() {
+        resetMediumState()
+        questionElement.innerHTML = `Well done in completing the quiz!` +
+            `<br> You have scored ${score} out of ${mediumQuestions.length} questions!`;
+        // This will hide the next question button
+        nextQuestionButton.style.display = 'none';
+        // This will display Main Menu button
+        backToIndexButton.style.display = 'block';
+    }
+
+
+    /**
+     * This function adds next question so the user can carry on with the quiz
+     * Next question Data will be loaded from game.js file
+     */
+    function handleNextMediumQuestionButton() {
+        // This will hide the next question button
+        nextQuestionButton.style.display = 'none';
+        currentQuestionIndex++;
+        if (currentQuestionIndex < mediumQuestions.length) {
+            showMediumQuestion();
+            console.log("next question shown");
+        } else {
+            showMediumScore();
+        }
+    }
+
+
+    /**
+     * This Event Listener is to active the next button
+     * By pressing it you will be taken to next question
+     */
+    nextQuestionButton.addEventListener('click', () => {
+        if (currentQuestionIndex < mediumQuestions.length) {
+            console.log("next button pressed");
+            handleNextMediumQuestionButton();
+        } else {
+            selectMediumQuiz();
+        }
+    });
+
 }
+
+
