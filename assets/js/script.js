@@ -8,6 +8,7 @@ const closeInstructionsButton = document.getElementById("close-instructions-btn"
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
+const nextQuestionButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -141,7 +142,9 @@ function selectEasyAnswer(event) {
         }
         button.disabled = true;
         console.log("answers locked");
-    })
+    });
+    // Once the answer is selected and locked, the Next button will be displayed
+    nextQuestionButton.style.display = "block";
 }
 
 
