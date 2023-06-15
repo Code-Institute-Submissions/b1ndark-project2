@@ -134,6 +134,13 @@ function selectEasyAnswer(event) {
         console.log("its wrong");
         selectedAnswerButton.classList.add("wrong-answer");
     }
+    // Soon as the answer is selected whether is correct or wrong, all answers will be locked.
+    Array.from(answerButtons.children).forEach(button => {
+        if (button.dataset.correct === "true") {
+        }
+        button.disabled = true;
+        console.log("answers locked");
+    })
 }
 
 
