@@ -173,6 +173,7 @@ function showScore() {
     resetEasyState();
     questionElement.innerHTML = `Well done in completing the quiz!` + 
     `<br> You have scored ${score} out of ${easyQuestions.length} questions!`;
+    nextQuestionButton.style.display = 'none';
 }
 
 
