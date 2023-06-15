@@ -71,8 +71,12 @@ h2 {
     cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover:not([disabled]) {
     background-color: #464646;
+}
+
+.btn:disabled {
+    cursor: none;
 }
 
 .btn-display {
