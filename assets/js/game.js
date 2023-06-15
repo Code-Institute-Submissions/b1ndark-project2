@@ -47,7 +47,7 @@ const easyQuestions = [
             { text: 'Antarctica', correct: false }
         ]
     }, {
-        question: 'What was the first counrty to be invaded by Germany in WW2?',
+        question: 'What was the first country to be invaded by Germany in WW2?',
         answers: [
             { text: 'Iceland', correct: false },
             { text: 'Portugal', correct: false },
