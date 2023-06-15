@@ -73,7 +73,7 @@ function selectDifficulty() {
  * The game will start on the mode that you have selected
  */
 
- 
+
 // Event Listener will open and start Easy mode quiz
 easyButton.addEventListener('click', selectEasyQuiz);
 
@@ -88,6 +88,10 @@ function selectEasyQuiz() {
 }
 
 
+/**
+ * This function will reset answers from previous questions
+ * 
+ */
 function resetEasyState() {
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
@@ -140,7 +144,7 @@ function selectEasyAnswer(event) {
     /**
      * The answer will be checked whether is correct or wrong
      * Also class has been added to decorate/style the correct and wrong answers
-     **/ 
+     **/
     if (correctAnswer) {
         console.log("its correct");
         selectedAnswerButton.classList.add("correct-answer");
@@ -161,8 +165,14 @@ function selectEasyAnswer(event) {
 }
 
 
+/**
+ * This function will show the user score at the end of the quiz.
+ * A text message has been added to congratulate the user.
+ */
 function showScore() {
     resetEasyState();
+    questionElement.innerHTML = `Well done in completing the quiz!` + 
+    `<br> You have scored ${score} out of ${easyQuestions.length} questions!`;
 }
 
 
