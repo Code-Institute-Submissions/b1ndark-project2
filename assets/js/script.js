@@ -173,13 +173,13 @@ function selectEasyAnswer(event) {
  */
 function showScore() {
     resetEasyState();
-    questionElement.innerHTML = `Well done in completing the quiz!` + 
-    `<br> You have scored ${score} out of ${easyQuestions.length} questions!`;
+    questionElement.innerHTML = `Well done in completing the quiz!` +
+        `<br> You have scored ${score} out of ${easyQuestions.length} questions!`;
     // This will hide the next question button
     nextQuestionButton.style.display = 'none';
     // This will display Main Menu button
     backToIndexButton.style.display = 'block';
-}   
+}
 
 
 /**

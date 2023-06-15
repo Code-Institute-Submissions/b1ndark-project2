@@ -151,9 +151,9 @@ footer li {
 /* Styling to Answers */
 
 .correct-answer {
-    background: rgb(21, 219,4);
+    background: rgb(21, 219, 4);
 }
 
 .wrong-answer {
-    background: rgb(236,32,32);
+    background: rgb(236, 32, 32);
 }
