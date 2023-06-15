@@ -175,7 +175,9 @@ function showScore() {
     resetEasyState();
     questionElement.innerHTML = `Well done in completing the quiz!` + 
     `<br> You have scored ${score} out of ${easyQuestions.length} questions!`;
+    // This will hide the next question button
     nextQuestionButton.style.display = 'none';
+    // This will display Main Menu button
     backToIndexButton.style.display = 'block';
 }   
 
@@ -185,6 +187,8 @@ function showScore() {
  * Next question Data will be loaded from game.js file
  */
 function handleNextQuestionButton() {
+    // This will hide the next question button
+    nextQuestionButton.style.display = 'none';
     currentQuestionIndex++;
     if (currentQuestionIndex < easyQuestions.length) {
         showEasyQuestion();
