@@ -87,11 +87,21 @@ function selectEasyQuiz() {
     showEasyQuestion()
 }
 
+
+function resetEasyState() {
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+        console.log("previous answers cleared");
+    }
+}
+
+
 /**
  * This function will show questions and its answers
  */
 
 function showEasyQuestion() {
+    resetEasyState();
     console.log("show question");
     /**
      * This function will show current question
@@ -149,6 +159,12 @@ function selectEasyAnswer(event) {
     // Once the answer is selected and locked, the Next button will be displayed
     nextQuestionButton.style.display = "block";
 }
+
+
+function showScore() {
+    resetEasyState();
+}
+
 
 /**
  * This function adds next question so the user can carry on with the quiz
