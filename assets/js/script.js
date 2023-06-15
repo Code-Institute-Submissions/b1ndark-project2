@@ -151,3 +151,15 @@ function selectEasyAnswer(event) {
 }
 
 
+/**
+ * This Event Listener is to active the next button
+ * 
+ */
+nextQuestionButton.addEventListener('click', () => {
+    if (currentQuestionIndex < easyQuestions.length) {
+        console.log("next button pressed");
+    } else {
+        
+    }
+});
+
