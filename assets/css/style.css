@@ -93,6 +93,14 @@ h2 {
     display: none;
 }
 
+#back-to-index-btn {
+    margin: 20px auto;
+}
+
+#back-to-index-btn a {
+    color: #fff;
+}
+
 /* Instructions container */
 
 #instructions-container {
