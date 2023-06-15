@@ -5,6 +5,7 @@
 const startButton = document.getElementById("start-btn");
 const instructionsButton = document.getElementById("instructions-btn");
 const closeInstructionsButton = document.getElementById("close-instructions-btn");
+const backToIndexButton = document.getElementById("back-to-index-btn");
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
@@ -174,7 +175,8 @@ function showScore() {
     questionElement.innerHTML = `Well done in completing the quiz!` + 
     `<br> You have scored ${score} out of ${easyQuestions.length} questions!`;
     nextQuestionButton.style.display = 'none';
-}
+    backToIndexButton.style.display = 'block';
+}   
 
 
 /**
