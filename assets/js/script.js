@@ -16,6 +16,8 @@ let score = 0;
 
 // Difficulty menu selection
 const easyButton = document.getElementById('easy-btn');
+const mediumButton = document.getElementById('medium-btn');
+
 
 /**
  * Containers
@@ -212,3 +214,11 @@ nextQuestionButton.addEventListener('click', () => {
     }
 });
 
+
+// Event Listener will open and start Medium mode quiz
+mediumButton.addEventListener('click', selectMediumQuiz);
+
+// This fucntion will select Easy mode and start it
+function selectMediumQuiz() {
+    console.log('you have selected medium mode');
+}
