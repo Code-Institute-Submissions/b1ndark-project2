@@ -9,7 +9,6 @@ const backToIndexButton = document.getElementById("back-to-index-btn");
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
-const nextQuestionButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -166,7 +165,7 @@ function selectEasyQuiz() {
         });
         // Once answer is selected whether is correct or wrong it will automatically move to the next one
         setTimeout(() => {
-            handleNextQuestionButton();
+            handleNextQuestion();
         }, 2000);
     }
 
@@ -188,7 +187,7 @@ function selectEasyQuiz() {
      * This function adds next question so the user can carry on with the quiz
      * Next question Data will be loaded from game.js file
      */
-    function handleNextQuestionButton() {
+    function handleNextQuestion() {
         currentQuestionIndex++;
         if (currentQuestionIndex < easyQuestions.length) {
             showEasyQuestion();
@@ -286,8 +285,10 @@ function selectMediumQuiz() {
             button.disabled = true;
             console.log("answers locked");
         });
-        // Once the answer is selected and locked, the Next button will be displayed
-        nextQuestionButton.style.display = "block";
+        // Once answer is selected whether is correct or wrong it will automatically move to the next one
+        setTimeout(() => {
+            handleNextMediumQuestion();
+        }, 2000);
     }
 
 
@@ -299,8 +300,6 @@ function selectMediumQuiz() {
         resetMediumState()
         questionElement.innerHTML = `Well done in completing the quiz!` +
             `<br> You have scored ${score} out of ${mediumQuestions.length} questions!`;
-        // This will hide the next question button
-        nextQuestionButton.style.display = 'none';
         // This will display Main Menu button
         backToIndexButton.style.display = 'block';
     }
@@ -310,9 +309,7 @@ function selectMediumQuiz() {
      * This function adds next question so the user can carry on with the quiz
      * Next question Data will be loaded from game.js file
      */
-    function handleNextMediumQuestionButton() {
-        // This will hide the next question button
-        nextQuestionButton.style.display = 'none';
+    function handleNextMediumQuestion() {
         currentQuestionIndex++;
         if (currentQuestionIndex < mediumQuestions.length) {
             showMediumQuestion();
@@ -321,20 +318,6 @@ function selectMediumQuiz() {
             showMediumScore();
         }
     }
-
-
-    /**
-     * This Event Listener is to active the next button
-     * By pressing it you will be taken to next question
-     */
-    nextQuestionButton.addEventListener('click', () => {
-        if (currentQuestionIndex < mediumQuestions.length) {
-            console.log("next button pressed");
-            handleNextMediumQuestionButton();
-        } else {
-            selectMediumQuiz();
-        }
-    });
 
 }
 
@@ -424,8 +407,10 @@ function selectHardQuiz() {
             button.disabled = true;
             console.log("answers locked");
         });
-        // Once the answer is selected and locked, the Next button will be displayed
-        nextQuestionButton.style.display = "block";
+        // Once answer is selected whether is correct or wrong it will automatically move to the next one
+        setTimeout(() => {
+            handleNextHardQuestion();
+        }, 2000);
     }
 
 
@@ -437,8 +422,6 @@ function selectHardQuiz() {
         resetHardState()
         questionElement.innerHTML = `Well done in completing the quiz!` +
             `<br> You have scored ${score} out of ${hardQuestions.length} questions!`;
-        // This will hide the next question button
-        nextQuestionButton.style.display = 'none';
         // This will display Main Menu button
         backToIndexButton.style.display = 'block';
     }
@@ -448,9 +431,7 @@ function selectHardQuiz() {
      * This function adds next question so the user can carry on with the quiz
      * Next question Data will be loaded from game.js file
      */
-    function handleNextHardQuestionButton() {
-        // This will hide the next question button
-        nextQuestionButton.style.display = 'none';
+    function handleNextHardQuestion() {
         currentQuestionIndex++;
         if (currentQuestionIndex < hardQuestions.length) {
             showHardQuestion();
@@ -459,19 +440,5 @@ function selectHardQuiz() {
             showHardScore();
         }
     }
-
-
-    /**
-     * This Event Listener is to active the next button
-     * By pressing it you will be taken to next question
-     */
-    nextQuestionButton.addEventListener('click', () => {
-        if (currentQuestionIndex < hardQuestions.length) {
-            console.log("next button pressed");
-            handleNextHardQuestionButton();
-        } else {
-            selectHardQuiz();
-        }
-    });
 
 }
