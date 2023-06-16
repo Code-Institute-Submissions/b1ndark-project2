@@ -158,9 +158,9 @@ footer li {
     background: rgb(236, 32, 32);
 }
 
-/* for small screens sizes from 576px wide and down */
+/* for medium screens sizes from 768px wide and down */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
     }
@@ -183,6 +183,44 @@ footer li {
 
     .networks i {
         font-size: 145%;
+    }
+
+    .container {
+        max-width: 475px;
+    }
+
+    .network-container {
+        max-width: 475px;
+    }
+
+}
+
+/* for small screens sizes from 576px wide and down */
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+        
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    #question {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    #instructions-container {
+        font-size: 0.8rem;
+    }
+
+    .networks i {
+        font-size: 137%;
     }
 }
 
