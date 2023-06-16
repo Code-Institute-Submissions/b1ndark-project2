@@ -8,6 +8,10 @@
 
 /* body */
 
+body {
+    background: url(../images/background/orphans-castle-ruins.webp) no-repeat center center;
+}
+
 a {
     text-decoration: none;
 }
@@ -17,10 +21,11 @@ a {
 h1 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 120px;
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 4rem;
+    
 }
 
 h2 {
