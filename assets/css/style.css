@@ -240,6 +240,10 @@ h2 {
     .networks i {
         font-size: 137%;
     }
+
+    .network-container {
+        margin-top: 250px;
+    }
 }
 
 /* for extra small screen sizes from 335px wide and down */
