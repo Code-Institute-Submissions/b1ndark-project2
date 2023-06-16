@@ -17,6 +17,7 @@ let score = 0;
 // Difficulty menu selection
 const easyButton = document.getElementById('easy-btn');
 const mediumButton = document.getElementById('medium-btn');
+const hardButton = document.getElementById('hard-btn');
 
 
 /**
