@@ -164,8 +164,10 @@ function selectEasyQuiz() {
             button.disabled = true;
             console.log("answers locked");
         });
-        // Once the answer is selected and locked, the Next button will be displayed
-        nextQuestionButton.style.display = "block";
+        // Once answer is selected whether is correct or wrong it will automatically move to the next one
+        setTimeout(() => {
+            handleNextQuestionButton();
+        }, 2000);
     }
 
 
@@ -177,8 +179,6 @@ function selectEasyQuiz() {
         resetEasyState();
         questionElement.innerHTML = `Well done in completing the quiz!` +
             `<br> You have scored ${score} out of ${easyQuestions.length} questions!`;
-        // This will hide the next question button
-        nextQuestionButton.style.display = 'none';
         // This will display Main Menu button
         backToIndexButton.style.display = 'block';
     }
@@ -189,8 +189,6 @@ function selectEasyQuiz() {
      * Next question Data will be loaded from game.js file
      */
     function handleNextQuestionButton() {
-        // This will hide the next question button
-        nextQuestionButton.style.display = 'none';
         currentQuestionIndex++;
         if (currentQuestionIndex < easyQuestions.length) {
             showEasyQuestion();
@@ -200,19 +198,6 @@ function selectEasyQuiz() {
         }
     }
 
-
-    /**
-     * This Event Listener is to active the next button
-     * By pressing it you will be taken to next question
-     */
-    nextQuestionButton.addEventListener('click', () => {
-        if (currentQuestionIndex < easyQuestions.length) {
-            console.log("next button pressed");
-            handleNextQuestionButton();
-        } else {
-            selectEasyQuiz();
-        }
-    });
 }
 
 
