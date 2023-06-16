@@ -157,3 +157,31 @@ footer li {
 .wrong-answer {
     background: rgb(236, 32, 32);
 }
+
+/* for extra small screen sizes from 335px wide and down */
+
+@media screen and (max-width: 335px) { 
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    #question {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.7rem;
+    }
+
+    #instructions-container {
+        font-size: 0.7rem;
+    }
+
+    .networks i {
+        font-size: 130%;
+    }
+}
