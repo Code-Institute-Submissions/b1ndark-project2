@@ -140,13 +140,17 @@ h2 {
     margin-bottom: 100px;
 }
 
-footer li {
-    list-style-type: none;
-    display: inline;
-
+.networks {
+    display: flex;
 }
 
+.each-network {
+    margin: 5px auto;
+}
+    
 .networks i {
+    list-style-type: none;
+    display: inline;
     font-size: 160%;
     margin: 1%;
     padding: 1%;
