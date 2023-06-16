@@ -229,7 +229,7 @@ h2 {
     }
 
     .container {
-        margin-bottom: 150px;
+        margin-bottom: 75px;
     }
 
     .networks i {
@@ -237,7 +237,8 @@ h2 {
     }
 
     .network-container {
-        margin-top: 250px;
+        margin-top: 200px;
+        margin-bottom: 0;
     }
 }
 
@@ -245,26 +246,26 @@ h2 {
 
 @media screen and (max-width: 335px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     h2 {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     #question {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .btn {
-        font-size: 0.7rem;
+        font-size: 0.5rem;
     }
 
     #instructions-container {
-        font-size: 0.7rem;
+        font-size: 0.5rem;
     }
 
     .networks i {
-        font-size: 130%;
+        font-size: 110%;
     }
 }
