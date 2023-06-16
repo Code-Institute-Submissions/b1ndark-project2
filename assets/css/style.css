@@ -200,7 +200,8 @@ footer li {
 @media screen and (max-width: 576px) {
     h1 {
         font-size: 2rem;
-        
+        margin-top: 75px;
+        margin-bottom: 50px;
     }
 
     h2 {
@@ -219,6 +220,10 @@ footer li {
         font-size: 0.8rem;
     }
 
+    .container {
+        margin-bottom: 50px;
+    }
+
     .networks i {
         font-size: 137%;
     }
@@ -226,7 +231,7 @@ footer li {
 
 /* for extra small screen sizes from 335px wide and down */
 
-@media screen and (max-width: 335px) { 
+@media screen and (max-width: 335px) {
     h1 {
         font-size: 2rem;
     }
