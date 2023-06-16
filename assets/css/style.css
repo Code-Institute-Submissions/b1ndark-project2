@@ -158,6 +158,34 @@ footer li {
     background: rgb(236, 32, 32);
 }
 
+/* for small screens sizes from 576px wide and down */
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    #question {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    #instructions-container {
+        font-size: 1rem;
+    }
+
+    .networks i {
+        font-size: 145%;
+    }
+}
+
 /* for extra small screen sizes from 335px wide and down */
 
 @media screen and (max-width: 335px) { 
