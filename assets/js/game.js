@@ -175,3 +175,90 @@ const mediumQuestions = [
         ]
     }
 ];
+
+
+// Hard Mode/ 10 questions in Hard mode
+
+const hardQuestions = [
+    {
+        question: 'Which 3 countries made up the Triple Entente in World War 1?',
+        answers: [
+            { text: 'Portugal, Spain and Italy', correct: false },
+            { text: 'Greece, Albania and Romenia', correct: false },
+            { text: 'Great Britain, France and Russia', correct: true },
+            { text: 'Germany Australia and USA', correct: false }
+        ]
+    }, {
+        question: 'Which English king was defeated at the Battle of Hastings?',
+        answers: [
+            { text: 'King Harold II', correct: true },
+            { text: 'King Charles I', correct: false },
+            { text: 'King Henry V', correct: false },
+            { text: 'King James II', correct: false }
+        ]
+    }, {
+        question: 'In which French city was Joan of Arc burnt at the stake?',
+        answers: [
+            { text: 'Paris', correct: false },
+            { text: 'Rouen', correct: true },
+            { text: 'Bordeaux', correct: false },
+            { text: 'Clermont-Ferrand', correct: false }
+        ]
+    }, {
+        question: 'Which Europeans were the first to arrive in Japan?',
+        answers: [
+            { text: 'Spanish', correct: false },
+            { text: 'English', correct: false },
+            { text: 'Portuguese', correct: true },
+            { text: 'French', correct: false }
+        ]
+    }, {
+        question: 'Who discovered America first?',
+        answers: [
+            { text: 'Vasco da Gama', correct: false },
+            { text: 'Napoleon', correct: false },
+            { text: 'Julius Caeser', correct: false },
+            { text: 'Christopher Columbus', correct: true }
+        ]
+    }, {
+        question: 'Who was the first President of the United States?',
+        answers: [
+            { text: 'Herbert Hoover', correct: false },
+            { text: 'George W. Bush', correct: false },
+            { text: 'James Monroe', correct: false },
+            { text: 'George Washington', correct: true }
+        ]
+    }, {
+        question: 'How many years did the 100 years war last?',
+        answers: [
+            { text: '116', correct: true },
+            { text: '100', correct: false },
+            { text: '101', correct: false },
+            { text: '97', correct: false }
+        ]
+    }, {
+        question: 'How many US presidents have been assassinated?',
+        answers: [
+            { text: '1', correct: false },
+            { text: '6', correct: false },
+            { text: '4', correct: true },
+            { text: '3', correct: false }
+        ]
+    }, {
+        question: 'Who invented the very first car?',
+        answers: [
+            { text: 'Henry Ford', correct: false },
+            { text: 'Andre Citroen', correct: false },
+            { text: 'Carl Benz', correct: true },
+            { text: 'Enzo Ferrari', correct: false }
+        ]
+    }, {
+        question: 'What year did the Great Fire of London happened?',
+        answers: [
+            { text: '1975', correct: false },
+            { text: '1766', correct: false },
+            { text: '1810', correct: false },
+            { text: '1666', correct: true }
+        ]
+    }
+];
