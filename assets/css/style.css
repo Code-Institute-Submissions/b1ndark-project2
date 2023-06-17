@@ -152,6 +152,18 @@ h2 {
     color: #000000;
 }
 
+/* Styling to Score Area */
+
+#score-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.main-counter-text {
+    text-align: center;
+}
+
 /* Styling to Answers */
 
 .correct-answer {
