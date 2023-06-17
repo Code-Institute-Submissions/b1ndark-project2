@@ -268,6 +268,10 @@ function selectMediumQuiz() {
         let currentMediumQuestion = mediumQuestions[currentQuestionIndex];
         questionElement.innerHTML = currentMediumQuestion.question;
 
+        // This will workout what question you are on and display it
+        currentQuestionIndex++;
+        answeredQuestionsCounter.innerHTML = `${currentQuestionIndex}/${mediumQuestions.length}`;
+
         /**
         * This function is to show answers of the current question
         * It will add a button for each answer of the current question, in this case 4 answers
@@ -349,7 +353,6 @@ function selectMediumQuiz() {
     * Next question Data will be loaded from game.js file
     */
     function handleNextMediumQuestion() {
-        currentQuestionIndex++;
         if (currentQuestionIndex < mediumQuestions.length) {
             showMediumQuestion();
             console.log("next question shown");
@@ -401,6 +404,10 @@ function selectHardQuiz() {
 
         let currentHardQuestion = hardQuestions[currentQuestionIndex];
         questionElement.innerHTML = currentHardQuestion.question;
+
+        // This will workout what question you are on and display it
+        currentQuestionIndex++;
+        answeredQuestionsCounter.innerHTML = `${currentQuestionIndex}/${hardQuestions.length}`;
 
         /**
         * This function is to show answers of the current question
@@ -483,7 +490,6 @@ function selectHardQuiz() {
     * Next question Data will be loaded from game.js file
     */
     function handleNextHardQuestion() {
-        currentQuestionIndex++;
         if (currentQuestionIndex < hardQuestions.length) {
             showHardQuestion();
             console.log("next question shown");
