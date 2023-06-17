@@ -72,6 +72,17 @@ function selectDifficulty() {
 
 
 /**
+ * Love Maths project helped me with this function
+ * This Function will get the current score
+ * and increase it by 1 as you progress and select correct answers
+ */
+ function addCorrectAnswersScore() {
+    let previousCorrectAnswersScore = parseInt(document.getElementById("correct-answers-score").innerText);
+    document.getElementById("correct-answers-score").innerText = ++previousCorrectAnswersScore;
+}
+
+
+/**
 * There are three modes Easy, Medium and Hard
 * The game will start on the mode that you have selected
 */
@@ -154,6 +165,7 @@ function selectEasyQuiz() {
             console.log("its correct");
             selectedAnswerButton.classList.add("correct-answer");
             score++;
+            addCorrectAnswersScore();
         } else {
             console.log("its wrong");
             selectedAnswerButton.classList.add("wrong-answer");
