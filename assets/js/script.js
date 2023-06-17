@@ -75,11 +75,11 @@ function selectDifficulty() {
 
 
 /**
- * Love Maths project helped me with this function
- * This Function will get the current score
- * and increase it by 1 as you progress and select correct answers
- */
- function addCorrectAnswersScore() {
+* Love Maths project helped me with this function
+* This Function will get the current score
+* and increase it by 1 as you progress and select correct answers
+*/
+function addCorrectAnswersScore() {
     let previousCorrectAnswersScore = parseInt(document.getElementById("correct-answers-score").innerText);
     document.getElementById("correct-answers-score").innerText = ++previousCorrectAnswersScore;
 }
@@ -334,6 +334,9 @@ function selectMediumQuiz() {
 
         // This will display Main Menu button
         backToIndexButton.style.display = 'block';
+
+        // This will Hide Score Area
+        scoreAreaDisplay.style.display = 'none';
     }
 
 
@@ -388,18 +391,18 @@ function selectHardQuiz() {
         console.log("show hard question");
 
         /**
-         * This function will show current question
-         * Data for the questions will be collected from game.js file
-         */
+        * This function will show current question
+        * Data for the questions will be collected from game.js file
+        */
 
         let currentHardQuestion = hardQuestions[currentQuestionIndex];
         questionElement.innerHTML = currentHardQuestion.question;
 
         /**
-         * This function is to show answers of the current question
-         * It will add a button for each answer of the current question, in this case 4 answers
-         * Data for the answers will be collected from game.js file
-         */
+        * This function is to show answers of the current question
+        * It will add a button for each answer of the current question, in this case 4 answers
+        * Data for the answers will be collected from game.js file
+        */
         currentHardQuestion.answers.forEach(answer => {
             console.log("answers displayed");
             const answerButton = document.createElement("button");
@@ -465,6 +468,9 @@ function selectHardQuiz() {
 
         // This will display Main Menu button
         backToIndexButton.style.display = 'block';
+
+        // This will Hide Score Area
+        scoreAreaDisplay.style.display = 'none';
     }
 
 
