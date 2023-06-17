@@ -252,6 +252,15 @@ h2 {
         margin-top: 200px;
         margin-bottom: 0;
     }
+
+    .main-counter-text {
+        font-size: 0.7rem;
+    }
+
+    .main-txt {
+        font-size: 0.7rem;
+    }
+
 }
 
 /* for extra small screen sizes from 335px wide and down */
@@ -262,19 +271,19 @@ h2 {
     }
 
     h2 {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     #question {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .btn {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
     }
 
     #instructions-container {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
     }
 
     .networks i {
