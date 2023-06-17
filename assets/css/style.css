@@ -77,12 +77,31 @@ h2 {
     cursor: pointer;
 }
 
+.btn-other {
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #000000;
+    text-align: center;
+    padding: 2px 20px;
+    font-size: 1rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
 .btn:hover:not([disabled]) {
     background-color: #464646;
 }
 
 .btn:disabled {
     cursor: none;
+}
+
+.btn-display-normal {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
 }
 
 .btn-display {
