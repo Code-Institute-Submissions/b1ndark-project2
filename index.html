@@ -26,13 +26,16 @@
 </head>
 
 <body>
+
     <!-- Title -->
     <div><a href="index.html">
             <h1>The History Quiz</h1>
         </a>
     </div>
+
     <!-- Containers -->
     <div class="container">
+
         <!-- Main Menu Container -->
         <div id="menu-container">
             <div>
@@ -44,6 +47,7 @@
                 <button id="score-board-btn" class="btn score-board">Score board</button>
             </div>
         </div>
+
         <!-- Difficulty Menu Container -->
         <div id="difficulty-container" class="hide">
             <div>
@@ -55,16 +59,39 @@
                 <button type="button" id="hard-btn" class="btn hard-btn">Hard</button>
             </div>
         </div>
+
         <!-- Questions Container -->
         <div id="question-container" class="hide">
+            <div id="score-area">
+
+                <!-- Question counter -->
+                <div class="score-item-content">
+                    <p class="main-txt">
+                        Question
+                    </p>
+                    <h4 class="main-counter-text" id="question-counter">1/10</h4>
+                </div>
+
+                <!-- Score counter -->
+                <div class="score-item-content">
+                    <p class="main-txt">
+                        Score
+                    </p>
+                    <h4 id="score-counter" class="main-counter-text"><span id="correct-answers-score">0</span></h4>
+                </div>
+            </div>
+
+            <!-- Here is where questions will appear from game.js file -->
             <div id="question">
                 <h2>Question</h2>
             </div>
             <div id="answer-buttons" class="btn-display">
+
                 <!-- Answer buttons will be created with JavaScript with its respective answers for the question -->
             </div>
             <button id="back-to-index-btn" class="btn hide"><a href="index.html">Main Menu</a></button>
         </div>
+
         <!-- Instructions container -->
         <div id="instructions-container" class="hide">
             <div>
@@ -103,6 +130,7 @@
             </div>
         </div>
     </footer>
+
     <!-- JavaScript -->
     <script src="assets/js/game.js"></script>
     <script src="assets/js/script.js"></script>
