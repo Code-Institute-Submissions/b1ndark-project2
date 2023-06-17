@@ -10,6 +10,7 @@ const backToIndexButton = document.getElementById("back-to-index-btn");
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const scoreAreaDisplay = document.getElementById("score-area");
+const answeredQuestionsCounter =document.getElementById("answered-question-counter");
 
 
 let currentQuestionIndex = 0;
@@ -131,6 +132,10 @@ function selectEasyQuiz() {
         let currentEasyQuestion = easyQuestions[currentQuestionIndex];
         questionElement.innerHTML = currentEasyQuestion.question;
 
+        // This will workout what question you are on and display it
+        currentQuestionIndex++;
+        answeredQuestionsCounter.innerHTML = `${currentQuestionIndex}/${easyQuestions.length}`;
+
         /**
         * This function is to show answers of the current question
         * It will add a button for each answer of the current question, in this case 4 answers
@@ -212,7 +217,6 @@ function selectEasyQuiz() {
     * Next question Data will be loaded from game.js file
     */
     function handleNextQuestion() {
-        currentQuestionIndex++;
         if (currentQuestionIndex < easyQuestions.length) {
             showEasyQuestion();
             console.log("next question shown");
