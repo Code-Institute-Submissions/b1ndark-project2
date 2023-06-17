@@ -9,9 +9,12 @@ const backToIndexButton = document.getElementById("back-to-index-btn");
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
+const scoreAreaDisplay = document.getElementById("score-area");
+
 
 let currentQuestionIndex = 0;
 let score = 0;
+
 
 // Difficulty menu selection
 const easyButton = document.getElementById('easy-btn');
@@ -198,6 +201,9 @@ function selectEasyQuiz() {
 
         // This will display Main Menu button
         backToIndexButton.style.display = 'block';
+
+        // This will Hide Score Area
+        scoreAreaDisplay.style.display = 'none';
     }
 
 
@@ -295,6 +301,7 @@ function selectMediumQuiz() {
             console.log("its correct");
             selectedAnswerButton.classList.add("correct-answer");
             score++;
+            addCorrectAnswersScore();
         } else {
             console.log("its wrong");
             selectedAnswerButton.classList.add("wrong-answer");
@@ -425,6 +432,7 @@ function selectHardQuiz() {
             console.log("its correct");
             selectedAnswerButton.classList.add("correct-answer");
             score++;
+            addCorrectAnswersScore();
         } else {
             console.log("its wrong");
             selectedAnswerButton.classList.add("wrong-answer");
