@@ -176,7 +176,7 @@ Font colors used:
 
   - This is a 404 Error page, just stating that the page wasn't found and gives the user a choice of going back to the Home page.
 
-  ![image]()
+  ![image](assets/images/readme/pagesdisplay/404ErrorPage.png)
 
 [Back to the top](#history-quiz)
 
