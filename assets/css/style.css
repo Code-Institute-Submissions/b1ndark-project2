@@ -210,6 +210,17 @@ h3 {
     text-align: center;
 }
 
+.question-counter {
+    color: #000000;
+    margin: auto;
+}
+
+.score-item-content {
+    text-align: center;
+}
+
+/* Progression bar */
+
 #progress-questions-bar {
     width: 100px;
     height: 15px;
@@ -222,12 +233,7 @@ h3 {
     background-color: #fff;
     width: 0%;
 }
-
-.question-counter {
-    color: #000000;
-    margin: auto;
-}
-
+ 
 /* Styling to Answers */
 
 .correct-answer {
