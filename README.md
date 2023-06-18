@@ -1,8 +1,11 @@
 # **History Quiz**
 
-## This website is a [History Quiz](),
+## This website is a [The History Quiz](https://b1ndark.github.io/project2/),
 
-<p>
+<p>The website is targeted for everyone, from young to elderly, there’s difficulty modes for everybody to enjoy :).
+<p>You can enjoy the different modes provided so you can test your knowledge regarding the history.
+<p>Users of this website will test and acquire knowledge.
+<p>Will also be able to see how you have score at the end.
 <br>
 
 ![image]()
@@ -25,8 +28,7 @@
   - [Languages used and its tests](#languages-used-and-its-tests)
   - [Accessibility](#accessibility)
   - [Testing](#testing)
-  - [Bugs](#bugs)
-  - [Problems](#problems)
+  - [Bugs](#bugs) 
   - [Deployment](#deployment)
   - [Credits](#credits)
   - [Acknowledgments](#acknowledgments)
@@ -37,23 +39,32 @@
 
 Visitors:
 
--
--
--
+- Users will be presented with a Quiz website that will test their knowledge.
+- The users will acquire knowledge of what they might not know.
+- They will be able to test the three difficulty modes presented.
 
 Goals:
 
--
--
--
+- First of all the main goal is for the user to have fun
+- Play solo or in a group to test your History knowledge
+- Go through every difficulty mode :).
 
 The website:
 
--
--
--
--
--
+- Starting at the begining the user will be presented with the ruins of a Castle in the Background
+- Within the same page the user will have a box in the middle of the screen with options that when pressed:
+    - START option will take you to the difficulty mode
+    - INSTRUCTIONS option will pop up a box with all instructions needed to play the quiz
+- Once in the difficulty menu the user will be able to select three option modes:
+    - EASY - The easiest mode for starters
+    - MEDIUM - The medium mode for users with some knowledge
+    - HARD - The hard mode for users that love the challenge.
+- Once the mode selected you will be presented with Questions that will have 4 answer options
+    - At the top you will be able to keep track of what question you are on and also your score.
+    - Once an answer is selected it will lock all other answers and show you whether you got it correct or not.
+    - Then will automatically move to the next question.
+- At the end of the quiz you will have a box that will congratulate you and present you will the score obtained.
+- After all that you can press Main Menu button which will take you back to the begining.
 
 [Back to the top](#history-quiz)
 
@@ -303,22 +314,11 @@ I did focus on making sure that the website is accessible:
 [Back to the top](#history-quiz)
 
 ---
-
-## Problems
-
-- ![image]()  
-  <br>
-- ![image]()  
-   <br>
-
-[Back to the top](#history-quiz)
-
----
-
+ 
 ## Deployment
 
 - The website was deployed to Github pages. Steps to deploy: 1. Log in into your github account. 2. In the Github repository select the project. 3. Navigate to the settings tab. 4. Then scroll down and on your left select Pages. 5. Go to branch, and select master branch. 6. Once master branch is selected, wait a moment and it will provide a page link to the website.
-  The live link can be found here - [My Website]()
+  The live link can be found here - [My Website](https://b1ndark.github.io/project2/)
   <br>
 
 [Back to the top](#history-quiz)
@@ -332,9 +332,9 @@ I did focus on making sure that the website is accessible:
       - []()
       - []()
       - []()
-      - []()
-      - []()
-      - []()
+      - [kwizzbit](https://kwizzbit.com/history-quiz-questions-and-answers/)
+      - [Thought Catalog](https://thoughtcatalog.com/katee-fletcher/2020/04/history-trivia-questions/)
+      - [Google Search](https://www.google.com/)
 
   <br>
 
@@ -346,28 +346,17 @@ I did focus on making sure that the website is accessible:
 
     - [PicJumbo](https://picjumbo.com)
     - [Pixabay](https://pixabay.com)
-    - [Unsplash](https://unsplash.com)
-    - [Pexels](https://www.pexels.com)
+
 
   - Photos Authors and where to find them:
 
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    -
-    - 404error - photo of - by []()
+    - Background photo - photo of Orphan's Castle Ruins in Klentnice by Viktor Hanacek[Orphan's Castle Ruins](https://picjumbo.com/detail-of-the-orphans-castle-ruins-in-klentnice/)
+    - 404error - photo of a Sad Emoti- by Silvia [sad emoti](https://pixabay.com/illustrations/emotiguy-sad-thoughtful-face-1654859/)
 
-  - The Favicon used - []()
+  - The Favicon generator used to create - [Favicon](https://favicon.io/favicon-generator/)
   - Footer social network links from:
-    - [Facebook](https://www.facebook.com/)
-    - [Instagram](https://www.instagram.com/)
-    - [Twitter](https://twitter.com/)
-    - [Youtube](https://www.youtube.com/)
+    - [My Github page](https://github.com/b1ndark)
+    - [My Linkedin page](https://www.linkedin.com/in/vitor-de-oliveira-50076b268/)
 
 [Back to the top](#history-quiz)
 
