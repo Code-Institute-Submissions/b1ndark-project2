@@ -10,7 +10,8 @@ const backToIndexButton = document.getElementById("back-to-index-btn");
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const scoreAreaDisplay = document.getElementById("score-area");
-const answeredQuestionsCounter =document.getElementById("answered-question-counter");
+const answeredQuestionsCounter = document.getElementById("answered-question-counter");
+const progressAnsweredQuestionBarFull = document.getElementById("fill-up-progress-question-bar")
 
 
 let currentQuestionIndex = 0;
@@ -102,7 +103,7 @@ function selectEasyQuiz() {
     questionContainerElement.classList.remove('hide');
     currentQuestionIndex = 0;
     score = 0;
-    showEasyQuestion()
+    showEasyQuestion();
 
 
     /**
@@ -135,6 +136,10 @@ function selectEasyQuiz() {
         // This will workout what question you are on and display it
         currentQuestionIndex++;
         answeredQuestionsCounter.innerHTML = `${currentQuestionIndex}/${easyQuestions.length}`;
+
+        // This will display a progression bar
+        progressAnsweredQuestionBarFull.style.width = `${(currentQuestionIndex / easyQuestions.length) * 100}%`;
+
 
         /**
         * This function is to show answers of the current question
