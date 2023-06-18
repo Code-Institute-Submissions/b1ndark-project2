@@ -277,6 +277,10 @@ function selectMediumQuiz() {
         currentQuestionIndex++;
         answeredQuestionsCounter.innerHTML = `${currentQuestionIndex}/${mediumQuestions.length}`;
 
+        // This will display a progression bar
+        progressAnsweredQuestionBarFull.style.width = `${(currentQuestionIndex / mediumQuestions.length) * 100}%`;
+
+
         /**
         * This function is to show answers of the current question
         * It will add a button for each answer of the current question, in this case 4 answers
@@ -413,6 +417,10 @@ function selectHardQuiz() {
         // This will workout what question you are on and display it
         currentQuestionIndex++;
         answeredQuestionsCounter.innerHTML = `${currentQuestionIndex}/${hardQuestions.length}`;
+
+        // This will display a progression bar
+        progressAnsweredQuestionBarFull.style.width = `${(currentQuestionIndex / hardQuestions.length) * 100}%`;
+
 
         /**
         * This function is to show answers of the current question
