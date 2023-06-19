@@ -249,7 +249,7 @@ h3 {
 /* for medium screens sizes from 768px wide and down */
 
 @media screen and (max-width: 768px) {
-    h1 {
+    .index-page-title {
         font-size: 2.5rem;
         margin-top: 220px;
         margin-bottom: 75px;
@@ -292,10 +292,10 @@ h3 {
 /* for small screens sizes from 576px wide and down */
 
 @media screen and (max-width: 576px) {
-    h1 {
+    .index-page-title {
         font-size: 2rem;
         margin-top: 75px;
-        margin-bottom: 100px;
+        margin-bottom: 0;
     }
 
     h2 {
@@ -344,7 +344,7 @@ h3 {
 /* for extra small screen sizes from 335px wide and down */
 
 @media screen and (max-width: 335px) {
-    h1 {
+    .index-page-title {
         font-size: 1.7rem;
     }
 
