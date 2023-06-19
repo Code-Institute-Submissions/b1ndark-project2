@@ -213,6 +213,7 @@ h3 {
 .question-counter {
     color: #000000;
     margin: auto;
+    font-weight: bold;
 }
 
 .score-item-content {
