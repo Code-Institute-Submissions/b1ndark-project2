@@ -210,6 +210,10 @@ h3 {
     text-align: center;
 }
 
+.main-text {
+    font-weight: bold;
+}
+
 .question-counter {
     color: #000000;
     margin: auto;
