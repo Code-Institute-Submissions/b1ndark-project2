@@ -198,6 +198,10 @@ h3 {
     color: #000000;
 }
 
+.networks i:hover {
+    color: #fff;
+}
+
 /* Styling to Score Area */
 
 #score-area {
