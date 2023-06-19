@@ -233,7 +233,7 @@ h3 {
     background-color: #fff;
     width: 0%;
 }
- 
+
 /* Styling to Answers */
 
 .correct-answer {
@@ -295,7 +295,6 @@ h3 {
     .index-page-title {
         font-size: 2rem;
         margin-top: 75px;
-        margin-bottom: 0;
     }
 
     h2 {
