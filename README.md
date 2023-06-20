@@ -126,54 +126,54 @@ Font colors used:
 
 - #### Main Page
 
-      - The main page presents a photo of ruins of a castle in the background.
-      - You have a container in the midle of the screen with some options.
+    - The main page presents a photo of ruins of a castle in the background.
+    - You have a container in the midle of the screen with some options.
 
-      ![image]()
+    ![image](assets/images/readme/pagesdisplay/mainpage.webp)
 
   <br>
 
 - #### Instructions Container
 
-      - This page shows you the procedures to take 
-      -
+    - This page shows you the procedures to take 
+    -
 
-      ![image]()
+    ![image](assets/images/readme/pagesdisplay/instructions.webp)
 
   <br>
 
 - #### Difficulty Page
 
-      - Here You will have a container with options and the ruins of a Castle in the background.
-      - Options are Easy, Medium and Hard.
+    - Here You will have a container with options and the ruins of a Castle in the background.
+    - Options are Easy, Medium and Hard.
 
-      ![image]()
+    ![image](assets/images/readme/pagesdisplay/difficulty.webp)
 
   <br>
 
 - #### Questions Container Page
 
-      - Once selected the mode  you will have this container with the questions.
-      - As you select the answer, it will show you whether you have got it right or not.
-      - Question number and score presented above the question.
+    - Once selected the mode  you will have this container with the questions.
+    - As you select the answer, it will show you whether you have got it right or not.
+    - Question number and score presented above the question.
 
-      ![image]()
+    ![image](assets/images/readme/pagesdisplay/questionspage.webp)
 
   <br>
 
 - #### End Page
 
-      - You will get a message with your score to congratulate you.
+    - You will get a message with your score to congratulate you.
 
-      ![image]()
+    ![image](assets/images/readme/pagesdisplay/endpage.webp)
 
   <br>
 
 - #### 404 Error page
 
-  - This is a 404 Error page, just stating that the page wasn't found and gives the user a choice of going back to the Home page.
+    - This is a 404 Error page, just stating that the page wasn't found and gives the user a choice of going back to the Home page.
 
-  ![image](assets/images/readme/pagesdisplay/404ErrorPage.png)
+    ![image](assets/images/readme/pagesdisplay/404ErrorPage.webp)
 
 [Back to the top](#history-quiz)
 
