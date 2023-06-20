@@ -270,8 +270,9 @@ h3 {
 @media screen and (max-width: 768px) {
     .index-page-title {
         font-size: 2.5rem;
+        margin-bottom: 120px;
     }
-    
+
     h2 {
         font-size: 1.4rem;
     }
@@ -301,6 +302,7 @@ h3 {
     }
 
     .network-container {
+        margin-top: 250px;
         max-width: 475px;
     }
 
@@ -312,6 +314,7 @@ h3 {
     .index-page-title {
         font-size: 2rem;
         margin-top: 75px;
+        margin-bottom: 75px;
     }
 
     h2 {
