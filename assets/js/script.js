@@ -207,7 +207,7 @@ function selectEasyQuiz() {
     function showScore() {
         resetEasyState();
         questionElement.innerHTML = `Well done in completing the quiz!` +
-            `<br> You have scored ${score} out of ${easyQuestions.length} questions!`;
+            `<br> You have answered ${score} correct questions out of ${easyQuestions.length} questions!`;
 
         // This will display Main Menu button
         backToIndexButton.style.display = 'block';
@@ -347,7 +347,7 @@ function selectMediumQuiz() {
     function showMediumScore() {
         resetMediumState()
         questionElement.innerHTML = `Well done in completing the quiz!` +
-            `<br> You have scored ${score} out of ${mediumQuestions.length} questions!`;
+            `<br> You have answered ${score} correct questions out of ${mediumQuestions.length} questions!`;
 
         // This will display Main Menu button
         backToIndexButton.style.display = 'block';
@@ -488,7 +488,7 @@ function selectHardQuiz() {
     function showHardScore() {
         resetHardState()
         questionElement.innerHTML = `Well done in completing the quiz!` +
-            `<br> You have scored ${score} out of ${hardQuestions.length} questions!`;
+            `<br> You have answered ${score} correct questions out of ${hardQuestions.length} questions!`;
 
         // This will display Main Menu button
         backToIndexButton.style.display = 'block';

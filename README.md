@@ -8,9 +8,9 @@
 <p>Will also be able to see how you have score at the end.
 <br>
 
-![image]()
+![image](assets/images/readme/amiresponsive.png)
 
-[]()
+[My Quiz website on Am I Responsive](https://ui.dev/amiresponsive?url=https://b1ndark.github.io/project2/)
 
 ---
 
@@ -76,14 +76,16 @@ The website:
 
 Fonts used came from [Google Fonts](https://fonts.google.com/):
 
-- []()
-- []()
+- ['Open sans', sans-serif](https://fonts.google.com/specimen/Open+Sans)
+- ['Montserrat', sans-serif](https://fonts.google.com/specimen/Montserrat)
 
 Font colors used:
 
--
--
-- <br>
+- Black: #000000
+- White: #fff / rgb(255, 255, 255)
+- Green: rgb(21, 219, 4)
+- Red: rgb(236, 32, 32)
+<br>
 
 [Back to the top](#history-quiz)
 
@@ -119,54 +121,49 @@ Font colors used:
 
 ### Features
 
-- #### Navigation
 
-      -
+  <br>
+
+- #### Main Page
+
+      - The main page presents a photo of ruins of a castle in the background.
+      - You have a container in the midle of the screen with some options.
+
+      ![image]()
+
+  <br>
+
+- #### Instructions Container
+
+      - This page shows you the procedures to take 
       -
 
       ![image]()
 
   <br>
 
-- #### Page
+- #### Difficulty Page
 
-      -
-      -
-
-      ![image]()
-
-  <br>
-
-- #### Page
-
-      -
-      -
+      - Here You will have a container with options and the ruins of a Castle in the background.
+      - Options are Easy, Medium and Hard.
 
       ![image]()
 
   <br>
 
-- #### Page
+- #### Questions Container Page
 
-      -
-      -
-
-      ![image]()
-
-  <br>
-
-- #### Page
-
-      -
-      -
+      - Once selected the mode  you will have this container with the questions.
+      - As you select the answer, it will show you whether you have got it right or not.
+      - Question number and score presented above the question.
 
       ![image]()
 
   <br>
 
-- #### Page
+- #### End Page
 
-      -
+      - You will get a message with your score to congratulate you.
 
       ![image]()
 
