@@ -259,29 +259,15 @@ I did focus on making sure that the website is accessible:
 
   - I can confirm that the fonts and colors chosen are easy to read and also Lighthouse performed really good.
 
-    - #### Page
+    - #### Desktop Page
 
-      ![image]()  
-      <br>
+    ![image](assets/images/readme/lighthouse/desktoplighthouse.webp)  
+    <br>
 
-    - #### Page
+    - #### Mobile Page
 
-      ![image]()  
-      <br>
-
-    - #### Page
-
-      ![image]()  
-      <br>
-
-    - #### Page
-
-      ![image]()  
-      <br>
-
-    - #### Page
-      ![image]()  
-      <br>
+    ![image](assets/images/readme/lighthouse/mobilelighthouse.webp)  
+    <br>
 
 [Back to the top](#history-quiz)
 
