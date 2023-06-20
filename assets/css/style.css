@@ -87,6 +87,7 @@ h2 {
     font-size: 1rem;
     transition: all 0.2s;
     cursor: pointer;
+    width: 140px;
 }
 
 .btn-other:hover {
