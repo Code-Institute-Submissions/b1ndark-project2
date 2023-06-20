@@ -255,15 +255,19 @@ h3 {
 
 /* Media queries */
 
-/* for medium screens sizes from 768px wide and down */
+/* for medium screens sizes from 1280px wide and down */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
     .index-page-title {
         font-size: 2.5rem;
         margin-top: 220px;
         margin-bottom: 75px;
     }
+}
 
+/* for medium screens sizes from 768px wide and down */
+
+@media screen and (max-width: 768px) {
     h2 {
         font-size: 1.4rem;
     }
@@ -370,6 +374,10 @@ h3 {
 
     .btn-other {
         font-size: 0.7rem;
+    }
+
+    .network-container {
+        margin-top: 0;
     }
 
     #instructions-container {
