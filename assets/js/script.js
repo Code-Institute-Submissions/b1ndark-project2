@@ -11,7 +11,7 @@ const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const scoreAreaDisplay = document.getElementById("score-area");
 const answeredQuestionsCounter = document.getElementById("answered-question-counter");
-const progressAnsweredQuestionBarFull = document.getElementById("fill-up-progress-question-bar")
+const progressAnsweredQuestionBarFull = document.getElementById("fill-up-progress-question-bar");
 
 
 let currentQuestionIndex = 0;
@@ -72,7 +72,7 @@ function selectDifficulty() {
     console.log('difficulty menu');
     startMenu.classList.add('hide');
     difficultyContainerElement.classList.remove('hide');
-    console.log('closed main menu')
+    console.log('closed main menu');
 }
 
 
@@ -159,7 +159,7 @@ function selectEasyQuiz() {
             // This Event Listener is to select an answer
             answerButton.addEventListener('click', selectEasyAnswer);
         });
-    };
+    }
 
 
     /**
@@ -243,7 +243,7 @@ function selectMediumQuiz() {
     questionContainerElement.classList.remove('hide');
     currentQuestionIndex = 0;
     score = 0;
-    showMediumQuestion()
+    showMediumQuestion();
 
 
     /**
@@ -299,7 +299,7 @@ function selectMediumQuiz() {
             // This Event Listener is to select an answer
             answerButton.addEventListener('click', selectMediumAnswer);
         });
-    };
+    }
 
 
     /**
@@ -345,7 +345,7 @@ function selectMediumQuiz() {
     * A text message has been added to congratulate the user.
     */
     function showMediumScore() {
-        resetMediumState()
+        resetMediumState();
         questionElement.innerHTML = `Well done in completing the quiz!` +
             `<br> You have answered ${score} correct questions out of ${mediumQuestions.length} questions!`;
 
@@ -383,7 +383,7 @@ function selectHardQuiz() {
     questionContainerElement.classList.remove('hide');
     currentQuestionIndex = 0;
     score = 0;
-    showHardQuestion()
+    showHardQuestion();
 
 
     /**
@@ -440,7 +440,7 @@ function selectHardQuiz() {
             // This Event Listener is to select an answer
             answerButton.addEventListener('click', selectHardAnswer);
         });
-    };
+    }
 
 
     /**
@@ -486,7 +486,7 @@ function selectHardQuiz() {
     * A text message has been added to congratulate the user.
     */
     function showHardScore() {
-        resetHardState()
+        resetHardState();
         questionElement.innerHTML = `Well done in completing the quiz!` +
             `<br> You have answered ${score} correct questions out of ${hardQuestions.length} questions!`;
 

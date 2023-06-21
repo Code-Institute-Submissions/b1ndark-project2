@@ -8,7 +8,7 @@
 <p>Will also be able to see how you have score at the end.
 <br>
 
-![image](assets/images/readme/amiresponsive.png)
+![image](assets/images/readme/amiresponsive.webp)
 
 [My Quiz website on Am I Responsive](https://ui.dev/amiresponsive?url=https://b1ndark.github.io/project2/)
 
@@ -207,34 +207,24 @@ Font colors used:
 
   - No errors were found when tested with W3C vallidator.
 
-    - Page  
-      ![image]()  
-      <br>
+    - Index Page  
+    ![image](assets/images/readme/validator/htmlvalidator.webp)  
+    <br>
 
-    - Page  
-      ![image]()  
-      <br>
-
-    - Page  
-      ![image]()  
-      <br>
-
-    - Page  
-      ![image]()  
-      <br>
-
-    - Page  
-      ![image]()  
-      <br>
-
-    - 404 Error Page  
-      ![image]()  
-      <br>
+    -404 Error Page  
+    ![image](assets/images/readme/validator/404errorpagevalidator.webp)  
+    <br>
 
 - ### CSS
   - No errors were found when tested with W3C (Jigsaw) validator.
     - CSS  
-      ![image]()
+    ![image](assets/images/readme/validator/cssvalidator.webp)
+    <br>
+
+- ### JavaScript
+  - 
+    -
+    <br>
 
 [Back to the top](#history-quiz)
 
