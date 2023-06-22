@@ -110,7 +110,7 @@ const mediumQuestions = [
             { text: 'THe Medieval Battle of Unity Spain', correct: false }
         ]
     }, {
-        question: 'what name is given to the deep ditch filled with water that often surrounded castles?',
+        question: 'What name is given to the deep ditch filled with water that often surrounded castles?',
         answers: [
             { text: 'Lake', correct: false },
             { text: 'Dam', correct: false },
