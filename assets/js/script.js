@@ -18,13 +18,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 
-// Difficulty menu selection
-const easyButton = document.getElementById('easy-btn');
-const mediumButton = document.getElementById('medium-btn');
-const hardButton = document.getElementById('hard-btn');
-
-
-/**
+/** 
 * Containers
 */
 const startMenu = document.getElementById("menu-container");
@@ -87,8 +81,7 @@ function addCorrectAnswersScore() {
 }
 
 
-
-
+// Difficulty menu selection
 const easy = document.getElementById("easy-btn");
 const medium = document.getElementById("medium-btn");
 const hard = document.getElementById("hard-btn");
