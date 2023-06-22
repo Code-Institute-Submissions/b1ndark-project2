@@ -216,7 +216,7 @@ function selectAnswer(event) {
 function showScore() {
     resetState();
     questionElement.innerHTML = `Well done in completing the quiz!` +
-        `<br> You have answered ${score} correct questions out of ${currentQuestion.length} questions!`;
+        `<br> You have answered ${score} correct out of ${10} questions!`;
 
     // This will display Main Menu button
     backToIndexButton.style.display = 'block';
