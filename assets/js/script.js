@@ -95,14 +95,13 @@ let currentQuestion = {};
 */
 
 
-function selectQuiz() {
+function selectQuiz(difficulty) {
     console.log('you have selected  mode');
     difficultyContainerElement.classList.add('hide');
     questionContainerElement.classList.remove('hide');
     currentQuestionIndex = 0;
     score = 0;
-    showQuestion();
-
+    showQuestion(difficulty);
 }
 
 /**
@@ -238,3 +237,4 @@ function handleNextQuestion() {
         showScore();
     }
 };
+
