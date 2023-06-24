@@ -22,7 +22,7 @@ a {
 .index-page-title {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    margin-top: 250px;
+    margin-top: 100px;
     margin-bottom: 120px;
     color: rgb(255, 255, 255);
     font-size: 4rem;
@@ -180,7 +180,6 @@ h3 {
     box-shadow: inset 0px 0px 10px 2px;
     margin: auto;
     text-align: center;
-    margin-bottom: 100px;
 }
 
 .networks {
@@ -262,13 +261,12 @@ h3 {
 @media screen and (max-width: 1280px) {
     .index-page-title {
         font-size: 3rem;
-        margin-top: 150px;
-        margin-bottom: 150px;
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
 
     .network-container {
-        margin-top: 250px;
-        max-width: 475px;
+        margin-top: 150px;
     }
 
 }
@@ -299,6 +297,10 @@ h3 {
 
     #instructions-container {
         font-size: 1rem;
+    }
+
+    .network-container {
+        max-width: 475px;
     }
 
     .networks i {
@@ -349,7 +351,7 @@ h3 {
     }
 
     .network-container {
-        margin-top: 200px;
+        margin-top: 100px;
         margin-bottom: 0;
     }
 
