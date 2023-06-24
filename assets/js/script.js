@@ -16,6 +16,8 @@ const progressAnsweredQuestionBarFull = document.getElementById("fill-up-progres
 
 let currentQuestionIndex = 0;
 let score = 0;
+let currentQuestion = {};
+let difficulty = "";
 
 
 /** 
@@ -86,22 +88,19 @@ const easy = document.getElementById("easy-btn");
 const medium = document.getElementById("medium-btn");
 const hard = document.getElementById("hard-btn");
 
-let currentQuestion = {};
-
-
-/**
+/** 
 * There are three modes Easy, Medium and Hard
 * The game will start on the mode that you have selected
 */
 
-
-function selectQuiz(difficulty) {
+function selectQuiz(selectedDifficulty) {
     console.log('you have selected  mode');
     difficultyContainerElement.classList.add('hide');
     questionContainerElement.classList.remove('hide');
     currentQuestionIndex = 0;
     score = 0;
-    showQuestion(difficulty);
+    difficulty = selectedDifficulty;
+    showQuestion();
 }
 
 /**
@@ -120,7 +119,7 @@ function resetState() {
 * This function will show questions and its answers
 */
 
-function showQuestion(difficulty) {
+function showQuestion() {
     resetState();
     console.log("show question");
 
@@ -174,6 +173,7 @@ function showQuestion(difficulty) {
 * This function will activate as soon as the User selects an answer
 */
 function selectAnswer(event) {
+    console.log(difficulty);
     console.log("answer selected");
     const selectedAnswerButton = event.target;
     const correctAnswer = selectedAnswerButton.dataset.correct === "true";
@@ -237,4 +237,5 @@ function handleNextQuestion() {
         showScore();
     }
 };
+
 
