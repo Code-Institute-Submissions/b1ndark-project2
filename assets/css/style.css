@@ -10,6 +10,7 @@
 
 .background {
     background: url(../images/background/orphans-castle-ruins.webp) no-repeat center center;
+    background-attachment: fixed;
 }
 
 a {
@@ -261,9 +262,15 @@ h3 {
 @media screen and (max-width: 1280px) {
     .index-page-title {
         font-size: 3rem;
-        margin-top: 200px;
-        margin-bottom: 75px;
+        margin-top: 150px;
+        margin-bottom: 150px;
     }
+
+    .network-container {
+        margin-top: 250px;
+        max-width: 475px;
+    }
+
 }
 
 /* for medium screens sizes from 768px wide and down */
@@ -299,11 +306,6 @@ h3 {
     }
 
     .container {
-        max-width: 475px;
-    }
-
-    .network-container {
-        margin-top: 250px;
         max-width: 475px;
     }
 
