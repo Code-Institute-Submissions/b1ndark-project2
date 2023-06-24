@@ -1,11 +1,12 @@
 /**
 * Buttons to access its containers
-* Variables
+* Global Variables
 */
 const startButton = document.getElementById("start-btn");
 const instructionsButton = document.getElementById("instructions-btn");
 const closeInstructionsButton = document.getElementById("close-instructions-btn");
 const backToIndexButton = document.getElementById("back-to-index-btn");
+const backToDifficultyMenu =document.getElementById("back-to-difficulty-menu");
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
@@ -69,7 +70,13 @@ function selectDifficulty() {
     startMenu.classList.add('hide');
     difficultyContainerElement.classList.remove('hide');
     console.log('closed main menu');
+    questionContainerElement.classList.add('hide');
 }
+
+/**
+ * By pressing back button it will take you back to Difficulty Menu
+ */
+backToDifficultyMenu.addEventListener('click', selectDifficulty);
 
 
 /**
@@ -222,6 +229,9 @@ function showScore() {
 
     // This will Hide Score Area
     scoreAreaDisplay.style.display = 'none';
+
+    // This will Hide the back button
+    backToDifficultyMenu.style.display = 'none';
 }
 
 
