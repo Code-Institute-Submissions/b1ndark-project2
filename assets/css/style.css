@@ -244,6 +244,36 @@ h3 {
     width: 0%;
 }
 
+/* Username Input Styling */
+
+.username-label {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.username-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.username-input {
+    height: 20px;
+    padding: 2px 20px;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.submit-btn {
+    padding: 2px 40px;
+}
+
+
 /* Styling to Answers */
 
 .correct-answer {
@@ -363,6 +393,10 @@ h3 {
         font-size: 0.7rem;
     }
 
+    .username-label {
+        font-size: 1rem;
+    }
+
 }
 
 /* for extra small screen sizes from 335px wide and down */
@@ -398,5 +432,9 @@ h3 {
 
     .networks i {
         font-size: 110%;
+    }
+
+    .username-label {
+        font-size: 0.8rem;
     }
 }
