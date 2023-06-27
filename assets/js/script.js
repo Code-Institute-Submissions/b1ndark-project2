@@ -6,7 +6,8 @@ const startButton = document.getElementById("start-btn");
 const instructionsButton = document.getElementById("instructions-btn");
 const closeInstructionsButton = document.getElementById("close-instructions-btn");
 const backToIndexButton = document.getElementById("back-to-index-btn");
-const backToDifficultyMenu =document.getElementById("back-to-difficulty-menu");
+const backToDifficultyMenu = document.getElementById("back-to-difficulty-menu");
+const submitButton = document.getElementById("submit-btn");
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
@@ -28,6 +29,7 @@ const startMenu = document.getElementById("menu-container");
 const difficultyContainerElement = document.getElementById("difficulty-container");
 const instructionsContainerElement = document.getElementById("instructions-container");
 const questionContainerElement = document.getElementById("question-container");
+const formContainer = document.getElementById("form-display");
 
 /**
 * Instructions container
@@ -221,7 +223,8 @@ function selectAnswer(event) {
 */
 function showScore() {
     resetState();
-    questionElement.innerHTML = `Well done in completing the quiz!` +
+    let username = localStorage.getItem('userName');
+    questionElement.innerHTML = `Well done ${username} in completing the quiz!` +
         `<br> You have answered ${score} correct out of ${10} questions!`;
 
     // This will display Main Menu button
@@ -248,4 +251,16 @@ function handleNextQuestion() {
     }
 };
 
+
+/**
+* This Function will localstore the username 
+* so we can display it in the title and at the end of the game.
+*/
+function usernameSubmit() {
+    let inputUsername = document.getElementById("usernameInput").value;
+    let chosenUsername = document.getElementById("chosen-username");
+    formContainer.style.display = 'none';
+    localStorage.setItem('userName', inputUsername);
+    chosenUsername.innerHTML = " " + inputUsername;
+}
 

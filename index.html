@@ -40,7 +40,7 @@
         <!-- Main Menu Container -->
         <div id="menu-container">
             <div>
-                <h2>Welcome and Enjoy the Quiz!</h2>
+                <h2>Welcome and Enjoy the Quiz<span id="chosen-username"></span>!</h2>
             </div>
             <div id="start-menu" class="btn-display-normal">
                 <button id="start-btn" class="btn-other start-btn">Start</button>
@@ -53,7 +53,7 @@
                 <label for="username" class="username-label">Username:</label>
                 <input type="text" id="usernameInput" name="text-input" class="username-input" required
                     placeholder="Username here">
-                <button id="submit-btn" class="btn-other btn submit-btn">Submit</button>
+                <button id="submit-btn" class="btn-other btn submit-btn" onclick="usernameSubmit()">Submit</button>
             </div>
         </div>
 
