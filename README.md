@@ -278,10 +278,11 @@ I did focus on making sure that the website is accessible:
 
 ## Bugs
 
-- -
-- -
-- -
--     -
+- The website had a bug that when a bigger container showed for example the instructions container, it would make the background messy as in moving out of place and zoom in.
+    - So to fix it I had to make the background image fixed by doing 'background-attachment: fixed;'
+- 
+- 
+- 
   <br>
 
 [Back to the top](#history-quiz)

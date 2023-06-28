@@ -214,7 +214,7 @@ function selectAnswer(event) {
     // Once answer is selected whether is correct or wrong it will automatically move to the next one
     setTimeout(() => {
         handleNextQuestion();
-    }, 2000);
+    }, 1500);
 }
 
 
