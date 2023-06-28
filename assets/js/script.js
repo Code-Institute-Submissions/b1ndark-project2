@@ -14,6 +14,7 @@ const answerButtons = document.getElementById("answer-buttons");
 const scoreAreaDisplay = document.getElementById("score-area");
 const answeredQuestionsCounter = document.getElementById("answered-question-counter");
 const progressAnsweredQuestionBarFull = document.getElementById("fill-up-progress-question-bar");
+const usernameInput = document.getElementById("usernameInput");
 
 
 let currentQuestionIndex = 0;
@@ -250,6 +251,12 @@ function handleNextQuestion() {
         showScore();
     }
 };
+
+
+// This Event Listener is to activate the submit button once you type username
+usernameInput.addEventListener('keyup', () => {
+    submitButton.disabled = !usernameInput.value;
+});
 
 
 /**
