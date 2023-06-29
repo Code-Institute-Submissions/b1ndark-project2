@@ -258,6 +258,10 @@ usernameInput.addEventListener('keyup', () => {
     submitButton.disabled = !usernameInput.value;
 });
 
+//This Event Listener is to activate Start button once username is submited
+submitButton.addEventListener('mousedown', () => {
+    startButton.disabled = !submitButton == 'none';
+})
 
 /**
 * This Function will localstore the username 
