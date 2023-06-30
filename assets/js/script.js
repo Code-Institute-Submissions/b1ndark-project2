@@ -74,6 +74,8 @@ function selectDifficulty() {
     difficultyContainerElement.classList.remove('hide');
     console.log('closed main menu');
     questionContainerElement.classList.add('hide');
+    //This line was added to reset the score incase the user goes back to difficulty menu
+    document.getElementById("correct-answers-score").innerText = 0;
 }
 
 /**
