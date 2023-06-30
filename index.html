@@ -43,9 +43,11 @@
                 <h2>Welcome and Enjoy the Quiz<span id="chosen-username"></span>!</h2>
             </div>
             <div id="start-menu" class="btn-display-normal">
-                <button id="start-btn" class="btn-other start-btn" onclick="selectDifficulty()" disabled>Start</button>
-                <button id="instructions-btn" class="btn-other instructions" onclick="selectInstructions() ">Instructions</button>
-                <button id="score-board-btn" class="btn-other score-board">Score board</button>
+                <button id="start-btn" class="btn-other btn start-btn" onclick="selectDifficulty()"
+                    disabled>Start</button>
+                <button id="instructions-btn" class="btn-other btn instructions"
+                    onclick="selectInstructions() ">Instructions</button>
+                <button id="score-board-btn" class="btn-other btn score-board">Score board</button>
             </div>
 
             <!-- Username input -->
@@ -53,7 +55,8 @@
                 <label for="username" class="username-label">Username:</label>
                 <input type="text" id="usernameInput" name="text-input" class="username-input" required
                     placeholder="Username here">
-                <button id="submit-btn" class="btn-other btn submit-btn" disabled onclick="usernameSubmit()">Submit</button>
+                <button id="submit-btn" class="btn-other btn submit-btn" disabled
+                    onclick="usernameSubmit()">Submit</button>
             </div>
         </div>
 
@@ -67,6 +70,7 @@
                 <button id="medium-btn" class="btn-other medium-btn" onclick="selectQuiz(medium)">Medium</button>
                 <button id="hard-btn" class="btn-other hard-btn" onclick="selectQuiz(hard)">Hard</button>
             </div>
+            <a href="index.html" id="back-btn" class="btn-other">Back</a>
         </div>
 
         <!-- Questions Container -->
