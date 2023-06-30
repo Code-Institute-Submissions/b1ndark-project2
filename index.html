@@ -43,8 +43,8 @@
                 <h2>Welcome and Enjoy the Quiz<span id="chosen-username"></span>!</h2>
             </div>
             <div id="start-menu" class="btn-display-normal">
-                <button id="start-btn" class="btn-other start-btn" disabled>Start</button>
-                <button id="instructions-btn" class="btn-other instructions">Instructions</button>
+                <button id="start-btn" class="btn-other start-btn" onclick="selectDifficulty()" disabled>Start</button>
+                <button id="instructions-btn" class="btn-other instructions" onclick="selectInstructions() ">Instructions</button>
                 <button id="score-board-btn" class="btn-other score-board">Score board</button>
             </div>
 
@@ -108,7 +108,7 @@
 
                 <!-- Answer buttons will be created with JavaScript with its respective answers for the question -->
             </div>
-            <button id="back-to-difficulty-menu" class="btn-back btn">Back</button>
+            <button id="back-to-difficulty-menu" class="btn-back btn" onclick="selectDifficulty()">Back</button>
             <a href="index.html" id="back-to-index-btn" class="btn-other hide">Main Menu</a>
         </div>
 
@@ -130,7 +130,7 @@
                 </ol>
             </div>
             <div id="instructions-menu" class="btn-display">
-                <button id="close-instructions-btn" class="btn instructions">Close</button>
+                <button id="close-instructions-btn" class="btn instructions" onclick="selectMainMenu()">Close</button>
             </div>
         </div>
     </div>

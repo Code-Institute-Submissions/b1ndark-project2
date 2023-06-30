@@ -1,7 +1,7 @@
 /**
-* Buttons to access its containers
-* Global Variables
-*/
+ * Buttons to access its containers
+ * Global Variables
+ */
 const startButton = document.getElementById("start-btn");
 const instructionsButton = document.getElementById("instructions-btn");
 const closeInstructionsButton = document.getElementById("close-instructions-btn");
@@ -24,8 +24,8 @@ let difficulty = "";
 
 
 /** 
-* Containers
-*/
+ * Containers
+ */
 const startMenu = document.getElementById("menu-container");
 const difficultyContainerElement = document.getElementById("difficulty-container");
 const instructionsContainerElement = document.getElementById("instructions-container");
@@ -33,13 +33,10 @@ const questionContainerElement = document.getElementById("question-container");
 const formContainer = document.getElementById("form-display");
 
 /**
-* Instructions container
-* By selecting Instructions button, you will be taken to Instructions container
-* Event Listener to select Instructions
-*/
-instructionsButton.addEventListener('click', selectInstructions);
-
-// This function will open the Instructions container
+ * Instructions container
+ * By selecting Instructions button, you will be taken to Instructions container
+ * This function will open the Instructions contain
+ */
 function selectInstructions() {
     console.log("open instructions");
     startMenu.classList.add('hide');
@@ -47,12 +44,9 @@ function selectInstructions() {
 }
 
 /**
-* By pressing Close button, it will close the Instructions container and take you back to Main Menu Container
-* Event Listener to close instructions
-*/
-closeInstructionsButton.addEventListener('click', selectMainMenu);
-
-// This function will close the Instructions container
+ * By pressing Close button, it will close the Instructions container and take you back to Main Menu Container
+ * This function will close the Instructions container
+ */
 function selectMainMenu() {
     console.log("close instructions");
     instructionsContainerElement.classList.add('hide');
@@ -62,12 +56,9 @@ function selectMainMenu() {
 
 
 /**
-* By pressing Start it will take you to the Difficulty Menu
-* Event Listener to take back to Difficulty Menu
-*/
-startButton.addEventListener('click', selectDifficulty);
-
-// Function to close Start Menu and open Difficulty Menu
+ * By pressing Start it will take you to the Difficulty Menu
+ * Function to close Start Menu and open Difficulty Menu
+ */
 function selectDifficulty() {
     console.log('difficulty menu');
     startMenu.classList.add('hide');
@@ -78,17 +69,12 @@ function selectDifficulty() {
     document.getElementById("correct-answers-score").innerText = 0;
 }
 
+
 /**
- * By pressing back button it will take you back to Difficulty Menu
+ * Love Maths project helped me with this function
+ * This Function will get the current score
+ * and increase it by 1 as you progress and select correct answers
  */
-backToDifficultyMenu.addEventListener('click', selectDifficulty);
-
-
-/**
-* Love Maths project helped me with this function
-* This Function will get the current score
-* and increase it by 1 as you progress and select correct answers
-*/
 function addCorrectAnswersScore() {
     let previousCorrectAnswersScore = parseInt(document.getElementById("correct-answers-score").innerText);
     document.getElementById("correct-answers-score").innerText = ++previousCorrectAnswersScore;
@@ -101,9 +87,9 @@ const medium = document.getElementById("medium-btn");
 const hard = document.getElementById("hard-btn");
 
 /** 
-* There are three modes Easy, Medium and Hard
-* The game will start on the mode that you have selected
-*/
+ * There are three modes Easy, Medium and Hard
+ * The game will start on the mode that you have selected
+ */
 
 function selectQuiz(selectedDifficulty) {
     console.log('you have selected  mode');
@@ -116,9 +102,9 @@ function selectQuiz(selectedDifficulty) {
 }
 
 /**
-    * This function will reset answers from previous questions
-    * 
-    */
+ * This function will reset answers from previous questions
+ * 
+ */
 function resetState() {
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
@@ -128,18 +114,18 @@ function resetState() {
 
 
 /**
-* This function will show questions and its answers
-*/
+ * This function will show questions and its answers
+ */
 
 function showQuestion() {
     resetState();
     console.log("show question");
 
     /**
-    * This function will show current question
-    * Data for the questions will be collected from game.js file
-    * It will pick the questions from the mode you have choosen
-    */
+     * This function will show current question
+     * Data for the questions will be collected from game.js file
+     * It will pick the questions from the mode you have choosen
+     */
     if (difficulty == easy) {
         currentQuestion = easyQuestions[currentQuestionIndex];
         console.log("easy questions");
@@ -161,10 +147,10 @@ function showQuestion() {
 
 
     /**
-    * This function is to show answers of the current question
-    * It will add a button for each answer of the current question, in this case 4 answers
-    * Data for the answers will be collected from game.js file
-    */
+     * This function is to show answers of the current question
+     * It will add a button for each answer of the current question, in this case 4 answers
+     * Data for the answers will be collected from game.js file
+     */
     currentQuestion.answers.forEach(answer => {
         console.log("answers displayed");
         const answerButton = document.createElement("button");
@@ -182,8 +168,8 @@ function showQuestion() {
 
 
 /**
-* This function will activate as soon as the User selects an answer
-*/
+ * This function will activate as soon as the User selects an answer
+ */
 function selectAnswer(event) {
     console.log(difficulty);
     console.log("answer selected");
@@ -191,9 +177,9 @@ function selectAnswer(event) {
     const correctAnswer = selectedAnswerButton.dataset.correct === "true";
 
     /**
-    * The answer will be checked whether is correct or wrong
-    * Also class has been added to decorate/style the correct and wrong answers
-    **/
+     * The answer will be checked whether is correct or wrong
+     * Also class has been added to decorate/style the correct and wrong answers
+     **/
     if (correctAnswer) {
         console.log("its correct");
         selectedAnswerButton.classList.add("correct-answer");
@@ -221,9 +207,9 @@ function selectAnswer(event) {
 
 
 /**
-* This function will show the user score at the end of the quiz.
-* A text message has been added to congratulate the user.
-*/
+ * This function will show the user score at the end of the quiz.
+ * A text message has been added to congratulate the user.
+ */
 function showScore() {
     resetState();
     let username = localStorage.getItem('userName');
@@ -242,9 +228,9 @@ function showScore() {
 
 
 /**
-* This function adds next question so the user can carry on with the quiz
-* Next question Data will be loaded from game.js file
-*/
+ * This function adds next question so the user can carry on with the quiz
+ * Next question Data will be loaded from game.js file
+ */
 function handleNextQuestion() {
     if (currentQuestionIndex < 10) {
         showQuestion();
@@ -266,9 +252,9 @@ submitButton.addEventListener('mousedown', () => {
 })
 
 /**
-* This Function will localstore the username 
-* so we can display it in the title and at the end of the game.
-*/
+ * This Function will localstore the username 
+ * so we can display it in the title and at the end of the game.
+ */
 function usernameSubmit() {
     let inputUsername = document.getElementById("usernameInput").value;
     let chosenUsername = document.getElementById("chosen-username");
@@ -276,4 +262,3 @@ function usernameSubmit() {
     localStorage.setItem('userName', inputUsername);
     chosenUsername.innerHTML = " " + inputUsername;
 }
-
