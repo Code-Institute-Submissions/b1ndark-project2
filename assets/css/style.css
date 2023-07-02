@@ -463,4 +463,12 @@ h3 {
     .username-label {
         font-size: 0.8rem;
     }
+
+    .container {
+        margin-bottom: 20px;
+    }
+
+    .network-container {
+        margin-top: 20px;
+    }
 }

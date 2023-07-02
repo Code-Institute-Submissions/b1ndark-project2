@@ -135,10 +135,18 @@ Font colors used:
 
 - #### Instructions Container
 
-    - This page shows you the procedures to take 
-    -
+    - This container shows you the procedures to take 
 
     ![image](assets/images/readme/pagesdisplay/instructions.webp)
+
+  <br>
+
+- #### Scoreboard Container
+
+    - This container shows you the Scoreboard 
+    - You will be able to check your score
+
+    ![image](assets/images/readme/pagesdisplay/scoreboard.webp)
 
   <br>
 
@@ -195,6 +203,7 @@ Font colors used:
 - [Font Awesome](https://fontawesome.com/) - To display icons.
 - [W3C HTML](https://validator.w3.org/#validate_by_input) - To verify HTML.
 - [W3C CSS](https://jigsaw.w3.org/css-validator/#validate_by_input) - To verify CSS.
+- [JSHint](https://jshint.com/) - To verify JavaScript.
 - [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/word?activetab=tabs%3afaqheaderregion3) - Used to write most of my documents.
 
 [Back to the top](#history-quiz)
@@ -222,8 +231,9 @@ Font colors used:
     <br>
 
 - ### JavaScript
-  - 
-    -
+  - No errors were found when tested with JSHint validator.
+    - JavaScript
+    ![image]()
     <br>
 
 [Back to the top](#history-quiz)
@@ -236,9 +246,9 @@ I did focus on making sure that the website is accessible:
 
 -
 -
--
--
--
+- Semantic HTML.
+- colour contrast in every page.
+- Kept the Quiz simple and easy to navigate.
 -
 
 [Back to the top](#history-quiz)
@@ -265,12 +275,12 @@ I did focus on making sure that the website is accessible:
 
 ## Testing
 
--
--
--
--
--
-- <br>
+- I have tested the Quiz website and it works on different types of browsers like Chrome, Safari, Microsoft Edge and Firefox.
+- I have also tested and work on different mobile phone brands such Iphones, Realmes, Huaweis, Samsungs and also Xiaomis.
+- The project is responsive as I have tested it on different types of screen sizes using devtools.
+- All content of every container is readable and easy to understand.
+- All functions work as they should.
+ <br>
 
 [Back to the top](#history-quiz)
 
@@ -280,7 +290,8 @@ I did focus on making sure that the website is accessible:
 
 - The website had a bug that when a bigger container showed for example the instructions container, it would make the background messy as in moving out of place and zoom in.
     - So to fix it I had to make the background image fixed by doing 'background-attachment: fixed;'
-- 
+- The quiz had a bug when entered in a mode and after answering a few questions, if you pressed back button and entered again, the score wouldn't reset.
+    - To fix it I had to add "document.getElementById("correct-answers-score").innerText = 0;" on to function selectDifficulty(), in order to reset it.
 - 
 - 
   <br>
