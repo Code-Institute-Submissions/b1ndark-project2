@@ -47,7 +47,8 @@
                     disabled>Start</button>
                 <button id="instructions-btn" class="btn-other btn instructions"
                     onclick="selectInstructions() ">Instructions</button>
-                <button id="score-board-btn" class="btn-other btn score-board">Score board</button>
+                <button id="score-board-btn" class="btn-other btn score-board" onclick="selectScoreboard()">Score
+                    board</button>
             </div>
 
             <!-- Username input -->
@@ -135,6 +136,17 @@
             </div>
             <div id="instructions-menu" class="btn-display">
                 <button id="close-instructions-btn" class="btn instructions" onclick="selectMainMenu()">Close</button>
+            </div>
+        </div>
+
+        <!-- Scoreboard container -->
+        <div id="scoreboard-container" class="hide">
+            <div>
+                <h2>Scoreboard!</h2>
+                <ul id="scoreboard-list"></ul>
+            </div>
+            <div id="scoreboard-menu" class="btn-display">
+                <button id="close-scoreboard-btn" class="btn scoreboard" onclick="selectMainMenu()">Close</button>
             </div>
         </div>
     </div>

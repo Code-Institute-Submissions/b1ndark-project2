@@ -31,6 +31,7 @@ const difficultyContainerElement = document.getElementById("difficulty-container
 const instructionsContainerElement = document.getElementById("instructions-container");
 const questionContainerElement = document.getElementById("question-container");
 const formContainer = document.getElementById("form-display");
+const scoreboardContainerElement = document.getElementById("scoreboard-container");
 
 /**
  * Instructions container
@@ -38,20 +39,28 @@ const formContainer = document.getElementById("form-display");
  * This function will open the Instructions contain
  */
 function selectInstructions() {
-    console.log("open instructions");
     startMenu.classList.add('hide');
     instructionsContainerElement.classList.remove('hide');
 }
+
+/**
+ * Scoreboard container
+ * By selecting Scoreboard button, you will be taken to Scoreboard container
+ */
+function selectScoreboard() {
+    startMenu.classList.add('hide');
+    scoreboardContainerElement.classList.remove('hide');
+}
+
 
 /**
  * By pressing Close button, it will close the Instructions container and take you back to Main Menu Container
  * This function will close the Instructions container
  */
 function selectMainMenu() {
-    console.log("close instructions");
     instructionsContainerElement.classList.add('hide');
     startMenu.classList.remove('hide');
-    console.log('back to Main Menu');
+    scoreboardContainerElement.classList.add('hide');
 }
 
 
@@ -60,10 +69,8 @@ function selectMainMenu() {
  * Function to close Start Menu and open Difficulty Menu
  */
 function selectDifficulty() {
-    console.log('difficulty menu');
     startMenu.classList.add('hide');
     difficultyContainerElement.classList.remove('hide');
-    console.log('closed main menu');
     questionContainerElement.classList.add('hide');
     //This line was added to reset the score incase the user goes back to difficulty menu
     document.getElementById("correct-answers-score").innerText = 0;
@@ -92,7 +99,6 @@ const hard = document.getElementById("hard-btn");
  */
 
 function selectQuiz(selectedDifficulty) {
-    console.log('you have selected  mode');
     difficultyContainerElement.classList.add('hide');
     questionContainerElement.classList.remove('hide');
     currentQuestionIndex = 0;
@@ -108,7 +114,6 @@ function selectQuiz(selectedDifficulty) {
 function resetState() {
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
-        console.log("previous answers cleared");
     }
 }
 
@@ -119,7 +124,6 @@ function resetState() {
 
 function showQuestion() {
     resetState();
-    console.log("show question");
 
     /**
      * This function will show current question
@@ -128,13 +132,10 @@ function showQuestion() {
      */
     if (difficulty == easy) {
         currentQuestion = easyQuestions[currentQuestionIndex];
-        console.log("easy questions");
     } else if (difficulty == medium) {
         currentQuestion = mediumQuestions[currentQuestionIndex];
-        console.log("medium questions");
     } else {
         currentQuestion = hardQuestions[currentQuestionIndex];
-        console.log("hard questions");
     }
     questionElement.innerHTML = currentQuestion.question;
 
@@ -152,7 +153,6 @@ function showQuestion() {
      * Data for the answers will be collected from game.js file
      */
     currentQuestion.answers.forEach(answer => {
-        console.log("answers displayed");
         const answerButton = document.createElement("button");
         answerButton.innerHTML = answer.text;
         answerButton.classList.add("btn");
@@ -171,8 +171,6 @@ function showQuestion() {
  * This function will activate as soon as the User selects an answer
  */
 function selectAnswer(event) {
-    console.log(difficulty);
-    console.log("answer selected");
     const selectedAnswerButton = event.target;
     const correctAnswer = selectedAnswerButton.dataset.correct === "true";
 
@@ -181,12 +179,10 @@ function selectAnswer(event) {
      * Also class has been added to decorate/style the correct and wrong answers
      **/
     if (correctAnswer) {
-        console.log("its correct");
         selectedAnswerButton.classList.add("correct-answer");
         score++;
         addCorrectAnswersScore();
     } else {
-        console.log("its wrong");
         selectedAnswerButton.classList.add("wrong-answer");
     }
 
@@ -196,7 +192,6 @@ function selectAnswer(event) {
             button.classList.add("correct-answer");
         }
         button.disabled = true;
-        console.log("answers locked");
     });
 
     // Once answer is selected whether is correct or wrong it will automatically move to the next one
@@ -234,7 +229,6 @@ function showScore() {
 function handleNextQuestion() {
     if (currentQuestionIndex < 10) {
         showQuestion();
-        console.log("next question shown");
     } else {
         showScore();
     }
