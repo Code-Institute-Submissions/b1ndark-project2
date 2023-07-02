@@ -50,6 +50,7 @@ function selectInstructions() {
 function selectScoreboard() {
     startMenu.classList.add('hide');
     scoreboardContainerElement.classList.remove('hide');
+    showScoreboard();
 }
 
 
@@ -207,7 +208,7 @@ function selectAnswer(event) {
  */
 function showScore() {
     resetState();
-    let username = localStorage.getItem('userName');
+    let username = localStorage.getItem('username');
     questionElement.innerHTML = `Well done ${username} in completing the quiz!` +
         `<br> You have answered ${score} correct out of ${10} questions!`;
 
@@ -232,6 +233,9 @@ function handleNextQuestion() {
     } else {
         showScore();
     }
+
+    //save the score in to localstorage
+    localStorage.setItem('score', score);
 };
 
 
@@ -253,6 +257,33 @@ function usernameSubmit() {
     let inputUsername = document.getElementById("usernameInput").value;
     let chosenUsername = document.getElementById("chosen-username");
     formContainer.style.display = 'none';
-    localStorage.setItem('userName', inputUsername);
+    localStorage.setItem('username', inputUsername);
     chosenUsername.innerHTML = " " + inputUsername;
+}
+
+/**
+ * This function will access the localstorage and get username and score to store on scoreboard
+ */
+function showScoreboard() {
+    let showScoreList = document.getElementById("scoreboard-list");
+    const username = localStorage.getItem('username');
+    const endScore = localStorage.getItem('score');
+    const scoreboard = JSON.parse(localStorage.getItem('scoreboard')) || [];
+    let score = {
+        score: endScore,
+        username: `${username}`
+    };
+
+    //This is to prevent from showing null in scoreboard if the user hasn't played yet
+    if (score.score > 1) {
+        scoreboard.push(score);
+        showScoreList.innerHTML = scoreboard
+            .map(score => {
+                return `<li class="score-list">${score.username} - ${score.score}</li>`;
+            })
+            .join("");
+    } else {
+        //It won't show null on scoreboard
+        showScoreList.innerHTML = "";
+    };
 }
