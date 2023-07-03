@@ -53,16 +53,21 @@ The website:
 
 - Starting at the begining the user will be presented with the ruins of a Castle in the Background
 - Within the same page the user will have a box in the middle of the screen with options that when pressed:
-    - START option will take you to the difficulty mode
-    - INSTRUCTIONS option will pop up a box with all instructions needed to play the quiz
+    - START - option will take you to the difficulty mode
+    - INSTRUCTIONS - option will pop up a box with all instructions needed to play the quiz
+    - SCOREBOARD - option will display the scoreboard of the quiz
+    - Input box - for the username to type the name in order to play the quiz
+    - SUBMIT - button to submit the username
 - Once in the difficulty menu the user will be able to select three option modes:
     - EASY - The easiest mode for starters
     - MEDIUM - The medium mode for users with some knowledge
     - HARD - The hard mode for users that love the challenge.
+    - BACK - button to go back to main menu
 - Once the mode selected you will be presented with Questions that will have 4 answer options
     - At the top you will be able to keep track of what question you are on and also your score.
     - Once an answer is selected it will lock all other answers and show you whether you got it correct or not.
     - Then will automatically move to the next question.
+    - BACK - button to go back to difficulty menu
 - At the end of the quiz you will have a box that will congratulate you and present you will the score obtained.
 - After all that you can press Main Menu button which will take you back to the begining.
 
@@ -96,23 +101,27 @@ Font colors used:
 - Created for mobile devices and desktops
 
   - Home Page  
-    ![image]()  
+    ![image](assets/images/readme/wireframes/mainmenu.webp)  
     <br>
 
-  - Page  
-    ![image]()  
+  - Instructions Page  
+    ![image](assets/images/readme/wireframes/instructions.webp)  
     <br>
 
-  - Page  
-    ![image]()  
+  - Scoreboard Page  
+    ![image](assets/images/readme/wireframes/scoreboard.webp)  
     <br>
 
-  - Page  
-    ![image]()  
+  - Difficulty Page  
+    ![image](assets/images/readme/wireframes/difficulty.webp)  
     <br>
 
-  - Page  
-    ![image]()  
+  - Questions Page  
+    ![image](assets/images/readme/wireframes/questions.webp)  
+    <br>
+
+  - End Page  
+    ![image](assets/images/readme/wireframes/endgame.webp)  
     <br>
 
 [Back to the top](#history-quiz)
@@ -129,7 +138,7 @@ Font colors used:
     - The main page presents a photo of ruins of a castle in the background.
     - You have a container in the midle of the screen with some options.
 
-    ![image](assets/images/readme/pagesdisplay/mainpage.webp)
+      ![image](assets/images/readme/pagesdisplay/mainpage.webp)
 
   <br>
 
@@ -137,7 +146,7 @@ Font colors used:
 
     - This container shows you the procedures to take 
 
-    ![image](assets/images/readme/pagesdisplay/instructions.webp)
+      ![image](assets/images/readme/pagesdisplay/instructions.webp)
 
   <br>
 
@@ -146,7 +155,7 @@ Font colors used:
     - This container shows you the Scoreboard 
     - You will be able to check your score
 
-    ![image](assets/images/readme/pagesdisplay/scoreboard.webp)
+      ![image](assets/images/readme/pagesdisplay/scoreboard.webp)
 
   <br>
 
@@ -155,7 +164,7 @@ Font colors used:
     - Here You will have a container with options and the ruins of a Castle in the background.
     - Options are Easy, Medium and Hard.
 
-    ![image](assets/images/readme/pagesdisplay/difficulty.webp)
+      ![image](assets/images/readme/pagesdisplay/difficulty.webp)
 
   <br>
 
@@ -165,7 +174,7 @@ Font colors used:
     - As you select the answer, it will show you whether you have got it right or not.
     - Question number and score presented above the question.
 
-    ![image](assets/images/readme/pagesdisplay/questionspage.webp)
+      ![image](assets/images/readme/pagesdisplay/questionspage.webp)
 
   <br>
 
@@ -173,7 +182,7 @@ Font colors used:
 
     - You will get a message with your score to congratulate you.
 
-    ![image](assets/images/readme/pagesdisplay/endpage.webp)
+      ![image](assets/images/readme/pagesdisplay/endpage.webp)
 
   <br>
 
@@ -181,7 +190,7 @@ Font colors used:
 
     - This is a 404 Error page, just stating that the page wasn't found and gives the user a choice of going back to the Home page.
 
-    ![image](assets/images/readme/pagesdisplay/404ErrorPage.webp)
+      ![image](assets/images/readme/pagesdisplay/404ErrorPage.webp)
 
 [Back to the top](#history-quiz)
 
@@ -220,7 +229,7 @@ Font colors used:
     ![image](assets/images/readme/validator/htmlvalidator.webp)  
     <br>
 
-    -404 Error Page  
+    - 404 Error Page  
     ![image](assets/images/readme/validator/404errorpagevalidator.webp)  
     <br>
 
@@ -292,7 +301,8 @@ I did focus on making sure that the website is accessible:
     - So to fix it I had to make the background image fixed by doing 'background-attachment: fixed;'
 - The quiz had a bug when entered in a mode and after answering a few questions, if you pressed back button and entered again, the score wouldn't reset.
     - To fix it I had to add "document.getElementById("correct-answers-score").innerText = 0;" on to function selectDifficulty(), in order to reset it.
-- 
+- For new users or users that cleared cache and pressed Scoreboard straight away before playing the Quiz. Had a bug which was showing "null - null" in the scoreboard.
+  - To avoid that issue I have added an if statement to show an empty scoreboard - 'if (score.score > 1)...', 'else showScoreList.innerHTML = "";'. 
 - 
   <br>
 
@@ -314,12 +324,18 @@ I did focus on making sure that the website is accessible:
 
 - ### Content
 
-      - []()
-      - []()
-      - []()
-      - [kwizzbit](https://kwizzbit.com/history-quiz-questions-and-answers/)
-      - [Thought Catalog](https://thoughtcatalog.com/katee-fletcher/2020/04/history-trivia-questions/)
-      - [Google Search](https://www.google.com/)
+    - [kwizzbit](https://kwizzbit.com/history-quiz-questions-and-answers/)
+    - [Thought Catalog](https://thoughtcatalog.com/katee-fletcher/2020/04/history-trivia-questions/)
+    - [Google Search](https://www.google.com/)
+
+    - I have watched some tutorials on youtube which I will leave below-
+      - [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&ab_channel=WebDevSimplified)
+      - [GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8&ab_channel=GreatStack)
+      - [James Q Quick](https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=1&ab_channel=JamesQQuick)
+      - [Keith Paterson](https://www.youtube.com/watch?v=KB6Yg5hNrqc&ab_channel=KeithPaterson)
+
+    - I have used Readme structure from my first project as a template.
+    - To increment the score I have used Love Maths project to help me.
 
   <br>
 
