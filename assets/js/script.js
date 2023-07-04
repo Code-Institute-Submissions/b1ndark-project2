@@ -219,7 +219,7 @@ function handleNextQuestion() {
 
     //save the score in to localstorage
     localStorage.setItem('score', score);
-};
+}
 
 // This Event Listener is to activate the submit button once you type username
 usernameInput.addEventListener('keyup', () => {
@@ -228,8 +228,8 @@ usernameInput.addEventListener('keyup', () => {
 
 //This Event Listener is to activate Start button once username is submited
 submitButton.addEventListener('mousedown', () => {
-    startButton.disabled = !submitButton == 'none';
-})
+    startButton.disabled = submitButton == 'none';
+});
 
 /**
  * This Function will localstore the username 
@@ -269,5 +269,5 @@ function showScoreboard() {
     } else {
         //It won't show null on scoreboard if user hasn't played yet
         showScoreList.innerHTML = "";
-    };
+    }
 }
