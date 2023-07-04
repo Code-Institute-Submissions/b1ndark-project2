@@ -241,8 +241,11 @@ Font colours used:
 
 - ### JavaScript
   - No errors were found when tested with JSHint validator.
-    - JavaScript
-    ![image]()
+    - JavaScript Quiz  
+    ![image](assets/images/readme/validator/quizjsvalidator.webp)
+    <br>
+    - JavaScript Questions  
+    ![image](assets/images/readme/validator/questionsjsvalidator.webp)
     <br>
 
 [Back to the top](#history-quiz)
@@ -253,12 +256,11 @@ Font colours used:
 
 I did focus on making sure that the website is accessible:
 
--
--
+- Main container displaying buttons, that when hovered the same ones change colour
+- Maintained the same layout and style in every container
 - Semantic HTML.
 - colour contrast in every page.
 - Kept the Quiz simple and easy to navigate.
--
 
 [Back to the top](#history-quiz)
 
