@@ -1,14 +1,14 @@
 /**
- * Buttons to access its containers
- * Global Variables
+ * Buttons to access its containers and Global Variables
+ * Watched various tutorials on youtube which I will leave below-
+ * https://www.youtube.com/watch?v=riDzcEQbX6k&ab_channel=WebDevSimplified
+ * https://www.youtube.com/watch?v=PBcqGxrr9g8&ab_channel=GreatStack
+ * https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=1&ab_channel=JamesQQuick
  */
 const startButton = document.getElementById("start-btn");
-const instructionsButton = document.getElementById("instructions-btn");
-const closeInstructionsButton = document.getElementById("close-instructions-btn");
 const backToIndexButton = document.getElementById("back-to-index-btn");
 const backToDifficultyMenu = document.getElementById("back-to-difficulty-menu");
 const submitButton = document.getElementById("submit-btn");
-
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const scoreAreaDisplay = document.getElementById("score-area");
@@ -16,12 +16,10 @@ const answeredQuestionsCounter = document.getElementById("answered-question-coun
 const progressAnsweredQuestionBarFull = document.getElementById("fill-up-progress-question-bar");
 const usernameInput = document.getElementById("usernameInput");
 
-
 let currentQuestionIndex = 0;
 let score = 0;
 let currentQuestion = {};
 let difficulty = "";
-
 
 /** 
  * Containers
@@ -53,7 +51,6 @@ function selectScoreboard() {
     showScoreboard();
 }
 
-
 /**
  * By pressing Close button, it will close the Instructions container and take you back to Main Menu Container
  * This function will close the Instructions container
@@ -63,7 +60,6 @@ function selectMainMenu() {
     startMenu.classList.remove('hide');
     scoreboardContainerElement.classList.add('hide');
 }
-
 
 /**
  * By pressing Start it will take you to the Difficulty Menu
@@ -77,7 +73,6 @@ function selectDifficulty() {
     document.getElementById("correct-answers-score").innerText = 0;
 }
 
-
 /**
  * Love Maths project helped me with this function
  * This Function will get the current score
@@ -88,7 +83,6 @@ function addCorrectAnswersScore() {
     document.getElementById("correct-answers-score").innerText = ++previousCorrectAnswersScore;
 }
 
-
 // Difficulty menu selection
 const easy = document.getElementById("easy-btn");
 const medium = document.getElementById("medium-btn");
@@ -98,7 +92,6 @@ const hard = document.getElementById("hard-btn");
  * There are three modes Easy, Medium and Hard
  * The game will start on the mode that you have selected
  */
-
 function selectQuiz(selectedDifficulty) {
     difficultyContainerElement.classList.add('hide');
     questionContainerElement.classList.remove('hide');
@@ -118,7 +111,6 @@ function resetState() {
     }
 }
 
-
 /**
  * This function will show questions and its answers
  */
@@ -126,11 +118,10 @@ function resetState() {
 function showQuestion() {
     resetState();
 
-    /**
-     * This function will show current question
-     * Data for the questions will be collected from game.js file
-     * It will pick the questions from the mode you have choosen
-     */
+
+    // This function will show current question
+    // Data for the questions will be collected from game.js file
+    // It will pick the questions from the mode you have choosen
     if (difficulty == easy) {
         currentQuestion = easyQuestions[currentQuestionIndex];
     } else if (difficulty == medium) {
@@ -147,12 +138,9 @@ function showQuestion() {
     // This will display a progression bar
     progressAnsweredQuestionBarFull.style.width = `${(currentQuestionIndex / 10) * 100}%`;
 
-
-    /**
-     * This function is to show answers of the current question
-     * It will add a button for each answer of the current question, in this case 4 answers
-     * Data for the answers will be collected from game.js file
-     */
+    // This function is to show answers of the current question
+    // It will add a button for each answer of the current question, in this case 4 answers
+    // Data for the answers will be collected from game.js file
     currentQuestion.answers.forEach(answer => {
         const answerButton = document.createElement("button");
         answerButton.innerHTML = answer.text;
@@ -167,7 +155,6 @@ function showQuestion() {
     });
 }
 
-
 /**
  * This function will activate as soon as the User selects an answer
  */
@@ -175,10 +162,8 @@ function selectAnswer(event) {
     const selectedAnswerButton = event.target;
     const correctAnswer = selectedAnswerButton.dataset.correct === "true";
 
-    /**
-     * The answer will be checked whether is correct or wrong
-     * Also class has been added to decorate/style the correct and wrong answers
-     **/
+    // The answer will be checked whether is correct or wrong
+    // Also class has been added to decorate/style the correct and wrong answers
     if (correctAnswer) {
         selectedAnswerButton.classList.add("correct-answer");
         score++;
@@ -201,7 +186,6 @@ function selectAnswer(event) {
     }, 1500);
 }
 
-
 /**
  * This function will show the user score at the end of the quiz.
  * A text message has been added to congratulate the user.
@@ -222,7 +206,6 @@ function showScore() {
     backToDifficultyMenu.style.display = 'none';
 }
 
-
 /**
  * This function adds next question so the user can carry on with the quiz
  * Next question Data will be loaded from game.js file
@@ -238,7 +221,6 @@ function handleNextQuestion() {
     localStorage.setItem('score', score);
 };
 
-
 // This Event Listener is to activate the submit button once you type username
 usernameInput.addEventListener('keyup', () => {
     submitButton.disabled = !usernameInput.value;
@@ -252,6 +234,7 @@ submitButton.addEventListener('mousedown', () => {
 /**
  * This Function will localstore the username 
  * so we can display it in the title and at the end of the game.
+ * Watched on youtube https://www.youtube.com/watch?v=KB6Yg5hNrqc&ab_channel=KeithPaterson
  */
 function usernameSubmit() {
     let inputUsername = document.getElementById("usernameInput").value;
@@ -263,6 +246,7 @@ function usernameSubmit() {
 
 /**
  * This function will access the localstorage and get username and score to store on scoreboard
+ * Watched https://www.youtube.com/watch?v=jfOv18lCMmw&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=9&ab_channel=JamesQQuick
  */
 function showScoreboard() {
     let showScoreList = document.getElementById("scoreboard-list");
@@ -274,7 +258,7 @@ function showScoreboard() {
         username: `${username}`
     };
 
-    //This is to prevent from showing null in scoreboard if the user hasn't played yet
+    // This is to prevent from showing null in scoreboard if the user hasn't played yet
     if (score.score > 1) {
         scoreboard.push(score);
         showScoreList.innerHTML = scoreboard
@@ -283,7 +267,7 @@ function showScoreboard() {
             })
             .join("");
     } else {
-        //It won't show null on scoreboard
+        //It won't show null on scoreboard if user hasn't played yet
         showScoreList.innerHTML = "";
     };
 }

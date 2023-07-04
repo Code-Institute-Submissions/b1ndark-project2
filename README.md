@@ -51,7 +51,7 @@ Goals:
 
 The website:
 
-- Starting at the begining the user will be presented with the ruins of a Castle in the Background
+- Starting at the beginning the user will be presented with the ruins of a Castle in the Background
 - Within the same page the user will have a box in the middle of the screen with options that when pressed:
     - START - option will take you to the difficulty mode
     - INSTRUCTIONS - option will pop up a box with all instructions needed to play the quiz
@@ -69,7 +69,7 @@ The website:
     - Then will automatically move to the next question.
     - BACK - button to go back to difficulty menu
 - At the end of the quiz you will have a box that will congratulate you and present you will the score obtained.
-- After all that you can press Main Menu button which will take you back to the begining.
+- After all that you can press Main Menu button which will take you back to the beginning.
 
 [Back to the top](#history-quiz)
 
@@ -84,7 +84,7 @@ Fonts used came from [Google Fonts](https://fonts.google.com/):
 - ['Open sans', sans-serif](https://fonts.google.com/specimen/Open+Sans)
 - ['Montserrat', sans-serif](https://fonts.google.com/specimen/Montserrat)
 
-Font colors used:
+Font colours used:
 
 - Black: #000000
 - White: #fff / rgb(255, 255, 255)
@@ -136,7 +136,7 @@ Font colors used:
 - #### Main Page
 
     - The main page presents a photo of ruins of a castle in the background.
-    - You have a container in the midle of the screen with some options.
+    - You have a container in the middle of the screen with some options.
 
       ![image](assets/images/readme/pagesdisplay/mainpage.webp)
 
@@ -223,7 +223,7 @@ Font colors used:
 
 - ### HTML
 
-  - No errors were found when tested with W3C vallidator.
+  - No errors were found when tested with W3C validator.
 
     - Index Page  
     ![image](assets/images/readme/validator/htmlvalidator.webp)  
@@ -266,7 +266,7 @@ I did focus on making sure that the website is accessible:
 
 - ### Lighthouse
 
-  - I can confirm that the fonts and colors chosen are easy to read and also Lighthouse performed really good.
+  - I can confirm that the fonts and colours chosen are easy to read and also Lighthouse performed really good.
 
     - #### Desktop Page
 
@@ -312,7 +312,7 @@ I did focus on making sure that the website is accessible:
  
 ## Deployment
 
-- The website was deployed to Github pages. Steps to deploy: 1. Log in into your github account. 2. In the Github repository select the project. 3. Navigate to the settings tab. 4. Then scroll down and on your left select Pages. 5. Go to branch, and select master branch. 6. Once master branch is selected, wait a moment and it will provide a page link to the website.
+- The website was deployed to Github pages. Steps to deploy: 1. Log in into your Github account. 2. In the Github repository select the project. 3. Navigate to the settings tab. 4. Then scroll down and on your left select Pages. 5. Go to branch, and select master branch. 6. Once master branch is selected, wait a moment and it will provide a page link to the website.
   The live link can be found here - [My Website](https://b1ndark.github.io/project2/)
   <br>
 
@@ -351,7 +351,7 @@ I did focus on making sure that the website is accessible:
 
   - Photos Authors and where to find them:
 
-    - Background photo - photo of Orphan's Castle Ruins in Klentnice by Viktor Hanacek[Orphan's Castle Ruins](https://picjumbo.com/detail-of-the-orphans-castle-ruins-in-klentnice/)
+    - Background photo - photo of Orphan's Castle Ruins in Klentnice by Viktor Hanacek [Orphan's Castle Ruins](https://picjumbo.com/detail-of-the-orphans-castle-ruins-in-klentnice/)
     - 404error - photo of a Sad Emoti- by Silvia [sad emoti](https://pixabay.com/illustrations/emotiguy-sad-thoughtful-face-1654859/)
 
   - The Favicon generator used to create - [Favicon](https://favicon.io/favicon-generator/)
