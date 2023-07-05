@@ -17,20 +17,34 @@
 ## **Content**
 
 - [**History Quiz**](#history-quiz)
-  - [This website is a History Quiz,](#this-website-is-a-history-quiz)
-  - [**Content**](#content)
-  - [**User Experience**](#user-experience)
-  - [**Design**](#design)
+  - [User Experience](#user-experience)
+  - [Design](#design)
     - [Typography](#typography)
     - [Wireframes](#wireframes)
     - [Features](#features)
+      - [Main Menu Container](#main-menu-container)
+      - [Instructions Container](#instructions-container)
+      - [Scoreboard Container](#scoreboard-container)
+      - [Difficulty Container](#difficulty-container)
+      - [Questions Container](#questions-container)
+      - [End Page](#end-page)
+      - [404 Error page](#404-error-page)  
   - [Programs and tools used](#programs-and-tools-used)
-  - [Languages used and its tests](#languages-used-and-its-tests)
+  - [Languages](#languages)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [JavaScript](#javascript)  
   - [Accessibility](#accessibility)
+    - [Lighthouse](#lighthouse)
+      - [Desktop Page](#desktop-page)
+      - [Mobile Page](#mobile-page)  
   - [Testing](#testing)
   - [Bugs](#bugs) 
   - [Deployment](#deployment)
   - [Credits](#credits)
+    - [Content](#content-1)
+    - [Media](#media)  
+
   - [Acknowledgments](#acknowledgments)
 
 ---
@@ -133,7 +147,7 @@ Font colours used:
 
   <br>
 
-- #### Main Page
+- #### Main Menu Container
 
     - The main page presents a photo of ruins of a castle in the background.
     - You have a container in the middle of the screen with some options.
@@ -159,7 +173,7 @@ Font colours used:
 
   <br>
 
-- #### Difficulty Page
+- #### Difficulty Container
 
     - Here You will have a container with options and the ruins of a Castle in the background.
     - Options are Easy, Medium and Hard.
@@ -168,7 +182,7 @@ Font colours used:
 
   <br>
 
-- #### Questions Container Page
+- #### Questions Container
 
     - Once selected the mode  you will have this container with the questions.
     - As you select the answer, it will show you whether you have got it right or not.
@@ -219,7 +233,7 @@ Font colours used:
 
 ---
 
-## Languages used and its tests
+## Languages
 
 - ### HTML
 
@@ -314,8 +328,15 @@ I did focus on making sure that the website is accessible:
  
 ## Deployment
 
-- The website was deployed to Github pages. Steps to deploy: 1. Log in into your Github account. 2. In the Github repository select the project. 3. Navigate to the settings tab. 4. Then scroll down and on your left select Pages. 5. Go to branch, and select master branch. 6. Once master branch is selected, wait a moment and it will provide a page link to the website.
-  The live link can be found here - [My Website](https://b1ndark.github.io/project2/)
+- The website was deployed to Github pages. Steps to deploy: 
+  1. Log in into your Github account. 
+  2. In the Github repository select the project. 
+  3. Navigate to the settings tab. 
+  4. Then scroll down and on your left select Pages. 
+  5. Go to branch, and select master branch. 
+  6. Once master branch is selected, wait a moment and it will provide a page link to the website.  
+  <br>
+- The live link can be found here - [My Website](https://b1ndark.github.io/project2/)
   <br>
 
 [Back to the top](#history-quiz)
@@ -326,11 +347,12 @@ I did focus on making sure that the website is accessible:
 
 - ### Content
 
-    - [kwizzbit](https://kwizzbit.com/history-quiz-questions-and-answers/)
-    - [Thought Catalog](https://thoughtcatalog.com/katee-fletcher/2020/04/history-trivia-questions/)
-    - [Google Search](https://www.google.com/)
+    - I have Searched for some questions regarding History, I have left the website links and tools below:
+      - [kwizzbit](https://kwizzbit.com/history-quiz-questions-and-answers/)
+      - [Thought Catalog](https://thoughtcatalog.com/katee-fletcher/2020/04/history-trivia-questions/)
+      - [Google Search](https://www.google.com/)
 
-    - I have watched some tutorials on youtube which I will leave below-
+    - I have watched some tutorials on youtube which I will leave below:
       - [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&ab_channel=WebDevSimplified)
       - [GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8&ab_channel=GreatStack)
       - [James Q Quick](https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=1&ab_channel=JamesQQuick)
