@@ -47,8 +47,8 @@
                     disabled>Start</button>
                 <button id="instructions-btn" class="btn-other btn instructions"
                     onclick="selectInstructions() ">Instructions</button>
-                <button id="score-board-btn" class="btn-other btn score-board"
-                    onclick="selectScoreboard()">Scoreboard</button>
+                <button id="scoreboard-btn" class="btn-other btn score-board" onclick="selectScoreboard()"
+                    disabled>Scoreboard</button>
             </div>
 
             <!-- Username input -->
@@ -95,7 +95,7 @@
                 <!-- Score counter -->
                 <div class="score-item-content">
                     <p class="main-text">
-                        Score
+                        Correct Answers:
                     </p>
                     <h4 class="main-counter-text">
                         <span id="correct-answers-score">
@@ -114,7 +114,7 @@
                 <!-- Answer buttons will be created with JavaScript with its respective answers for the question -->
             </div>
             <button id="back-to-difficulty-menu" class="btn-back btn" onclick="selectDifficulty()">Back</button>
-            <a href="index.html" id="back-to-index-btn" class="btn-other hide">Main Menu</a>
+            <button id="back-to-index-btn" class="btn-other btn hide" onclick="selectMainMenu()">Main Menu</button>
         </div>
 
         <!-- Instructions container -->
@@ -124,17 +124,17 @@
                 <br>
                 <ol>
                     <li>First in order to start, you will have to insert your username and submit</li>
-                    <li>Now you will be able to Start</li>
-                    <li>Once the difficulty menu shows you will be able to select the difficulty mode</li>
+                    <li>After pressing Start, the difficulty will pop up and you will be able to select the difficulty
+                        mode</li>
+                    <li>Score points for each correct answer, easy = 1, medium = 2 and hard = 5</li>
                     <li>After selecting the difficulty mode, you will be taken to the quiz</li>
-                    <li>Where you will have four answer options for each question</li>
+                    <li>Where you will have four answer options for each question, Each mode has 10 questions</li>
                     <li>Once the Answer is selected it will take you to the next question in 1.5 seconds</li>
-                    <li>Each mode has 10 questions</li>
                     <li>The goal will be to get the highest score possible</li>
                     <li>Have fun and enjoy the quiz :)</li>
                 </ol>
             </div>
-            <div id="instructions-menu" class="btn-display">
+            <div id="instructions-menu" class="btn-display btn-intructions">
                 <button id="close-instructions-btn" class="btn instructions" onclick="selectMainMenu()">Close</button>
             </div>
         </div>

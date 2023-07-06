@@ -15,6 +15,7 @@ const scoreAreaDisplay = document.getElementById("score-area");
 const answeredQuestionsCounter = document.getElementById("answered-question-counter");
 const progressAnsweredQuestionBarFull = document.getElementById("fill-up-progress-question-bar");
 const usernameInput = document.getElementById("usernameInput");
+const scoreboardButton = document.getElementById("scoreboard-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -49,6 +50,9 @@ function selectScoreboard() {
     startMenu.classList.add('hide');
     scoreboardContainerElement.classList.remove('hide');
     showScoreboard();
+
+    // to stop scoreboard bug, everytime you repeated countless times going into scoreboard and exit, it would add same score to scoreboard.
+    localStorage.removeItem('score');
 }
 
 /**
@@ -59,6 +63,7 @@ function selectMainMenu() {
     instructionsContainerElement.classList.add('hide');
     startMenu.classList.remove('hide');
     scoreboardContainerElement.classList.add('hide');
+    questionContainerElement.classList.add('hide');
 }
 
 /**
@@ -111,14 +116,22 @@ function resetState() {
     }
 }
 
+// This function is to reset everyhting after playing first time, was having issues as the Score Area and Back button weren't being displayed
+function resetQuestionContainer() {
+    // This will display Main Menu button
+    backToIndexButton.style.display = 'none';
+    // This will Hide Score Area
+    scoreAreaDisplay.style.display = 'flex';
+    // This will Hide the back button
+    backToDifficultyMenu.style.display = 'block';
+}
+
 /**
  * This function will show questions and its answers
  */
-
 function showQuestion() {
     resetState();
-
-
+    resetQuestionContainer();
     // This function will show current question
     // Data for the questions will be collected from game.js file
     // It will pick the questions from the mode you have choosen
@@ -165,8 +178,14 @@ function selectAnswer(event) {
     // The answer will be checked whether is correct or wrong
     // Also class has been added to decorate/style the correct and wrong answers
     if (correctAnswer) {
+        if (difficulty == easy) {
+            score++;
+        } else if (difficulty == medium) {
+            score += 2;
+        } else {
+            score += 5;
+        }
         selectedAnswerButton.classList.add("correct-answer");
-        score++;
         addCorrectAnswersScore();
     } else {
         selectedAnswerButton.classList.add("wrong-answer");
@@ -194,7 +213,7 @@ function showScore() {
     resetState();
     let username = localStorage.getItem('username');
     questionElement.innerHTML = `Well done ${username} in completing the quiz!` +
-        `<br> You have answered ${score} correct out of ${10} questions!`;
+        `<br> You have scored ${score} points!`;
 
     // This will display Main Menu button
     backToIndexButton.style.display = 'block';
@@ -229,6 +248,7 @@ usernameInput.addEventListener('keyup', () => {
 //This Event Listener is to activate Start button once username is submited
 submitButton.addEventListener('mousedown', () => {
     startButton.disabled = submitButton == 'none';
+    scoreboardButton.disabled = submitButton == 'none';
 });
 
 /**
@@ -259,15 +279,21 @@ function showScoreboard() {
     };
 
     // This is to prevent from showing null in scoreboard if the user hasn't played yet
-    if (score.score > 1) {
+    if (score.score === null || score.score === undefined) {
+        //It won't show null on scoreboard if user hasn't played yet
+        return '';
+    } else {
         scoreboard.push(score);
+        // To sort scores in order from the highest at the top to the lowest at the bottom
+        scoreboard.sort((a, b) => b.score - a.score);
+        // Keeps the top 5 scores by removing the lowest ones from the array
+        scoreboard.splice(5);
+        // To convert into a string
+        localStorage.setItem('scoreboard', JSON.stringify((scoreboard)));
         showScoreList.innerHTML = scoreboard
             .map(score => {
                 return `<li class="score-list">${score.username} - ${score.score}</li>`;
             })
             .join("");
-    } else {
-        //It won't show null on scoreboard if user hasn't played yet
-        showScoreList.innerHTML = "";
     }
 }
