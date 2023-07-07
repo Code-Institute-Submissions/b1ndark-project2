@@ -282,7 +282,10 @@ usernameInput.addEventListener('keyup', () => {
  * so we can display it in the title and at the end of the game.
  * Watched on youtube https://www.youtube.com/watch?v=KB6Yg5hNrqc&ab_channel=KeithPaterson
  */
-submitButton.addEventListener('click', usernameSubmit);
+submitButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    usernameSubmit();
+});
 
 function usernameSubmit() {
     let inputUsername = document.getElementById("usernameInput").value;

@@ -267,6 +267,11 @@ h3 {
 
 /* Username Input Styling */
 
+#form-display {
+    display: flex;
+    justify-content: center;
+}
+
 .username-label {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
