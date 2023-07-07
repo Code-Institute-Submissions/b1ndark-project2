@@ -62,6 +62,7 @@ Goals:
 - First of all the main goal is for the user to have fun
 - Play solo or in a group to test your History knowledge
 - Go through every difficulty mode :).
+- To try achieve the top 5 in the scoreboard.
 
 The website:
 
@@ -72,6 +73,7 @@ The website:
     - SCOREBOARD - option will display the scoreboard of the quiz
     - Input box - for the username to type the name in order to play the quiz
     - SUBMIT - button to submit the username
+    - If user trys to start without entering username, an alert box will pop up to ask the user to enter username.
 - Once in the difficulty menu the user will be able to select three option modes:
     - EASY - The easiest mode for starters
     - MEDIUM - The medium mode for users with some knowledge
@@ -318,8 +320,9 @@ I did focus on making sure that the website is accessible:
 - The quiz had a bug when entered in a mode and after answering a few questions, if you pressed back button and entered again, the score wouldn't reset.
     - To fix it I had to add "document.getElementById("correct-answers-score").innerText = 0;" on to function selectDifficulty(), in order to reset it.
 - For new users or users that cleared cache and pressed Scoreboard straight away before playing the Quiz. Had a bug which was showing "null - null" in the scoreboard.
-  - To avoid that issue I have added an if statement to show an empty scoreboard - 'if (score.score > 1)...', 'else showScoreList.innerHTML = "";'. 
-- 
+  - To avoid that issue I have added an if statement to show an empty scoreboard - 'if (score.score === null || score.score === undefined) {return '';}.
+- If User wanted to play the quiz more then once, after first time, the question container was having issues in displaying score area and back button.
+  - So to fix this bug I had to add a new function "resetQuestionContainer()" to reset the style display of the same ones.
   <br>
 
 [Back to the top](#history-quiz)

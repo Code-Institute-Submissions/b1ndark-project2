@@ -117,10 +117,7 @@ function selectQuiz(selectedDifficulty) {
     showQuestion();
 }
 
-/**
- * This function will reset answers from previous questions
- * 
- */
+// This function will reset answers from previous questions
 function resetState() {
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
@@ -258,7 +255,6 @@ usernameInput.addEventListener('keyup', () => {
 
 //This Event Listener is to activate Start button once username is submited
 submitButton.addEventListener('mousedown', () => {
-    startButton.disabled = submitButton == 'none';
     scoreboardButton.disabled = submitButton == 'none';
 });
 
