@@ -5,7 +5,7 @@
 
 // Easy Mode/ 10 questions in Easy mode
 
-const easyQuestions = [{
+export const easyQuestions = [{
     question: 'What are the four nations that make the UK?',
     answers: [{
             text: 'England, Wales, Northern Ireland and Sweden.',
@@ -200,7 +200,7 @@ const easyQuestions = [{
 
 // Medium Mode/ 10 questions in Medium mode
 
-const mediumQuestions = [{
+export const mediumQuestions = [{
     question: 'In Ancient Rome, what was a thermae?',
     answers: [{
             text: 'Restaurant',
@@ -395,7 +395,7 @@ const mediumQuestions = [{
 
 // Hard Mode/ 10 questions in Hard mode
 
-const hardQuestions = [{
+export const hardQuestions = [{
     question: 'Which 3 countries made up the Triple Entente in World War 1?',
     answers: [{
             text: 'Portugal, Spain and Italy',

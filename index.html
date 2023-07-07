@@ -49,10 +49,10 @@
             </div>
 
             <!-- Username input -->
-            <div id="form-display" >
+            <div id="form-display">
                 <form class="username-form">
-                    <label class="username-label">Username:</label>
-                    <input type="text" id="usernameInput" name="text-input" class="username-input" required
+                    <label aria-label="username" for="username" class="username-label">Username:</label>
+                    <input type="text" id="usernameInput" name="username" class="username-input" required
                         placeholder="Username here">
                     <button id="submit-btn" class="btn-other btn submit-btn" disabled>Submit</button>
                 </form>
@@ -66,8 +66,8 @@
                 <h2>Choose the difficulty and let's play</h2>
             </div>
             <div class="btn-display-normal">
-                <button id="easy-btn" class="btn-other easy-btn" onclick="selectQuiz(easy)">Easy</button>
-                <button id="medium-btn" class="btn-other medium-btn" onclick="selectQuiz(medium)">Medium</button>
+                <button id="easy-btn" class="btn-other easy-btn">Easy</button>
+                <button id="medium-btn" class="btn-other medium-btn">Medium</button>
                 <button id="hard-btn" class="btn-other hard-btn">Hard</button>
             </div>
             <button id="back-btn" class="btn-back btn">Back</button>
@@ -169,8 +169,8 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="assets/js/game.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/game.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,8 @@
+import {
+    easyQuestions,
+    mediumQuestions,
+    hardQuestions
+} from "./game.js";
 /**
  * Buttons to access its containers and Global Variables
  * Watched various tutorials on youtube which I will leave below-
@@ -36,9 +41,8 @@ const questionContainerElement = document.getElementById("question-container");
 const formContainer = document.getElementById("form-display");
 const scoreboardContainerElement = document.getElementById("scoreboard-container");
 
-
+// Function to delete all the localStorage, to avoid issues and bugs with scoreboard
 function resetLocalStorage() {
-    // to stop scoreboard bug, everytime you repeated countless times going into scoreboard and exit, it would add same score to scoreboard.
     localStorage.removeItem('score');
     localStorage.removeItem('username');
 }
@@ -46,10 +50,10 @@ function resetLocalStorage() {
 /**
  * Instructions container
  * By selecting Instructions button, you will be taken to Instructions container
- * This function will open the Instructions contain
+ * Event Listener to open and close instructions
  */
 instructionsButton.addEventListener('click', selectInstructions);
-
+//This function will open the Instructions container
 function selectInstructions() {
     startMenu.classList.add('hide');
     instructionsContainerElement.classList.remove('hide');
@@ -59,23 +63,23 @@ closeInstructionsButton.addEventListener('click', selectMainMenu);
 /**
  * Scoreboard container
  * By selecting Scoreboard button, you will be taken to Scoreboard container
+ * Event Listener to open and close scoreboard
  */
 scoreboardButton.addEventListener('click', selectScoreboard);
-
+//This function will open the scoreboard container
 function selectScoreboard() {
     startMenu.classList.add('hide');
     scoreboardContainerElement.classList.remove('hide');
     showScoreboard();
 }
 closeScoreboardButton.addEventListener('click', selectMainMenu);
+
 /**
- * By pressing Close button, it will close the Instructions container and take you back to Main Menu Container
- * This function will close the Instructions container
+ * Event Listener to take back to Main menu container
  */
 backToIndexButton.addEventListener('click', selectMainMenu);
-
+//This function will open the Main Menu container
 function selectMainMenu() {
-    resetLocalStorage();
     instructionsContainerElement.classList.add('hide');
     startMenu.classList.remove('hide');
     scoreboardContainerElement.classList.add('hide');
@@ -96,10 +100,10 @@ startButton.addEventListener('click', () => {
 
 /**
  * By pressing Start it will take you to the Difficulty Menu
- * Function to close Start Menu and open Difficulty Menu
+ * Event listener to take you to Difficulty Menu
  */
 backToDifficultyMenu.addEventListener('click', selectDifficulty);
-
+//Function will open the Difficulty Menu container
 function selectDifficulty() {
     startMenu.classList.add('hide');
     difficultyContainerElement.classList.remove('hide');
@@ -123,7 +127,15 @@ function addCorrectAnswersScore() {
 const easy = document.getElementById("easy-btn");
 const medium = document.getElementById("medium-btn");
 const hard = document.getElementById("hard-btn");
-
+//Event Listener for Easy mode
+easy.addEventListener('click', () => {
+    selectQuiz(easy);
+});
+//Event Listener for Medium mode
+medium.addEventListener('click', () => {
+    selectQuiz(medium);
+});
+//Event Listener for Hard mode
 hard.addEventListener('click', selectQuiz);
 
 /** 
@@ -209,10 +221,13 @@ function selectAnswer(event) {
     // Also class has been added to decorate/style the correct and wrong answers
     if (correctAnswer) {
         if (difficulty == easy) {
+            // Easy mode adds 1 score per each correct answer
             score++;
         } else if (difficulty == medium) {
+            // Medium mode adds 2 score per each correct answer
             score += 2;
         } else {
+            // Hard mode adds 5 score per each correct answer
             score += 5;
         }
         selectedAnswerButton.classList.add("correct-answer");
@@ -240,6 +255,8 @@ function selectAnswer(event) {
  * A text message has been added to congratulate the user.
  */
 function showScore() {
+    //save the score in to localstorage
+    localStorage.setItem('score', score);
     resetState();
     let username = localStorage.getItem('username');
     questionElement.innerHTML = `Well done ${username} in completing the quiz!` +
@@ -267,9 +284,6 @@ function handleNextQuestion() {
     } else {
         showScore();
     }
-
-    //save the score in to localstorage
-    localStorage.setItem('score', score);
 }
 
 // This Event Listener is to activate the submit button once you type username
@@ -277,16 +291,17 @@ usernameInput.addEventListener('keyup', () => {
     submitButton.disabled = !usernameInput.value;
 });
 
+// This Event Listener is to prevent form default action
+submitButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    usernameSubmit();
+});
+
 /**
  * This Function will localstore the username 
  * so we can display it in the title and at the end of the game.
  * Watched on youtube https://www.youtube.com/watch?v=KB6Yg5hNrqc&ab_channel=KeithPaterson
  */
-submitButton.addEventListener('click', function(event) {
-    event.preventDefault();
-    usernameSubmit();
-});
-
 function usernameSubmit() {
     let inputUsername = document.getElementById("usernameInput").value;
     let chosenUsername = document.getElementById("chosen-username");
