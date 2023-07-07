@@ -16,6 +16,10 @@ const answeredQuestionsCounter = document.getElementById("answered-question-coun
 const progressAnsweredQuestionBarFull = document.getElementById("fill-up-progress-question-bar");
 const usernameInput = document.getElementById("usernameInput");
 const scoreboardButton = document.getElementById("scoreboard-btn");
+const instructionsButton = document.getElementById("instructions-btn");
+const closeScoreboardButton = document.getElementById("close-scoreboard-btn");
+const backButton = document.getElementById("back-btn");
+const closeInstructionsButton = document.getElementById("close-instructions-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -32,38 +36,52 @@ const questionContainerElement = document.getElementById("question-container");
 const formContainer = document.getElementById("form-display");
 const scoreboardContainerElement = document.getElementById("scoreboard-container");
 
+
+function resetLocalStorage() {
+    // to stop scoreboard bug, everytime you repeated countless times going into scoreboard and exit, it would add same score to scoreboard.
+    localStorage.removeItem('score');
+    localStorage.removeItem('username');
+}
+
 /**
  * Instructions container
  * By selecting Instructions button, you will be taken to Instructions container
  * This function will open the Instructions contain
  */
+instructionsButton.addEventListener('click', selectInstructions);
+
 function selectInstructions() {
     startMenu.classList.add('hide');
     instructionsContainerElement.classList.remove('hide');
 }
+closeInstructionsButton.addEventListener('click', selectMainMenu);
 
 /**
  * Scoreboard container
  * By selecting Scoreboard button, you will be taken to Scoreboard container
  */
+scoreboardButton.addEventListener('click', selectScoreboard);
+
 function selectScoreboard() {
     startMenu.classList.add('hide');
     scoreboardContainerElement.classList.remove('hide');
     showScoreboard();
-
-    // to stop scoreboard bug, everytime you repeated countless times going into scoreboard and exit, it would add same score to scoreboard.
-    localStorage.removeItem('score');
 }
-
+closeScoreboardButton.addEventListener('click', selectMainMenu);
 /**
  * By pressing Close button, it will close the Instructions container and take you back to Main Menu Container
  * This function will close the Instructions container
  */
+backToIndexButton.addEventListener('click', selectMainMenu);
+
 function selectMainMenu() {
+    resetLocalStorage();
     instructionsContainerElement.classList.add('hide');
     startMenu.classList.remove('hide');
     scoreboardContainerElement.classList.add('hide');
     questionContainerElement.classList.add('hide');
+    formContainer.style.display = 'flex';
+    difficultyContainerElement.classList.add('hide');
 }
 
 // This add Event Listener is checking whether the user has entered the username or not in oreder to start
@@ -74,12 +92,14 @@ startButton.addEventListener('click', () => {
     } else {
         selectDifficulty();
     }
-})
+});
 
 /**
  * By pressing Start it will take you to the Difficulty Menu
  * Function to close Start Menu and open Difficulty Menu
  */
+backToDifficultyMenu.addEventListener('click', selectDifficulty);
+
 function selectDifficulty() {
     startMenu.classList.add('hide');
     difficultyContainerElement.classList.remove('hide');
@@ -87,7 +107,7 @@ function selectDifficulty() {
     //This line was added to reset the score incase the user goes back to difficulty menu
     document.getElementById("correct-answers-score").innerText = 0;
 }
-
+backButton.addEventListener('click', selectMainMenu);
 
 /**
  * Love Maths project helped me with this function
@@ -103,6 +123,8 @@ function addCorrectAnswersScore() {
 const easy = document.getElementById("easy-btn");
 const medium = document.getElementById("medium-btn");
 const hard = document.getElementById("hard-btn");
+
+hard.addEventListener('click', selectQuiz);
 
 /** 
  * There are three modes Easy, Medium and Hard
@@ -231,6 +253,8 @@ function showScore() {
 
     // This will Hide the back button
     backToDifficultyMenu.style.display = 'none';
+    showScoreboard();
+    resetLocalStorage();
 }
 
 /**
@@ -253,16 +277,13 @@ usernameInput.addEventListener('keyup', () => {
     submitButton.disabled = !usernameInput.value;
 });
 
-//This Event Listener is to activate Start button once username is submited
-submitButton.addEventListener('mousedown', () => {
-    scoreboardButton.disabled = submitButton == 'none';
-});
-
 /**
  * This Function will localstore the username 
  * so we can display it in the title and at the end of the game.
  * Watched on youtube https://www.youtube.com/watch?v=KB6Yg5hNrqc&ab_channel=KeithPaterson
  */
+submitButton.addEventListener('click', usernameSubmit);
+
 function usernameSubmit() {
     let inputUsername = document.getElementById("usernameInput").value;
     let chosenUsername = document.getElementById("chosen-username");
@@ -286,7 +307,7 @@ function showScoreboard() {
     };
 
     // This is to prevent from showing null in scoreboard if the user hasn't played yet
-    if (score.score === null || score.score === undefined) {
+    if (score.score === null || score.username && null) {
         //It won't show null on scoreboard if user hasn't played yet
         return '';
     } else {

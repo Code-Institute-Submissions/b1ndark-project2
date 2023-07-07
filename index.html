@@ -44,10 +44,8 @@
             </div>
             <div id="start-menu" class="btn-display-normal">
                 <button id="start-btn" class="btn-other btn start-btn">Start</button>
-                <button id="instructions-btn" class="btn-other btn instructions"
-                    onclick="selectInstructions() ">Instructions</button>
-                <button id="scoreboard-btn" class="btn-other btn score-board" onclick="selectScoreboard()"
-                    disabled>Scoreboard</button>
+                <button id="instructions-btn" class="btn-other btn instructions">Instructions</button>
+                <button id="scoreboard-btn" class="btn-other btn score-board">Scoreboard</button>
             </div>
 
             <!-- Username input -->
@@ -55,8 +53,7 @@
                 <label class="username-label">Username:</label>
                 <input type="text" id="usernameInput" name="text-input" class="username-input" required
                     placeholder="Username here">
-                <button id="submit-btn" class="btn-other btn submit-btn" disabled
-                    onclick="usernameSubmit()">Submit</button>
+                <button id="submit-btn" class="btn-other btn submit-btn" disabled>Submit</button>
             </div>
         </div>
 
@@ -68,9 +65,9 @@
             <div class="btn-display-normal">
                 <button id="easy-btn" class="btn-other easy-btn" onclick="selectQuiz(easy)">Easy</button>
                 <button id="medium-btn" class="btn-other medium-btn" onclick="selectQuiz(medium)">Medium</button>
-                <button id="hard-btn" class="btn-other hard-btn" onclick="selectQuiz(hard)">Hard</button>
+                <button id="hard-btn" class="btn-other hard-btn">Hard</button>
             </div>
-            <a href="index.html" id="back-btn" class="btn-other">Back</a>
+            <button id="back-btn" class="btn-back btn">Back</button>
         </div>
 
         <!-- Questions Container -->
@@ -112,8 +109,8 @@
 
                 <!-- Answer buttons will be created with JavaScript with its respective answers for the question -->
             </div>
-            <button id="back-to-difficulty-menu" class="btn-back btn" onclick="selectDifficulty()">Back</button>
-            <button id="back-to-index-btn" class="btn-other btn hide" onclick="selectMainMenu()">Main Menu</button>
+            <button id="back-to-difficulty-menu" class="btn-back btn">Back</button>
+            <button id="back-to-index-btn" class="btn-other btn hide">Main Menu</button>
         </div>
 
         <!-- Instructions container -->
@@ -134,7 +131,7 @@
                 </ol>
             </div>
             <div id="instructions-menu" class="btn-display btn-intructions">
-                <button id="close-instructions-btn" class="btn instructions" onclick="selectMainMenu()">Close</button>
+                <button id="close-instructions-btn" class="btn instructions">Close</button>
             </div>
         </div>
 
@@ -145,7 +142,7 @@
                 <ul id="scoreboard-list"></ul>
             </div>
             <div id="scoreboard-menu" class="btn-display">
-                <button id="close-scoreboard-btn" class="btn scoreboard" onclick="selectMainMenu()">Close</button>
+                <button id="close-scoreboard-btn" class="btn scoreboard">Close</button>
             </div>
         </div>
     </div>
