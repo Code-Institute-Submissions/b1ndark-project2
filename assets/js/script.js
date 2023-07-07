@@ -66,6 +66,16 @@ function selectMainMenu() {
     questionContainerElement.classList.add('hide');
 }
 
+// This add Event Listener is checking whether the user has entered the username or not in oreder to start
+startButton.addEventListener('click', () => {
+    let username = localStorage.getItem('username');
+    if (username == null || username == "") {
+        alert("In order to continue please enter username first!");
+    } else {
+        selectDifficulty();
+    }
+})
+
 /**
  * By pressing Start it will take you to the Difficulty Menu
  * Function to close Start Menu and open Difficulty Menu
@@ -77,6 +87,7 @@ function selectDifficulty() {
     //This line was added to reset the score incase the user goes back to difficulty menu
     document.getElementById("correct-answers-score").innerText = 0;
 }
+
 
 /**
  * Love Maths project helped me with this function
