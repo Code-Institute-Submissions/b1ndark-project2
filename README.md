@@ -100,12 +100,14 @@ Fonts used came from [Google Fonts](https://fonts.google.com/):
 - ['Open sans', sans-serif](https://fonts.google.com/specimen/Open+Sans)
 - ['Montserrat', sans-serif](https://fonts.google.com/specimen/Montserrat)
 
-Font colours used:
+Colours used:
 
 - Black: #000000
 - White: #fff / rgb(255, 255, 255)
 - Green: rgb(21, 219, 4)
 - Red: rgb(236, 32, 32)
+
+  ![image](assets/images/readme/colours/colours.webp)
 <br>
 
 [Back to the top](#history-quiz)
@@ -230,6 +232,7 @@ Font colours used:
 - [W3C CSS](https://jigsaw.w3.org/css-validator/#validate_by_input) - To verify CSS.
 - [JSHint](https://jshint.com/) - To verify JavaScript.
 - [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/word?activetab=tabs%3afaqheaderregion3) - Used to write most of my documents.
+- [Coolors](https://coolors.co/) - To create the color palette.
 
 [Back to the top](#history-quiz)
 
@@ -252,16 +255,16 @@ Font colours used:
 - ### CSS
   - No errors were found when tested with W3C (Jigsaw) validator.
     - CSS  
-    ![image](assets/images/readme/validator/cssvalidator.webp)
+    ![image](assets/images/readme/validator/cssvalidator.webp)  
     <br>
 
 - ### JavaScript
   - No errors were found when tested with JSHint validator.
     - JavaScript Quiz  
-    ![image](assets/images/readme/validator/quizjsvalidator.webp)
+    ![image](assets/images/readme/validator/quizjsvalidator.webp)  
     <br>
     - JavaScript Questions  
-    ![image](assets/images/readme/validator/questionsjsvalidator.webp)
+    ![image](assets/images/readme/validator/questionsjsvalidator.webp)  
     <br>
 
 [Back to the top](#history-quiz)
@@ -302,8 +305,17 @@ I did focus on making sure that the website is accessible:
 
 ## Testing
 
-- I have tested the Quiz website and it works on different types of browsers like Chrome, Safari, Microsoft Edge and Firefox.
-- I have also tested and work on different mobile phone brands such Iphones, Realmes, Huaweis, Samsungs and also Xiaomis.
+- The Quiz website has been tested and it works on different types of computers with different browsers
+  - Chrome
+  - Safari
+  - Microsoft Edge
+  - Firefox
+- It has been tested and work on different mobile phone brands
+  - Iphone 11 pro
+  - Realme x2
+  - Xiaomi note 8
+  - Hauwei p30 lite
+- Tests were carry out by myself, friends and family, different devices from PCs, laptops, tablets to mobile phones, different screen sizes.
 - The project is responsive as I have tested it on different types of screen sizes using devtools.
 - All content of every container is readable and easy to understand.
 - All functions work as they should.
@@ -316,13 +328,25 @@ I did focus on making sure that the website is accessible:
 ## Bugs
 
 - The website had a bug that when a bigger container showed for example the instructions container, it would make the background messy as in moving out of place and zoom in.
-    - So to fix it I had to make the background image fixed by doing 'background-attachment: fixed;'
+    - So to fix it I had to make the background image fixed by doing 
+    ```ruby
+    background-attachment: fixed;
+    ```
 - The quiz had a bug when entered in a mode and after answering a few questions, if you pressed back button and entered again, the score wouldn't reset.
-    - To fix it I had to add "document.getElementById("correct-answers-score").innerText = 0;" on to function selectDifficulty(), in order to reset it.
+    - To fix it I had to add
+    ```ruby
+    document.getElementById("correct-answers-score").innerText = 0;
+    ```
+     on to ```function selectDifficulty()```, in order to reset it.
 - For new users or users that cleared cache and pressed Scoreboard straight away before playing the Quiz. Had a bug which was showing "null - null" in the scoreboard.
-  - To avoid that issue I have added an if statement to show an empty scoreboard - 'if (score.score === null || score.score === undefined) {return '';}.
+  - To avoid that issue I have added an if statement to show an empty scoreboard
+  ```ruby
+  if (score.score === null || score.score === undefined) {
+    return '';
+    }
+  ```
 - If User wanted to play the quiz more then once, after first time, the question container was having issues in displaying score area and back button.
-  - So to fix this bug I had to add a new function "resetQuestionContainer()" to reset the style display of the same ones.
+  - So to fix this bug I had to add a new ```function resetQuestionContainer()``` to reset the style display of the same ones.
   <br>
 
 [Back to the top](#history-quiz)
@@ -331,16 +355,42 @@ I did focus on making sure that the website is accessible:
  
 ## Deployment
 
+### My Deployment
+
 - The website was deployed to Github pages. Steps to deploy: 
-  1. Log in into your Github account. 
-  2. In the Github repository select the project. 
-  3. Navigate to the settings tab. 
-  4. Then scroll down and on your left select Pages. 
-  5. Go to branch, and select master branch. 
-  6. Once master branch is selected, wait a moment and it will provide a page link to the website.  
+  1. Open Github
+  2. Log in into your Github account. 
+  3. In the Github repository select the project. 
+  4. Navigate to the settings tab. 
+  5. Then scroll down and on your left select Pages. 
+  6. Go to branch, and select master branch. 
+  7. Once master branch is selected, wait a moment and it will provide a page link to the website.  
   <br>
 - The live link can be found here - [My Website](https://b1ndark.github.io/project2/)
   <br>
+
+### Local Deployment
+
+#### Fork the repository
+
+  1. Open Github
+  2. Log in or Sign up
+  3. Look for my repository [The History Quiz](https://github.com/b1ndark/project2)
+  4. Last on the right corner you will find the fork button(click it).
+
+#### Clone the repository
+  1. Open Github
+  2. Log in or Sign up
+  3. Look for my repository [The History Quiz](https://github.com/b1ndark/project2)
+  4. Look for code button next to the gitpod button at the top right(click it)
+  5. A window will pop up with options for you to select to clone it with such as HTTPS, SSH or GitHub CLI
+  6. Once selected copy the link that is shown.
+  7. Open your code editor terminal
+  8. Type ```git clone``` in the terminal and paste the copied repository link
+  9. After all that just Press enter to create the clone.
+
+
+
 
 [Back to the top](#history-quiz)
 
@@ -360,7 +410,8 @@ I did focus on making sure that the website is accessible:
       - [GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8&ab_channel=GreatStack)
       - [James Q Quick](https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=1&ab_channel=JamesQQuick)
       - [Keith Paterson](https://www.youtube.com/watch?v=KB6Yg5hNrqc&ab_channel=KeithPaterson)
-
+    - To fix issue with JSHint when JS was being checked I did had errors because of easyQuestions, mediumQuestions and hardQuestions as they are in other file,so I have used import method to import content from another file, I did use stackoverflow.
+      - [Import method](https://stackoverflow.com/questions/26650721/how-to-use-javascript-constant-in-javascript-file-from-another-javascript-file)
     - I have used Readme structure from my first project as a template.
     - To increment the score I have used Love Maths project to help me.
 
@@ -378,8 +429,8 @@ I did focus on making sure that the website is accessible:
 
   - Photos Authors and where to find them:
 
-    - Background photo - photo of Orphan's Castle Ruins in Klentnice by Viktor Hanacek [Orphan's Castle Ruins](https://picjumbo.com/detail-of-the-orphans-castle-ruins-in-klentnice/)
-    - 404error - photo of a Sad Emoti- by Silvia [sad emoti](https://pixabay.com/illustrations/emotiguy-sad-thoughtful-face-1654859/)
+    - ```Background photo``` - photo of Orphan's Castle Ruins in Klentnice by Viktor Hanacek [Orphan's Castle Ruins](https://picjumbo.com/detail-of-the-orphans-castle-ruins-in-klentnice/)
+    - ```404error``` - photo of a Sad Emoti- by Silvia [sad emoti](https://pixabay.com/illustrations/emotiguy-sad-thoughtful-face-1654859/)
 
   - The Favicon generator used to create - [Favicon](https://favicon.io/favicon-generator/)
   - Footer social network links from:

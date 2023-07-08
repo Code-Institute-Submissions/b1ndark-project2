@@ -27,7 +27,7 @@ a {
     margin-bottom: 100px;
     color: rgb(255, 255, 255);
     font-size: 4rem;
-    text-shadow: 2px 3px black;
+    text-shadow: -4px 0px 2px black, -3px 3px 1em #000000, -9px 1px 0.2em #000000;
 }
 
 h2 {
@@ -364,6 +364,7 @@ h3 {
 
     .networks i {
         font-size: 145%;
+        color: #fff;
     }
 
     .container {
