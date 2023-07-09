@@ -263,8 +263,10 @@ Colours used:
     - JavaScript Quiz  
     ![image](assets/images/readme/validator/quizjsvalidator.webp)  
     <br>
+
     - JavaScript Questions  
     ![image](assets/images/readme/validator/questionsjsvalidator.webp)  
+
     <br>
 
 [Back to the top](#history-quiz)

@@ -14,7 +14,7 @@ import {
  */
 const startButton = document.getElementById("start-btn");
 const backToIndexButton = document.getElementById("back-to-index-btn");
-const backToDifficultyMenu = document.getElementById("back-to-difficulty-menu");
+const backToMainMenu = document.getElementById("back-to-main-menu");
 const submitButton = document.getElementById("submit-btn");
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
@@ -29,9 +29,11 @@ const backButton = document.getElementById("back-btn");
 const closeInstructionsButton = document.getElementById("close-instructions-btn");
 
 let currentQuestionIndex = 0;
+let currentQuestionCounterIndex = 0;
 let score = 0;
 let currentQuestion = {};
 let difficulty = "";
+let eachModeQuestions = [];
 
 /** 
  * Containers
@@ -79,7 +81,9 @@ closeScoreboardButton.addEventListener('click', selectMainMenu);
 /**
  * Event Listener to take back to Main menu container
  */
-backToIndexButton.addEventListener('click', selectMainMenu);
+backToIndexButton.addEventListener('click', () => {
+    document.location.href="/";
+});
 //This function will open the Main Menu container
 function selectMainMenu() {
     instructionsContainerElement.classList.add('hide');
@@ -90,7 +94,7 @@ function selectMainMenu() {
     difficultyContainerElement.classList.add('hide');
 }
 
-// This add Event Listener is checking whether the user has entered the username or not in oreder to start
+// This add Event Listener is checking whether the user has entered the username or not in order to start
 startButton.addEventListener('click', () => {
     let username = localStorage.getItem('username');
     if (username == null || username == "") {
@@ -101,10 +105,18 @@ startButton.addEventListener('click', () => {
 });
 
 /**
- * By pressing Start it will take you to the Difficulty Menu
- * Event listener to take you to Difficulty Menu
+ * By pressing Start it will ask the user wether he/she wants to stop the Quiz
+ * Event listener to take you back to Main Menu
  */
-backToDifficultyMenu.addEventListener('click', selectDifficulty);
+backToMainMenu.addEventListener('click', () => {
+    let confirmation = confirm('are you sure you want to stop the quiz?');
+    //If Statement to check whether you want or not to go back
+    if (confirmation) {
+        document.location.href="/";
+    } else {
+        alert("You will carry on testing your knowledge");
+    }
+});
 //Function will open the Difficulty Menu container
 function selectDifficulty() {
     startMenu.classList.add('hide');
@@ -147,7 +159,7 @@ hard.addEventListener('click', selectQuiz);
 function selectQuiz(selectedDifficulty) {
     difficultyContainerElement.classList.add('hide');
     questionContainerElement.classList.remove('hide');
-    currentQuestionIndex = 0;
+    currentQuestionCounterIndex = 0;
     score = 0;
     difficulty = selectedDifficulty;
     showQuestion();
@@ -167,7 +179,7 @@ function resetQuestionContainer() {
     // This will Hide Score Area
     scoreAreaDisplay.style.display = 'flex';
     // This will Hide the back button
-    backToDifficultyMenu.style.display = 'block';
+    backToMainMenu.style.display = 'block';
 }
 
 /**
@@ -180,20 +192,26 @@ function showQuestion() {
     // Data for the questions will be collected from game.js file
     // It will pick the questions from the mode you have choosen
     if (difficulty == easy) {
-        currentQuestion = easyQuestions[currentQuestionIndex];
+        eachModeQuestions = easyQuestions;
+        currentQuestionIndex = Math.floor(Math.random() * eachModeQuestions.length);
+        currentQuestion = eachModeQuestions[currentQuestionIndex];
     } else if (difficulty == medium) {
-        currentQuestion = mediumQuestions[currentQuestionIndex];
+        eachModeQuestions = mediumQuestions;
+        currentQuestionIndex = Math.floor(Math.random() * eachModeQuestions.length);
+        currentQuestion = eachModeQuestions[currentQuestionIndex];
     } else {
-        currentQuestion = hardQuestions[currentQuestionIndex];
+        eachModeQuestions = hardQuestions;
+        currentQuestionIndex = Math.floor(Math.random() * eachModeQuestions.length);
+        currentQuestion = eachModeQuestions[currentQuestionIndex];
     }
     questionElement.innerHTML = currentQuestion.question;
 
     // This will workout what question you are on and display it
-    currentQuestionIndex++;
-    answeredQuestionsCounter.innerHTML = `${currentQuestionIndex}/10`;
+    currentQuestionCounterIndex++;
+    answeredQuestionsCounter.innerHTML = `${currentQuestionCounterIndex}/10`;
 
     // This will display a progression bar
-    progressAnsweredQuestionBarFull.style.width = `${(currentQuestionIndex / 10) * 100}%`;
+    progressAnsweredQuestionBarFull.style.width = `${(currentQuestionCounterIndex / 10) * 100}%`;
 
     // This function is to show answers of the current question
     // It will add a button for each answer of the current question, in this case 4 answers
@@ -210,6 +228,7 @@ function showQuestion() {
         // This Event Listener is to select an answer
         answerButton.addEventListener('click', selectAnswer);
     });
+    eachModeQuestions.splice(currentQuestionIndex, 1);
 }
 
 /**
@@ -271,7 +290,7 @@ function showScore() {
     scoreAreaDisplay.style.display = 'none';
 
     // This will Hide the back button
-    backToDifficultyMenu.style.display = 'none';
+    backToMainMenu.style.display = 'none';
     showScoreboard();
     resetLocalStorage();
 }
@@ -281,7 +300,7 @@ function showScore() {
  * Next question Data will be loaded from game.js file
  */
 function handleNextQuestion() {
-    if (currentQuestionIndex < 10) {
+    if (currentQuestionCounterIndex < 10) {
         showQuestion();
     } else {
         showScore();
@@ -327,9 +346,13 @@ function showScoreboard() {
     };
 
     // This is to prevent from showing null in scoreboard if the user hasn't played yet
-    if (score.score === null || score.username && null) {
-        //It won't show null on scoreboard if user hasn't played yet
-        return '';
+    if (score.score === null || score.username == "") {
+        //This is to prevent the scores to be shown null if username hasn't played yet, instead it will show an empty scoreboard
+        showScoreList.innerHTML = scoreboard
+            .map(score => {
+                return `<li class="score-list">${score.username} - ${score.score}</li>`;
+            })
+            .join("");
     } else {
         scoreboard.push(score);
         // To sort scores in order from the highest at the top to the lowest at the bottom
