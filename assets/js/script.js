@@ -79,10 +79,10 @@ function selectScoreboard() {
 closeScoreboardButton.addEventListener('click', selectMainMenu);
 
 /**
- * Event Listener to take back to Main menu container
+ * Event Listener to take you back to Main Menu container
  */
 backToIndexButton.addEventListener('click', () => {
-    document.location.href="/";
+    document.location.href="index.html";
 });
 //This function will open the Main Menu container
 function selectMainMenu() {
@@ -112,7 +112,7 @@ backToMainMenu.addEventListener('click', () => {
     let confirmation = confirm('are you sure you want to stop the quiz?');
     //If Statement to check whether you want or not to go back
     if (confirmation) {
-        document.location.href="/";
+        document.location.href="index.html";
     } else {
         alert("You will carry on testing your knowledge");
     }
@@ -191,6 +191,7 @@ function showQuestion() {
     // This function will show current question
     // Data for the questions will be collected from game.js file
     // It will pick the questions from the mode you have choosen
+    // Each mode will have their questions shuffled, by using Math.floor and Math.random * their length
     if (difficulty == easy) {
         eachModeQuestions = easyQuestions;
         currentQuestionIndex = Math.floor(Math.random() * eachModeQuestions.length);
@@ -228,6 +229,7 @@ function showQuestion() {
         // This Event Listener is to select an answer
         answerButton.addEventListener('click', selectAnswer);
     });
+    // This will splice the questions that have been shown, to prevent from repeating them
     eachModeQuestions.splice(currentQuestionIndex, 1);
 }
 
@@ -265,7 +267,7 @@ function selectAnswer(event) {
         button.disabled = true;
     });
 
-    // Once answer is selected whether is correct or wrong it will automatically move to the next one
+    // Once answer is selected whether is correct or wrong it will automatically move to the next one in 1.5 seconds
     setTimeout(() => {
         handleNextQuestion();
     }, 1500);

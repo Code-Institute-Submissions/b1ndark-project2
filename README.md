@@ -343,8 +343,12 @@ I did focus on making sure that the website is accessible:
 - For new users or users that cleared cache and pressed Scoreboard straight away before playing the Quiz. Had a bug which was showing "null - null" in the scoreboard.
   - To avoid that issue I have added an if statement to show an empty scoreboard
   ```ruby
-  if (score.score === null || score.score === undefined) {
-    return '';
+  if (score.score === null || score.username == "") {
+        showScoreList.innerHTML = scoreboard
+            .map(score => {
+                return `<li class="score-list">${score.username} - ${score.score}</li>`;
+            })
+            .join("");
     }
   ```
 - If User wanted to play the quiz more then once, after first time, the question container was having issues in displaying score area and back button.
