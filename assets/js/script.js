@@ -82,7 +82,7 @@ closeScoreboardButton.addEventListener('click', selectMainMenu);
  * Event Listener to take you back to Main Menu container
  */
 backToIndexButton.addEventListener('click', () => {
-    document.location.href="index.html";
+    document.location.href = "index.html";
 });
 //This function will open the Main Menu container
 function selectMainMenu() {
@@ -112,7 +112,7 @@ backToMainMenu.addEventListener('click', () => {
     let confirmation = confirm('are you sure you want to stop the quiz?');
     //If Statement to check whether you want or not to go back
     if (confirmation) {
-        document.location.href="index.html";
+        document.location.href = "index.html";
     } else {
         alert("You will carry on testing your knowledge");
     }

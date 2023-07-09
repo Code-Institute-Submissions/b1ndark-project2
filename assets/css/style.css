@@ -20,14 +20,29 @@ a {
 
 /* Page Title */
 
+#title-container {
+    margin: auto;
+    margin-bottom: 100px;
+    color: #fff;
+    background-color: rgb(12 12 12 / 60%);
+    max-width: 550px;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 10px 2px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
 .index-page-title {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    margin-top: 80px;
-    margin-bottom: 100px;
     color: rgb(255, 255, 255);
     font-size: 4rem;
-    text-shadow: -4px 0px 2px black, -3px 3px 1em #000000, -9px 1px 0.2em #000000;
+    margin: auto;
 }
 
 h2 {
@@ -314,14 +329,21 @@ h3 {
 /* for medium screens sizes from 1280px wide and down */
 
 @media screen and (max-width: 1280px) {
+    #title-container {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
     .index-page-title {
         font-size: 3rem;
-        margin-top: 100px;
-        margin-bottom: 100px;
+    }
+
+    .container {
+        margin-bottom: 50px;
     }
 
     .network-container {
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
 }
@@ -329,9 +351,15 @@ h3 {
 /* for medium screens sizes from 768px wide and down */
 
 @media screen and (max-width: 768px) {
+    #title-container {
+        max-width: 475px;
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+
     .index-page-title {
         font-size: 2.5rem;
-        margin-bottom: 90px;
+
     }
 
     h2 {
@@ -359,6 +387,7 @@ h3 {
     }
 
     .network-container {
+        margin-top: 100px;
         max-width: 475px;
     }
 
@@ -376,10 +405,13 @@ h3 {
 /* for small screens sizes from 576px wide and down */
 
 @media screen and (max-width: 576px) {
+    #title-container {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+
     .index-page-title {
         font-size: 2rem;
-        margin-top: 20px;
-        margin-bottom: 70px;
     }
 
     h2 {
@@ -415,7 +447,6 @@ h3 {
     }
 
     .network-container {
-        margin-top: 100px;
         margin-bottom: 0;
     }
 
@@ -436,9 +467,13 @@ h3 {
 /* for extra small screen sizes from 335px wide and down */
 
 @media screen and (max-width: 335px) {
+    #title-container {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
     .index-page-title {
         font-size: 1.7rem;
-        margin-bottom: 50px;
     }
 
     h2 {
