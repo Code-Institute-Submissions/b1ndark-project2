@@ -457,15 +457,15 @@ I did focus on making sure that the website is accessible:
 
 - The website was deployed to Github pages. Steps to deploy:  
 
-  1. Open Github
-  2. Log in into your Github account. 
-  3. In the Github repository select the project. 
-  4. Navigate to the settings tab. 
-  5. Then scroll down and on your left select Pages. 
-  6. Go to branch, and select master branch. 
-  7. Once master branch is selected, wait a moment and it will provide a page link to the website.  
-
-  <br>
+1. Open Github
+2. Log in into your Github account. 
+3. In the Github repository select the project. 
+4. Navigate to the settings tab. 
+5. Then scroll down and on your left select Pages. 
+6. Go to branch, and select master branch. 
+7. Once master branch is selected, wait a moment and it will provide a page link to the website.  
+<br>
+  
 - The live link can be found here - [My Website](https://b1ndark.github.io/project2/).
   <br>
 
