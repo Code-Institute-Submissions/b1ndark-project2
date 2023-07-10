@@ -186,9 +186,11 @@ ul li {
 /* 404 error page */
 
 .page-title-error {
+    margin-top: 50px;
     color: rgb(0, 0, 0);
     height: 100px;
     text-align: center;
+    font-size: 50px;
 }
 
 .error-container {
@@ -395,6 +397,10 @@ ul li {
     .container {
         max-width: 475px;
     }
+
+    .page-title-error {
+        font-size: 30px;
+    }
 }
 
 /* for small screens sizes from 576px wide and down */
@@ -459,6 +465,7 @@ ul li {
 
     .page-title-error {
         padding-top: 50px;
+        font-size: 30px;
     }
 }
 

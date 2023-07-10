@@ -5,10 +5,10 @@
 <p>The website is targeted for everyone, from young to elderly, there’s difficulty modes for everybody to enjoy :).
 <p>You can enjoy the different modes provided so you can test your knowledge regarding the history.
 <p>Users of this website will test and acquire knowledge.
-<p>Will also be able to see how you have score at the end.
+<p>Will also be able to see how much have you scored at the end.
 <br>
 
-![image](assets/images/readme/amiresponsive.webp)
+![image](assets/images/readme/amiresponsive.jpg)
 
 [My Quiz website on Am I Responsive](https://ui.dev/amiresponsive?url=https://b1ndark.github.io/project2/)
 
@@ -66,24 +66,24 @@ Goals:
 
 The website:
 
-- Starting at the beginning the user will be presented with the ruins of a Castle in the Background
+- Starting at the beginning the user will be presented with the ruins of a Castle in the Background.
 - Within the same page the user will have a box in the middle of the screen with options that when pressed:
-    - START - option will take you to the difficulty mode
-    - INSTRUCTIONS - option will pop up a box with all instructions needed to play the quiz
-    - SCOREBOARD - option will display the scoreboard of the quiz
-    - Input box - for the username to type the name in order to play the quiz
-    - SUBMIT - button to submit the username
+    - START - option will take you to the difficulty mode.
+    - INSTRUCTIONS - option will pop up a box with all instructions needed to play the quiz.
+    - SCOREBOARD - option will display the scoreboard of the quiz.
+    - Input box - for the username to type the name in order to play the quiz.
+    - SUBMIT - button to submit the username.
     - If user try's to start without entering username, an alert box will pop up to ask the user to enter username.
 - Once in the difficulty menu the user will be able to select three option modes:
-    - EASY - The easiest mode for starters
-    - MEDIUM - The medium mode for users with some knowledge
+    - EASY - The easiest mode for starters.
+    - MEDIUM - The medium mode for users with some knowledge.
     - HARD - The hard mode for users that love the challenge.
-    - BACK - button to go back to main menu
-- Once the mode selected you will be presented with Questions that will have 4 answer options
+    - BACK - button to go back to main menu.
+- Once the mode selected you will be presented with Questions that will have 4 answer options:
     - At the top you will be able to keep track of what question you are on and also your score.
     - Once an answer is selected it will lock all other answers and show you whether you got it correct or not.
     - Then will automatically move to the next question.
-    - BACK - button to go back to difficulty menu
+    - BACK - button to go back to difficulty menu.
 - At the end of the quiz you will have a box that will congratulate you and present you will the score obtained.
 - After all that you can press Main Menu button which will take you back to the beginning.
 
@@ -119,26 +119,32 @@ Colours used:
 - Created for mobile devices and desktops
 
   - Home Page  
+  <br>
     ![image](assets/images/readme/wireframes/mainmenu.webp)  
     <br>
 
   - Instructions Page  
+  <br>
     ![image](assets/images/readme/wireframes/instructions.webp)  
     <br>
 
   - Scoreboard Page  
+  <br>
     ![image](assets/images/readme/wireframes/scoreboard.webp)  
     <br>
 
   - Difficulty Page  
+  <br>
     ![image](assets/images/readme/wireframes/difficulty.webp)  
     <br>
 
   - Questions Page  
+  <br>
     ![image](assets/images/readme/wireframes/questions.webp)  
     <br>
 
   - End Page  
+  <br>
     ![image](assets/images/readme/wireframes/endgame.webp)  
     <br>
 
@@ -160,7 +166,8 @@ Colours used:
       - Instructions Button
       - Scoreboard Button
       - Input box
-      - Submit Button
+      - Submit Button  
+      <br>
 
       ![image](assets/images/readme/pagesdisplay/mainpage.webp)
 
@@ -201,7 +208,8 @@ Colours used:
     - Once selected the mode  you will have this container with the questions.
     - As you select the answer, it will show you whether you have got it right or not:
       - Correct Answers - Shown in green
-      - Wrong Answers - Shown in red
+      - Wrong Answers - Shown in red  
+      <br>
     - Question Progress Shown on top left
     - Correct Answers shown on top right
     - Back button to take you to Main Menu, when pressed you will be asked whether you want to carry on with the quiz or not
@@ -488,7 +496,7 @@ I did focus on making sure that the website is accessible:
       - [GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8&ab_channel=GreatStack)
       - [James Q Quick](https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=1&ab_channel=JamesQQuick)
       - [Keith Paterson](https://www.youtube.com/watch?v=KB6Yg5hNrqc&ab_channel=KeithPaterson)
-    - To fix issue with JSHint when JS was being checked I did had errors because of easyQuestions, mediumQuestions and hardQuestions as they are in other file,so I have used import method to import content from another file, I did use stackoverflow.
+    - To fix issue with JSHint when JS was being checked I did had errors because of easyQuestions, mediumQuestions and hardQuestions as they are in another file, so I have used import method to import content from another file, I did use stackoverflow.
       - [Import method](https://stackoverflow.com/questions/26650721/how-to-use-javascript-constant-in-javascript-file-from-another-javascript-file)
     - I have used Readme structure from my first project as a template.
     - To increment the score I have used Love Maths project to help me.
@@ -496,8 +504,6 @@ I did focus on making sure that the website is accessible:
   <br>
 
 - ### Media
-
-  -
 
   - Websites used-
 
@@ -522,6 +528,7 @@ I did focus on making sure that the website is accessible:
 ## Acknowledgments
 
 - I would like to thank my mentor [Graeme Taylor](https://github.com/G-Taylor) for helping me along the way in completing my Second milestone project.
-- Also, I would like to thank Code Institute Tutors for trying to help me when I had issues with Selecting different modes.
+- I would like to thank Code Institute Tutors for trying to help me when I had issues with Selecting different modes.
+- Also, I would like to thank friends and family for helping with testing the Quiz.
 
 [Back to the top](#history-quiz)
