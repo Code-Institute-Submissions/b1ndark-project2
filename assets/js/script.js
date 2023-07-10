@@ -281,9 +281,16 @@ function showScore() {
     //save the score in to localstorage
     localStorage.setItem('score', score);
     resetState();
-    let username = localStorage.getItem('username');
-    questionElement.innerHTML = `Well done ${username} in completing the quiz!` +
-        `<br> You have scored ${score} points!`;
+    // If statement to check if user has score atleast 1 point
+    if (score == 0) {
+        let username = localStorage.getItem('username');
+        questionElement.innerHTML = `Please try again ${username}!` +
+            `<br> You have scored ${score} points!`;
+    } else {
+        let username = localStorage.getItem('username');
+        questionElement.innerHTML = `Well done ${username} in completing the quiz!` +
+            `<br> You have scored ${score} points!`;
+    }
 
     // This will display Main Menu button
     backToIndexButton.style.display = 'block';
