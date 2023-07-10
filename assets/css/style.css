@@ -187,23 +187,21 @@ ul li {
 
 .page-title-error {
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    margin-top: 100px;
     color: rgb(0, 0, 0);
-    font-size: 3rem;
+    height: 100px;
+    padding-top: 150px;
+    text-align: center;
+    font-size: 200%;
 }
 
 .error-container {
     text-align: center;
     display: flex;
     flex-direction: column;
-    font-family: 'Open Sans', sans-serif;
 }
 
-h3 {
-    text-align: center;
-    font-size: 2rem;
-    padding-bottom: 5px;
+.error-container h2 {
+    text-transform: capitalize;
 }
 
 /* Footer and Networks */
@@ -399,7 +397,6 @@ h3 {
     .container {
         max-width: 475px;
     }
-
 }
 
 /* for small screens sizes from 576px wide and down */
@@ -462,6 +459,9 @@ h3 {
         font-size: 1rem;
     }
 
+    .page-title-error {
+        padding-top: 50px;
+    }
 }
 
 /* for extra small screen sizes from 335px wide and down */

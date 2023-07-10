@@ -59,8 +59,8 @@ Visitors:
 
 Goals:
 
-- First of all the main goal is for the user to have fun
-- Play solo or in a group to test your History knowledge
+- First of all, the main goal is for the user to have fun
+- Play solo or in a group to test your history knowledge
 - Go through every difficulty mode :).
 - To try achieve the top 5 in the scoreboard.
 
@@ -73,7 +73,7 @@ The website:
     - SCOREBOARD - option will display the scoreboard of the quiz
     - Input box - for the username to type the name in order to play the quiz
     - SUBMIT - button to submit the username
-    - If user trys to start without entering username, an alert box will pop up to ask the user to enter username.
+    - If user try's to start without entering username, an alert box will pop up to ask the user to enter username.
 - Once in the difficulty menu the user will be able to select three option modes:
     - EASY - The easiest mode for starters
     - MEDIUM - The medium mode for users with some knowledge
@@ -153,8 +153,14 @@ Colours used:
 
 - #### Main Menu Container
 
+    - Title of the website displayed at the top
     - The main page presents a photo of ruins of a castle in the background.
-    - You have a container in the middle of the screen with some options.
+    - You have a container in the middle of the screen with some options:
+      - Start Button
+      - Instructions Button
+      - Scoreboard Button
+      - Input box
+      - Submit Button
 
       ![image](assets/images/readme/pagesdisplay/mainpage.webp)
 
@@ -163,6 +169,7 @@ Colours used:
 - #### Instructions Container
 
     - This container shows you the procedures to take 
+    - Back button to take you to Main Menu
 
       ![image](assets/images/readme/pagesdisplay/instructions.webp)
 
@@ -172,6 +179,8 @@ Colours used:
 
     - This container shows you the Scoreboard 
     - You will be able to check your score
+    - Top 5 scores will be picked
+    - Back button to take you to Main Menu
 
       ![image](assets/images/readme/pagesdisplay/scoreboard.webp)
 
@@ -181,6 +190,7 @@ Colours used:
 
     - Here You will have a container with options and the ruins of a Castle in the background.
     - Options are Easy, Medium and Hard.
+    - Back button to take you to Main Menu
 
       ![image](assets/images/readme/pagesdisplay/difficulty.webp)
 
@@ -189,8 +199,12 @@ Colours used:
 - #### Questions Container
 
     - Once selected the mode  you will have this container with the questions.
-    - As you select the answer, it will show you whether you have got it right or not.
-    - Question number and score presented above the question.
+    - As you select the answer, it will show you whether you have got it right or not:
+      - Correct Answers - Shown in green
+      - Wrong Answers - Shown in red
+    - Question Progress Shown on top left
+    - Correct Answers shown on top right
+    - Back button to take you to Main Menu, when pressed you will be asked whether you want to carry on with the quiz or not
 
       ![image](assets/images/readme/pagesdisplay/questionspage.webp)
 
@@ -232,7 +246,8 @@ Colours used:
 - [W3C CSS](https://jigsaw.w3.org/css-validator/#validate_by_input) - To verify CSS.
 - [JSHint](https://jshint.com/) - To verify JavaScript.
 - [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/word?activetab=tabs%3afaqheaderregion3) - Used to write most of my documents.
-- [Coolors](https://coolors.co/) - To create the color palette.
+- [Coolors](https://coolors.co/) - To create the colour palette.
+- [Wave](https://wave.webaim.org/) - To help improving accessibility to individuals with disabilities, by showing where there might be errors.
 
 [Back to the top](#history-quiz)
 
@@ -244,27 +259,27 @@ Colours used:
 
   - No errors were found when tested with W3C validator.
 
-    - Index Page  
+    - Index Page - PASS  
     ![image](assets/images/readme/validator/htmlvalidator.webp)  
     <br>
 
-    - 404 Error Page  
+    - 404 Error Page - PASS  
     ![image](assets/images/readme/validator/404errorpagevalidator.webp)  
     <br>
 
 - ### CSS
   - No errors were found when tested with W3C (Jigsaw) validator.
-    - CSS  
+    - CSS - PASS  
     ![image](assets/images/readme/validator/cssvalidator.webp)  
     <br>
 
 - ### JavaScript
   - No errors were found when tested with JSHint validator.
-    - JavaScript Quiz  
+    - JavaScript Quiz - PASS  
     ![image](assets/images/readme/validator/quizjsvalidator.webp)  
     <br>
 
-    - JavaScript Questions  
+    - JavaScript Questions - PASS  
     ![image](assets/images/readme/validator/questionsjsvalidator.webp)  
 
     <br>
@@ -321,6 +336,63 @@ I did focus on making sure that the website is accessible:
 - The project is responsive as I have tested it on different types of screen sizes using devtools.
 - All content of every container is readable and easy to understand.
 - All functions work as they should.
+ <br>
+
+[Back to the top](#history-quiz)
+
+---
+
+`Main Menu`
+
+| Feature | Expected Outcome | Testing | Result | Pass of Fail |
+| --- | --- | --- | --- | --- |
+| Website Title | Expected to take user back to Index/Home page | Clicked on it | Reload/Taken back to Index/Home page | Pass |
+| Start Button | Expected to take user to Difficulty Menu | Clicked on it | Taken to Difficulty Container | Pass |
+| Instructions Button | Expected to take user to Instructions Container | Clicked on it | Taken to Instructions Container | Pass |
+| Instructions Container | Expected to help user to understand what to do | Followed the instructions | Everything worked according to the instructions | Pass |
+| Instructions Close Button | Expected to take user Back to Main Menu | Clicked on it | Taken to Main Menu | Pass |
+| Scoreboard Button | Expected to take user to Scoreboard Container | Clicked on it | Taken to Scoreboard Container | Pass |
+| Scoreboard Container | Expected to show the user the Score obtained | Played the Quiz to obtain Score | Score obtained shown on Scoreboard | Pass |
+| Scoreboard Close Button | Expected to take user Back to Main Menu | Clicked on it | Taken to Main Menu | Pass |
+| Input Box | For user to write their username | Wrote on it | Taken value | Pass |
+| Submit Button | Expected to Submit the username in order to play | Clicked on it | Store value in LocalStorage | Pass |  
+
+ <br>
+ 
+`Difficulty Menu`
+
+| Feature | Expected Outcome | Testing | Result | Pass of Fail |
+| --- | --- | --- | --- | --- |
+| Website Title | Expected to take user back to Index/Home page | Clicked on it | Reload/Taken back to Index/Home page | Pass |
+| Easy Button | Expected to Start quiz in Easy mode | Clicked on it | Easy mode quiz Started | Pass |
+| Medium Button | Expected to Start quiz in Medium mode | Clicked on it | Medium mode quiz Started | Pass |
+| Hard Button | Expected to Start quiz in Hard mode | Clicked on it | Hard mode quiz Started | Pass |
+| Back Button | Expected to take user Back to Main Menu | Clicked on it | Taken to Main Menu | Pass |  
+
+ <br>
+
+ `Question Container`
+
+| Feature | Expected Outcome | Testing | Result | Pass of Fail |
+| --- | --- | --- | --- | --- |
+| Website Title | Expected to take user back to Index/Home page | Clicked on it | Reload/Taken back to Index/Home page | Pass |
+| Quiz progress bar on the top left | Expected to show the user what question are on | Done the Quiz | Progress bar increases as you progress through the Quiz | Pass |
+| Quiz Correct answers on the top right | Expected to show the user how many correct answers | Done the Quiz | It adds up correct answers as you get them correct | Pass |
+| Four Answer Buttons | Once the answer selected, expected to show correct or wrong | Clicked on it | Answer selected | Pass |
+| Correct Answer | Expected to change the answer button selected to green | Tried selecting Answer | Correct Answer selected shown green | Pass |
+| Wrong Answer | Expected to change the answer button selected to red | Tried selecting Answer | Wrong Answer selected shown red | Pass |
+| Back Button | Expected to ask User if really wants to go back to Main Menu or carry on | Clicked on it | If Yes - User is taken to Main Menu/ Else - Carrys on with Quiz | Pass |  
+
+ <br>
+
+`End Game/Score Shown`
+
+| Feature | Expected Outcome | Testing | Result | Pass of Fail |
+| --- | --- | --- | --- | --- |
+| Website Title | Expected to take user back to Index/Home page | Clicked on it | Reload/Taken back to Index/Home page | Pass |
+| End Game | Expected to tell the User How many points were obtained | Followed the instructions | Once Quiz done it did show the points obtained | Pass |
+| Back Button | Expected to take user Back to Main Menu | Clicked on it | Taken to Main Menu | Pass |  
+
  <br>
 
 [Back to the top](#history-quiz)
@@ -449,7 +521,7 @@ I did focus on making sure that the website is accessible:
 
 ## Acknowledgments
 
--
--
+- I would like to thank my mentor [Graeme Taylor](https://github.com/G-Taylor) for helping me along the way in completing my Second milestone project.
+- Also, I would like to thank Code Institute Tutors for trying to help me when I had issues with Selecting different modes.
 
 [Back to the top](#history-quiz)
