@@ -73,7 +73,7 @@ The website:
     - SCOREBOARD - option will display the scoreboard of the quiz.
     - Input box - for the username to type the name in order to play the quiz.
     - SUBMIT - button to submit the username.
-    - If user try's to start without entering username, an alert box will pop up to ask the user to enter username.
+    - If user tries to start without entering username, an alert box will pop up to ask the user to enter username.
 - Once in the difficulty menu the user will be able to select three option modes:
     - EASY - The easiest mode for starters.
     - MEDIUM - The medium mode for users with some knowledge.
@@ -205,7 +205,7 @@ Colours used:
 
 - #### Questions Container
 
-    - Once selected the mode  you will have this container with the questions.
+    - Once selected the mode you will have this container with the questions.
     - As you select the answer, it will show you whether you have got it right or not:
       - Correct Answers - Shown in green
       - Wrong Answers - Shown in red  
@@ -350,9 +350,9 @@ I did focus on making sure that the website is accessible:
 
 ---
 
-`Main Menu`
+### Main Menu
 
-| Feature | Expected Outcome | Testing | Result | Pass of Fail |
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | --- | --- | --- | --- | --- |
 | Website Title | Expected to take user back to Index/Home page | Clicked on it | Reload/Taken back to Index/Home page | Pass |
 | Start Button | Expected to take user to Difficulty Menu | Clicked on it | Taken to Difficulty Container | Pass |
@@ -367,9 +367,9 @@ I did focus on making sure that the website is accessible:
 
  <br>
  
-`Difficulty Menu`
+### Difficulty Menu
 
-| Feature | Expected Outcome | Testing | Result | Pass of Fail |
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | --- | --- | --- | --- | --- |
 | Website Title | Expected to take user back to Index/Home page | Clicked on it | Reload/Taken back to Index/Home page | Pass |
 | Easy Button | Expected to Start quiz in Easy mode | Clicked on it | Easy mode quiz Started | Pass |
@@ -379,9 +379,9 @@ I did focus on making sure that the website is accessible:
 
  <br>
 
- `Question Container`
+### Question Container
 
-| Feature | Expected Outcome | Testing | Result | Pass of Fail |
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | --- | --- | --- | --- | --- |
 | Website Title | Expected to take user back to Index/Home page | Clicked on it | Reload/Taken back to Index/Home page | Pass |
 | Quiz progress bar on the top left | Expected to show the user what question are on | Done the Quiz | Progress bar increases as you progress through the Quiz | Pass |
@@ -393,13 +393,23 @@ I did focus on making sure that the website is accessible:
 
  <br>
 
-`End Game/Score Shown`
+### End Quiz/Score Shown
 
-| Feature | Expected Outcome | Testing | Result | Pass of Fail |
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | --- | --- | --- | --- | --- |
 | Website Title | Expected to take user back to Index/Home page | Clicked on it | Reload/Taken back to Index/Home page | Pass |
-| End Game | Expected to tell the User How many points were obtained | Followed the instructions | Once Quiz done it did show the points obtained | Pass |
+| End Quiz | Expected to tell the User How many points were obtained | Followed the instructions | Once Quiz done it did show the points obtained | Pass |
 | Back Button | Expected to take user Back to Main Menu | Clicked on it | Taken to Main Menu | Pass |  
+
+ <br>
+ 
+### 404 Error Page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| --- | --- | --- | --- | --- |
+| Website Title | Expected to take user back to Index/Home page | Clicked on it | Reload/Taken back to Index/Home page | Pass |
+| Sad Emoti and some info | Telling the user that an issue with the website has occurred | Tried it | Once on the page, the info was shown as expected | Pass |
+| Home Page Button | Expected to take user Back to Home Page | Clicked on it | Taken to Home Page | Pass |  
 
  <br>
 
@@ -410,7 +420,7 @@ I did focus on making sure that the website is accessible:
 ## Bugs
 
 - The website had a bug that when a bigger container showed for example the instructions container, it would make the background messy as in moving out of place and zoom in.
-    - So to fix it I had to make the background image fixed by doing 
+    - So, to fix it I had to make the background image fixed by doing 
     ```ruby
     background-attachment: fixed;
     ```
@@ -421,7 +431,7 @@ I did focus on making sure that the website is accessible:
     ```
      on to ```function selectDifficulty()```, in order to reset it.
 - For new users or users that cleared cache and pressed Scoreboard straight away before playing the Quiz. Had a bug which was showing "null - null" in the scoreboard.
-  - To avoid that issue I have added an if statement to show an empty scoreboard
+  - To avoid that issue I have added an if statement to show an empty scoreboard.
   ```ruby
   if (score.score === null || score.username == "") {
         showScoreList.innerHTML = scoreboard
@@ -431,7 +441,7 @@ I did focus on making sure that the website is accessible:
             .join("");
     }
   ```
-- If User wanted to play the quiz more then once, after first time, the question container was having issues in displaying score area and back button.
+- If User wanted to play the quiz more than once, after first time, the question container was having issues in displaying score area and back button.
   - So to fix this bug I had to add a new ```function resetQuestionContainer()``` to reset the style display of the same ones.
   <br>
 
@@ -443,7 +453,8 @@ I did focus on making sure that the website is accessible:
 
 ### My Deployment
 
-- The website was deployed to Github pages. Steps to deploy: 
+- The website was deployed to Github pages. Steps to deploy:  
+
   1. Open Github
   2. Log in into your Github account. 
   3. In the Github repository select the project. 
@@ -451,28 +462,29 @@ I did focus on making sure that the website is accessible:
   5. Then scroll down and on your left select Pages. 
   6. Go to branch, and select master branch. 
   7. Once master branch is selected, wait a moment and it will provide a page link to the website.  
+
   <br>
-- The live link can be found here - [My Website](https://b1ndark.github.io/project2/)
+- The live link can be found here - [My Website](https://b1ndark.github.io/project2/).
   <br>
 
 ### Local Deployment
 
 #### Fork the repository
 
-  1. Open Github
-  2. Log in or Sign up
-  3. Look for my repository [The History Quiz](https://github.com/b1ndark/project2)
-  4. Last on the right corner you will find the fork button(click it).
+  1. Open Github.
+  2. Log in or Sign up.
+  3. Look for my repository [The History Quiz](https://github.com/b1ndark/project2).
+  4. Last on the right corner you will find the fork button(click on it).
 
 #### Clone the repository
   1. Open Github
   2. Log in or Sign up
   3. Look for my repository [The History Quiz](https://github.com/b1ndark/project2)
-  4. Look for code button next to the gitpod button at the top right(click it)
-  5. A window will pop up with options for you to select to clone it with such as HTTPS, SSH or GitHub CLI
+  4. Look for code button next to the gitpod button at the top right(click on it).
+  5. A window will pop up with options for you to select to clone it with such as HTTPS, SSH or GitHub CLI.
   6. Once selected copy the link that is shown.
-  7. Open your code editor terminal
-  8. Type ```git clone``` in the terminal and paste the copied repository link
+  7. Open your code editor terminal.
+  8. Type ```git clone``` in the terminal and paste the copied repository link.
   9. After all that just Press enter to create the clone.
 
 
@@ -486,12 +498,12 @@ I did focus on making sure that the website is accessible:
 
 - ### Content
 
-    - I have Searched for some questions regarding History, I have left the website links and tools below:
+    - I have searched for some questions regarding past history, I have left the website links and tools below:
       - [kwizzbit](https://kwizzbit.com/history-quiz-questions-and-answers/)
       - [Thought Catalog](https://thoughtcatalog.com/katee-fletcher/2020/04/history-trivia-questions/)
-      - [Google Search](https://www.google.com/)
+      - [Google Search](https://www.google.com/) - Used it to look for and confirm some facts regarding some of the questions.
 
-    - I have watched some tutorials on youtube which I will leave below:
+    - I have watched some tutorials on Youtube that have helped me with understanding and learning new features along the project, I will leave them below:
       - [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&ab_channel=WebDevSimplified)
       - [GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8&ab_channel=GreatStack)
       - [James Q Quick](https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=1&ab_channel=JamesQQuick)

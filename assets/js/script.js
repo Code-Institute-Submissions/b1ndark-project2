@@ -7,7 +7,7 @@ import {
 } from "./game.js";
 /**
  * Buttons to access its containers and Global Variables
- * Watched various tutorials on youtube which I will leave below-
+ * I have watched some tutorials on Youtube that have helped me with understanding and learning new features along the project, I will leave them below:
  * https://www.youtube.com/watch?v=riDzcEQbX6k&ab_channel=WebDevSimplified
  * https://www.youtube.com/watch?v=PBcqGxrr9g8&ab_channel=GreatStack
  * https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=1&ab_channel=JamesQQuick
@@ -105,7 +105,7 @@ startButton.addEventListener('click', () => {
 });
 
 /**
- * By pressing Start it will ask the user wether he/she wants to stop the Quiz
+ * By pressing Start it will ask the user whether he/she wants to stop the Quiz
  * Event listener to take you back to Main Menu
  */
 backToMainMenu.addEventListener('click', () => {
@@ -122,7 +122,7 @@ function selectDifficulty() {
     startMenu.classList.add('hide');
     difficultyContainerElement.classList.remove('hide');
     questionContainerElement.classList.add('hide');
-    //This line was added to reset the score incase the user goes back to difficulty menu
+    //This line was added to reset the score in case the user goes back to difficulty menu
     document.getElementById("correct-answers-score").innerText = 0;
 }
 backButton.addEventListener('click', selectMainMenu);
@@ -172,7 +172,7 @@ function resetState() {
     }
 }
 
-// This function is to reset everyhting after playing first time, was having issues as the Score Area and Back button weren't being displayed
+// This function is to reset everything after playing first time, was having issues as the Score Area and Back button weren't being displayed
 function resetQuestionContainer() {
     // This will display Main Menu button
     backToIndexButton.style.display = 'none';
@@ -190,7 +190,7 @@ function showQuestion() {
     resetQuestionContainer();
     // This function will show current question
     // Data for the questions will be collected from game.js file
-    // It will pick the questions from the mode you have choosen
+    // It will pick the questions from the mode you have chosen
     // Each mode will have their questions shuffled, by using Math.floor and Math.random * their length
     if (difficulty == easy) {
         eachModeQuestions = easyQuestions;
@@ -207,7 +207,7 @@ function showQuestion() {
     }
     questionElement.innerHTML = currentQuestion.question;
 
-    // This will workout what question you are on and display it
+    // This will work out what question you are on and display it
     currentQuestionCounterIndex++;
     answeredQuestionsCounter.innerHTML = `${currentQuestionCounterIndex}/10`;
 
@@ -259,7 +259,7 @@ function selectAnswer(event) {
         selectedAnswerButton.classList.add("wrong-answer");
     }
 
-    // Soon as the answer is selected whether is correct or wrong, all answers will be locked.
+    // Soon as the answer is selected whether is correct or wrong, all answer buttons will be disabled.
     Array.from(answerButtons.children).forEach(button => {
         if (button.dataset.correct === "true") {
             button.classList.add("correct-answer");
@@ -321,9 +321,9 @@ submitButton.addEventListener('click', function (event) {
 });
 
 /**
- * This Function will localstore the username 
+ * This Function will localStore the username 
  * so we can display it in the title and at the end of the game.
- * Watched on youtube https://www.youtube.com/watch?v=KB6Yg5hNrqc&ab_channel=KeithPaterson
+ * Watched on Youtube to help me understanding https://www.youtube.com/watch?v=KB6Yg5hNrqc&ab_channel=KeithPaterson
  */
 function usernameSubmit() {
     let inputUsername = document.getElementById("usernameInput").value;
@@ -347,9 +347,9 @@ function showScoreboard() {
         username: `${username}`
     };
 
-    // This is to prevent from showing null in scoreboard if the user hasn't played yet
+    // This is to prevent the scores to be shown null if username hasn't played yet, instead it will show an empty scoreboard
+    // If statement used to check it 
     if (score.score === null || score.username == "") {
-        //This is to prevent the scores to be shown null if username hasn't played yet, instead it will show an empty scoreboard
         showScoreList.innerHTML = scoreboard
             .map(score => {
                 return `<li class="score-list">${score.username} - ${score.score}</li>`;
@@ -364,9 +364,12 @@ function showScoreboard() {
         // To convert into a string
         localStorage.setItem('scoreboard', JSON.stringify((scoreboard)));
         showScoreList.innerHTML = scoreboard
+            // Map method to convert array and return a string of <li> elements (username and score in it)
             .map(score => {
+                // Add a class to decorate the <li> with CSS
                 return `<li class="score-list">${score.username} - ${score.score}</li>`;
             })
+            // To return a new string
             .join("");
     }
 }

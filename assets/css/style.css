@@ -407,8 +407,8 @@ ul li {
 
 @media screen and (max-width: 576px) {
     #title-container {
-        margin-top: 70px;
-        margin-bottom: 70px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
     .index-page-title {
@@ -448,6 +448,7 @@ ul li {
     }
 
     .network-container {
+        margin-top: 50px;
         margin-bottom: 0;
     }
 
