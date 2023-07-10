@@ -186,12 +186,9 @@ ul li {
 /* 404 error page */
 
 .page-title-error {
-    font-family: 'Montserrat', sans-serif;
     color: rgb(0, 0, 0);
     height: 100px;
-    padding-top: 150px;
     text-align: center;
-    font-size: 200%;
 }
 
 .error-container {
@@ -202,6 +199,7 @@ ul li {
 
 .error-container h2 {
     text-transform: capitalize;
+    border-bottom: none;
 }
 
 /* Footer and Networks */
