@@ -119,34 +119,34 @@ Colours used:
 - Created for mobile devices and desktops
 
   - Home Page  
-  <br>
+
     ![image](assets/images/readme/wireframes/mainmenu.webp)  
-    <br>
+    <br>  
 
   - Instructions Page  
-  <br>
+
     ![image](assets/images/readme/wireframes/instructions.webp)  
-    <br>
+    <br>  
 
   - Scoreboard Page  
-  <br>
+
     ![image](assets/images/readme/wireframes/scoreboard.webp)  
-    <br>
+    <br>  
 
   - Difficulty Page  
-  <br>
+
     ![image](assets/images/readme/wireframes/difficulty.webp)  
-    <br>
+    <br>  
 
   - Questions Page  
-  <br>
+
     ![image](assets/images/readme/wireframes/questions.webp)  
-    <br>
+    <br>  
 
   - End Page  
-  <br>
+
     ![image](assets/images/readme/wireframes/endgame.webp)  
-    <br>
+    <br>  
 
 [Back to the top](#history-quiz)
 
@@ -330,16 +330,18 @@ I did focus on making sure that the website is accessible:
 
 ## Testing
 
-- The Quiz website has been tested and it works on different types of computers with different browsers
+- The Quiz website has been tested and it works on different types of computers with different browsers:
   - Chrome
   - Safari
   - Microsoft Edge
   - Firefox
-- It has been tested and work on different mobile phone brands
+- It has been tested and work on different mobile phone brands with different operating systems:
   - Iphone 11 pro
+  - Iphone 12 pro
   - Realme x2
   - Xiaomi note 8
   - Hauwei p30 lite
+  - Poco F5 pro
 - Tests were carry out by myself, friends and family, different devices from PCs, laptops, tablets to mobile phones, different screen sizes.
 - The project is responsive as I have tested it on different types of screen sizes using devtools.
 - All content of every container is readable and easy to understand.
@@ -540,7 +542,7 @@ I did focus on making sure that the website is accessible:
 ## Acknowledgments
 
 - I would like to thank my mentor [Graeme Taylor](https://github.com/G-Taylor) for helping me along the way in completing my Second milestone project.
-- I would like to thank Code Institute Tutors for trying to help me when I had issues with Selecting different modes.
+- I would like to thank Code Institute Tutors for helping me when I had issues with Selecting different modes.
 - Also, I would like to thank friends and family for helping with testing the Quiz.
 
 [Back to the top](#history-quiz)
