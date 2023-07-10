@@ -305,6 +305,9 @@ I did focus on making sure that the website is accessible:
 - Semantic HTML.
 - colour contrast in every page.
 - Kept the Quiz simple and easy to navigate.
+- No errors or contrast errors reported by [Wave](https://wave.webaim.org/report#/https://b1ndark.github.io/project2/).  
+
+![image](assets/images/readme/wave/wavetest.png)
 
 [Back to the top](#history-quiz)
 
